@@ -17,6 +17,9 @@
 </hr>
 
 ## Current Projects:
+### [DSPGraph](https://github.com/ReplicatAudio/DSPGraph)
+> A web based tool for plotting with DSP algorithms written in JavaScript.
+
 ### [AfterMath](https://github.com/matdombrock/AfterMath)
 > An over-engineered calculator for Windows written in JavaScript/Electron.
 
