@@ -14,7 +14,7 @@
 ### > [Frequency & Wavelength](/wiki/frequency-and-wavelength.html)
 ### > [Popular SDRs](/wiki/popular-sdrs.html)
 
-<hr>
+</hr>
 
 ## Current Projects:
 ### [AfterMath](https://github.com/matdombrock/AfterMath)
@@ -29,9 +29,9 @@
 ### [SteelSky](https://github.com/matdombrock/SteelSky)
 > A *very* lightweight, no BS static site generator written in NodeJS.
 
-### [GNU Radio Companion Examples](https://github.com/matdombrock/GNU_Radio_Companion_Examples)
-> My radio research files for GRC/HackRF. Mostly based off the HackRF One tutorials by Michael Ossmann (But updated for modern versions of GRC).
+### [Generative1](https://github.com/ReplicatAudio/generative1)
+> A tool for producing generative (procedurally generated) MIDI files.
 
-<hr>
+</hr>
 
-<img src="/max.png" width="256px">
+<!-- <img src="/max.png" width="256px"> -->

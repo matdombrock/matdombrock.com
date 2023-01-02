@@ -1,22 +1,33 @@
+/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(25, 26, 25);
+  --main:rgb(30, 81, 40);
+  --secondary:rgb(78, 159, 61);
+  --highlight:rgb(248, 248, 248);
+  --text:rgb(231, 237, 214);
+}
 body{
-  font-family: Consolas, monaco, monospace;
-  background:rgb(22, 22, 22);
-  color:rgb(233, 233, 233);
+  font-family: Tahoma;
+  background:var(--bg);
+  color:var(--text);
   padding:1em;
 }
-body::selection { color: #ff76ad }
+body::selection { color: var(--highlight) }
 a{
-  color:rgb(233, 233, 233);
+  color:var(--highlight);
   transition:all 0.2s;
 }
 a:hover{
-  color:#ff76ad;
+  color:var(--highlight);
 }
 img{
   max-width:100%;
 }
 small{
-  color:rgb(173, 173, 173);
+  color:var(--secondary);
+}
+h1,h2,h3,h4{
+  color:var(--highlight);
 }
 .ss-content{
   max-width:1000px;
