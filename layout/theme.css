@@ -1,0 +1,29 @@
+body{
+  font-family: Consolas, monaco, monospace;
+  background:rgb(22, 22, 22);
+  color:rgb(233, 233, 233);
+  padding:1em;
+}
+body::selection { color: #ff76ad }
+a{
+  color:rgb(233, 233, 233);
+  transition:all 0.2s;
+}
+a:hover{
+  color:#ff76ad;
+}
+img{
+  max-width:100%;
+}
+small{
+  color:rgb(173, 173, 173);
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
