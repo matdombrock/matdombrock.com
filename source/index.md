@@ -11,12 +11,13 @@ Hello and welcome to my website! My name is Mathieu Dombrock, and I've been deve
 
 ## Top Posts
 
-### > [Hacking an RG351 into a Synth](/wiki/rg351-synth.html)
-### > [Moving Within a Matrix](/wiki/moving-within-a-matrix.html)
-### > [Ultrasonic Distance](/wiki/arduino-ultrasonic-distance.html)
-### > [Traversing the File System with NodeJS](/wiki/traverse-fs-nodejs.html)
-### > [Frequency & Wavelength](/wiki/frequency-and-wavelength.html)
-### > [Popular SDRs](/wiki/popular-sdrs.html)
+### > [Hacking an RG351 into a Synth](/posts/rg351-synth.html)
+### > [Moving Within a Matrix](/posts/moving-within-a-matrix.html)
+### > [Ultrasonic Distance](/posts/arduino-ultrasonic-distance.html)
+### > [Emoji Math👽](/posts/emoji-math.html)
+### > [Traversing the File System with NodeJS](/posts/traverse-fs-nodejs.html)
+### > [Frequency & Wavelength](/posts/frequency-and-wavelength.html)
+### > [Popular SDRs](/posts/popular-sdrs.html)
 
 <hr>
 
@@ -39,6 +40,5 @@ Hello and welcome to my website! My name is Mathieu Dombrock, and I've been deve
 ### [Generative1](https://github.com/ReplicatAudio/generative1)
 > A tool for producing generative (procedurally generated) MIDI files.
 
-<hr>
 
 <!-- <img src="/max.png" width="256px"> -->

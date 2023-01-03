@@ -6,8 +6,11 @@
 </steelsky>
 # About Me and This Site
 
-My name is Mathieu Dombrock and I'm a software engineer by day and electronics hacker by night!
+Hi there! My name is Mathieu Dombrock and I am a software engineer. I have been building software for over 10 years, and I have always had a passion for programming. My love of programming started at a young age when I wanted to make video games for my little brother. Since then, my interests have expanded to include web technology, audio software, graphics, electronics hacking, machine learning and more.
 
+I am proficient in a number of programming languages, but my primary expertise is in JavaScript and C++. I have a strong foundation in computer science principles and I am always seeking to learn and expand my skills. In my free time, you can find me hiking, playing music, tinkering with new technologies or working on personal projects.
+
+Thank you for visiting my website. I hope you enjoy reading about my journey as a software engineer and my thoughts on various topics related to technology.
 
 This site is built using my own custom static site generator called [SteelSky](https://github.com/matdombrock/SteelSky)
 

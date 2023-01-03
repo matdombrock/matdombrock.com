@@ -3,7 +3,7 @@
     "mtime": 1672684358041
   },
   "about.md": {
-    "mtime": 1672684358041
+    "mtime": 1672748349369
   },
   "favicon.ico": {
     "mtime": 1672684358041
@@ -48,7 +48,7 @@
     "mtime": 1672684358073
   },
   "index.md": {
-    "mtime": 1672743817627
+    "mtime": 1672748623137
   },
   "lab/colorbrain.html": {
     "mtime": 1672684358073
@@ -101,11 +101,17 @@
   "posts/breakout-of-parent-css.md": {
     "mtime": 1672684358077
   },
+  "posts/chatgpt-screenplay-ai-fears.md": {
+    "mtime": 1672748476643
+  },
   "posts/detect-keypress-js.md": {
     "mtime": 1672684358077
   },
   "posts/download-files-nodejs.md": {
     "mtime": 1672684358077
+  },
+  "posts/emoji-math.md": {
+    "mtime": 1672747818853
   },
   "posts/frequency-and-wavelength.md": {
     "mtime": 1672684358077

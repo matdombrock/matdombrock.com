@@ -1,9 +1,9 @@
 /*rgb(228, 172, 106);*/
 :root{
   --bg:rgb(42, 42, 42);
-  --main:rgb(254, 128, 100);
-  --secondary:rgb(255, 131, 104);
-  --highlight:rgb(101, 208, 238);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
   --text:rgb(224, 220, 214);
 }
 body{
