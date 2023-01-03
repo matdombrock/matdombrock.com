@@ -1,25 +1,28 @@
+<br><br><br>
 <hr>
-<div>
-  &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
-  <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
-  <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
-  <small id="visits"></small>
-</div>
-<div>
-  <small style="text-align:right;">
-    <a href="/directory.html?s=%23programming">#programming</a>
-    <a href="/directory.html?s=%23radio">#radio</a>
-    <a href="/directory.html?s=%23guide">#guide</a>
-    <a href="/directory.html?s=%23thoughts">#thoughts</a>
-  </small>
-</div>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+      <a href="/directory.html?s=%23programming">#programming</a>
+      <a href="/directory.html?s=%23radio">#radio</a>
+      <a href="/directory.html?s=%23guide">#guide</a>
+      <a href="/directory.html?s=%23thoughts">#thoughts</a>
+    </small>
+  </div>
 
-<script>
-  let visits = localStorage.getItem('visits');
-  if(visits === undefined){
-    visits = 0;
-  }
-  visits++;
-  localStorage.setItem('visits', visits);
-  document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
-</script>
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

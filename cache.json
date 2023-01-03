@@ -5,9 +5,6 @@
   "about.md": {
     "mtime": 1672684358041
   },
-  "directory.md": {
-    "mtime": 1672684358041
-  },
   "favicon.ico": {
     "mtime": 1672684358041
   },
@@ -38,6 +35,9 @@
   "img/design/theWPFixers.png": {
     "mtime": 1672684358069
   },
+  "img/md-banner.jpg": {
+    "mtime": 1672741352080
+  },
   "img/spellcheck.png": {
     "mtime": 1672684358069
   },
@@ -48,7 +48,7 @@
     "mtime": 1672684358073
   },
   "index.md": {
-    "mtime": 1672687774633
+    "mtime": 1672743817627
   },
   "lab/colorbrain.html": {
     "mtime": 1672684358073
@@ -56,160 +56,133 @@
   "max.png": {
     "mtime": 1672684358073
   },
+  "posts/archive/_radio-links.md": {
+    "mtime": 1672745901152
+  },
+  "posts/archive/create-wp-db-cli.md": {
+    "mtime": 1672745828775
+  },
+  "posts/archive/download-files-nodejs.md": {
+    "mtime": 1672745907956
+  },
+  "posts/archive/js-promises.md": {
+    "mtime": 1672745911844
+  },
+  "posts/archive/node-async-readline.md": {
+    "mtime": 1672745829271
+  },
+  "posts/archive/parasails-utilities.md": {
+    "mtime": 1672745829499
+  },
+  "posts/archive/quest-telemetry.md": {
+    "mtime": 1672745829723
+  },
+  "posts/archive/require-on-front-end.md": {
+    "mtime": 1672745829963
+  },
+  "posts/archive/setup-lamp-wp.md": {
+    "mtime": 1672745830235
+  },
+  "posts/archive/vuejs-components.md": {
+    "mtime": 1672745830467
+  },
+  "posts/arduino-ultrasonic-distance.md": {
+    "mtime": 1672684358077
+  },
+  "posts/argument-for-static-langs.md": {
+    "mtime": 1672684358077
+  },
+  "posts/backup-restore-mysql-db-cli.md": {
+    "mtime": 1672684358077
+  },
+  "posts/beginner-radio-guide.md": {
+    "mtime": 1672684358077
+  },
+  "posts/breakout-of-parent-css.md": {
+    "mtime": 1672684358077
+  },
+  "posts/detect-keypress-js.md": {
+    "mtime": 1672684358077
+  },
+  "posts/download-files-nodejs.md": {
+    "mtime": 1672684358077
+  },
+  "posts/frequency-and-wavelength.md": {
+    "mtime": 1672684358077
+  },
+  "posts/git-cli.md": {
+    "mtime": 1672684358077
+  },
+  "posts/github-3d.md": {
+    "mtime": 1672684358077
+  },
+  "posts/ide-spellcheck.md": {
+    "mtime": 1672684358077
+  },
+  "posts/img/Ultrasonic-sensor-drawing.png": {
+    "mtime": 1672684358077
+  },
+  "posts/img/Ultrasonic-sensor-header.jpg": {
+    "mtime": 1672684358081
+  },
+  "posts/img/Ultrasonic-sensor-sketch.png": {
+    "mtime": 1672684358081
+  },
+  "posts/img/hdsdr-waterfall.png": {
+    "mtime": 1672684358085
+  },
+  "posts/img/radio-antenna-connectors.png": {
+    "mtime": 1672684358085
+  },
+  "posts/img/scanner-radio.jpg": {
+    "mtime": 1672684358085
+  },
+  "posts/img/spellcheck.png": {
+    "mtime": 1672684358085
+  },
+  "posts/laws-of-ux.md": {
+    "mtime": 1672684358085
+  },
+  "posts/linux-largest-file.md": {
+    "mtime": 1672684358085
+  },
+  "posts/moving-within-a-matrix.md": {
+    "mtime": 1672684358085
+  },
+  "posts/negative-features.md": {
+    "mtime": 1672684358085
+  },
+  "posts/node-async-readline.md": {
+    "mtime": 1672684358085
+  },
+  "posts/popular-sdrs.md": {
+    "mtime": 1672684358085
+  },
+  "posts/problem-solving.md": {
+    "mtime": 1672684358085
+  },
+  "posts/rg351-synth.md": {
+    "mtime": 1672684358085
+  },
+  "posts/sdr-tools.md": {
+    "mtime": 1672684358085
+  },
+  "posts/traverse-fs-nodejs.md": {
+    "mtime": 1672684358085
+  },
+  "posts/using-dipole-antennas.md": {
+    "mtime": 1672684358085
+  },
+  "projects.md": {
+    "mtime": 1672744405207
+  },
+  "search.md": {
+    "mtime": 1672742485675
+  },
   "steelsky.md": {
     "mtime": 1672684358073
   },
   "weather/index.md": {
     "mtime": 1672684358073
-  },
-  "wiki/_electronics_links.md": {
-    "mtime": 1672684358073
-  },
-  "wiki/_open_graphics.md": {
-    "mtime": 1672684358073
-  },
-  "wiki/_radio-links.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/_web-tools.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/aarl.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/amazon-tools.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/arduino-ultrasonic-distance.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/argument-for-static-langs.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/art-assets.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/backup-restore-mysql-db-cli.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/beginner-radio-guide.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/breakout-of-parent-css.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/create-wp-db-cli.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/detect-keypress-js.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/diagram-tools.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/download-files-nodejs.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/finding-frequencies.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/foss-vsts.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/frequency-and-wavelength.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/git-cli.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/github-3d.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/ide-spellcheck.md": {
-    "mtime": 1672684358077
-  },
-  "wiki/img/Ultrasonic-sensor-drawing.png": {
-    "mtime": 1672684358077
-  },
-  "wiki/img/Ultrasonic-sensor-header.jpg": {
-    "mtime": 1672684358081
-  },
-  "wiki/img/Ultrasonic-sensor-sketch.png": {
-    "mtime": 1672684358081
-  },
-  "wiki/img/hdsdr-waterfall.png": {
-    "mtime": 1672684358085
-  },
-  "wiki/img/radio-antenna-connectors.png": {
-    "mtime": 1672684358085
-  },
-  "wiki/img/scanner-radio.jpg": {
-    "mtime": 1672684358085
-  },
-  "wiki/img/spellcheck.png": {
-    "mtime": 1672684358085
-  },
-  "wiki/js-promises.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/laws-of-ux.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/linux-largest-file.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/local-freqs-whatcom.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/local-radio-freqs-kitsap.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/moving-within-a-matrix.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/negative-features.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/node-async-readline.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/parasails-utilities.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/popular-sdrs.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/problem-solving.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/quest-telemetry.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/radio-antenna-connections.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/require-on-front-end.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/rg351-synth.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/sdr-tools.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/setup-lamp-wp.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/traverse-fs-nodejs.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/using-dipole-antennas.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/vuejs-components.md": {
-    "mtime": 1672684358085
-  },
-  "wiki/web-radio.md": {
-    "mtime": 1672684358085
   }
 }

@@ -5,7 +5,11 @@
 }
 </steelsky>
 
-## Cool Stuff:
+## Welcome
+
+Hello and welcome to my website! My name is Mathieu Dombrock, and I've been developing software for over 10 years. I have a particular interest in web technologies, electronics hacking and audio software, and I enjoy sharing my knowledge and experiences with others through this site. Thank you for stopping by, and I hope you enjoy reading about my adventures in computing.
+
+## Top Posts
 
 ### > [Hacking an RG351 into a Synth](/wiki/rg351-synth.html)
 ### > [Moving Within a Matrix](/wiki/moving-within-a-matrix.html)
@@ -14,9 +18,9 @@
 ### > [Frequency & Wavelength](/wiki/frequency-and-wavelength.html)
 ### > [Popular SDRs](/wiki/popular-sdrs.html)
 
-</hr>
+<hr>
 
-## Current Projects:
+## Top Projects
 ### [DSPGraph](https://github.com/ReplicatAudio/DSPGraph)
 > A web based tool for plotting with DSP algorithms written in JavaScript.
 
@@ -35,6 +39,6 @@
 ### [Generative1](https://github.com/ReplicatAudio/generative1)
 > A tool for producing generative (procedurally generated) MIDI files.
 
-</hr>
+<hr>
 
 <!-- <img src="/max.png" width="256px"> -->

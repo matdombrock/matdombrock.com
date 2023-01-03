@@ -3,15 +3,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8"/>
 </head>
-<h1><a href="/">Mathieu Dombrock</a><img src="/favicon.ico" width="25px" style="float:right"></h1>
-<small id="tagline" onclick="loadTagline()" style="cursor:pointer;">Baseless claims & crimes against computing.</small>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
 <hr>
-<h3>
-  <a href="/directory.html">directory</a> |
+<div class="nav">
+  <a href="/">home</a> |
   <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
   <a href="https://github.com/matdombrock" target="_blank">github</a> |
-  <input type="text" placeholder="search directory" id="nav-search" style="float:right;">
-</h3>
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
 <hr>
 
 <script>
@@ -58,7 +62,7 @@
     
   ];
   function loadTagline(){
-    document.getElementById('tagline').innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
   }
   loadTagline();
   function game(input){

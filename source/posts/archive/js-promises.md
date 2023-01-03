@@ -7,6 +7,8 @@
 </steelsky>
 # JS Promises Explained
 
+<div class="archive-msg">ARCHIVED: This is for historical purposes only!</div>
+
 ## A Quick Example
 Before I get started I will show a quick example of an implementation of promises for reference.
 ```javascript

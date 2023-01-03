@@ -7,6 +7,8 @@
 </steelsky>
 # Various Radio Links
 
+<div class="archive-msg">ARCHIVED: This is for historical purposes only!</div>
+
 ## [Garage Door Security](https://en.wikipedia.org/wiki/Garage_door_opener#Remote_control)
 > Information about the history of garage door security and the fight against replay attacks. 
 

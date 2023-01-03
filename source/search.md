@@ -1,10 +1,10 @@
 <steelsky>
 {
-  "title":"Site Directory",
+  "title":"Search Site Directory",
   "description":"A list of all assets on this website."
 }
 </steelsky>
-# Site Directory
+# Site Search
 
 <select id="filter" onchange="ssList.updateFilter()">
   <option value=".html">HTML</option> 
