@@ -7,6 +7,7 @@
   --text:rgb(224, 220, 214);
 }
 body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-family: Tahoma;
   background:var(--bg);
   color:var(--text);
@@ -16,6 +17,7 @@ body::selection { color: var(--highlight) }
 a{
   color:var(--highlight);
   transition:all 0.2s;
+  font-family: Consolas;
 }
 a:hover{
   color:var(--highlight);
@@ -39,6 +41,7 @@ h1 a{
   color:var(--text);
 }
 h1,h2,h3,h4{
+  font-family: Consolas;
   color:var(--secondary);
 }
 /* hr{
