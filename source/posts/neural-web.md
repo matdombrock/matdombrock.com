@@ -2,7 +2,7 @@
 {
   "title":"Neural Web",
   "description":"Exploring Neural Nets In The Browser",
-  "tags":"#radio #link"
+  "tags":"#ai #web"
 }
 </steelsky>
 
