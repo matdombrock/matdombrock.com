@@ -48,7 +48,7 @@
     "mtime": 1672684358073
   },
   "index.md": {
-    "mtime": 1672756813897
+    "mtime": 1673218719235
   },
   "lab/colorbrain.html": {
     "mtime": 1672684358073
@@ -101,6 +101,9 @@
   "posts/breakout-of-parent-css.md": {
     "mtime": 1672684358077
   },
+  "posts/can-chatgpt-write-software.md": {
+    "mtime": 1673218680294
+  },
   "posts/chatgpt-screenplay-ai-fears.md": {
     "mtime": 1672748476643
   },
@@ -134,17 +137,29 @@
   "posts/img/Ultrasonic-sensor-sketch.png": {
     "mtime": 1672684358081
   },
+  "posts/img/carmack-twitter-gpt-reply.png": {
+    "mtime": 1673206566487
+  },
+  "posts/img/carmack-twitter-gpt.png": {
+    "mtime": 1673206566271
+  },
   "posts/img/hdsdr-waterfall.png": {
     "mtime": 1672684358085
   },
   "posts/img/radio-antenna-connectors.png": {
     "mtime": 1672684358085
   },
+  "posts/img/saw-fs.png": {
+    "mtime": 1673215235004
+  },
   "posts/img/scanner-radio.jpg": {
     "mtime": 1672684358085
   },
   "posts/img/spellcheck.png": {
     "mtime": 1672684358085
+  },
+  "posts/img/square-fs.png": {
+    "mtime": 1673215235220
   },
   "posts/laws-of-ux.md": {
     "mtime": 1672684358085

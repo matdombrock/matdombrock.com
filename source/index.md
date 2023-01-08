@@ -11,6 +11,7 @@ Hello and welcome to my website! My name is Mathieu Dombrock, and I've been deve
 
 ## Top Posts
 
+### > [Can chatGPT Write Software?](/posts/can-chatgpt-write-software.html)
 ### > [Exploring Neural Nets In The Browser](/posts/neural-web.html)
 ### > [Hacking an RG351 into a Synth](/posts/rg351-synth.html)
 ### > [Moving Within a Matrix](/posts/moving-within-a-matrix.html)
