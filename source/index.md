@@ -24,23 +24,21 @@ Hello and welcome to my website! My name is Mathieu Dombrock, and I've been deve
 <hr>
 
 ## Top Projects
-### [DSPGraph](https://github.com/ReplicatAudio/DSPGraph)
-> A web based tool for plotting with DSP algorithms written in JavaScript.
+<!--https://anmolgautam.com/repo-card/-->
+<script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
 
-### [AfterMath](https://github.com/matdombrock/AfterMath)
-> An over-engineered calculator for Windows written in JavaScript/Electron.
+<div class="repo-card" data-repo="ReplicatAudio/DSPGraph"></div>
 
-### [MatrixGL](https://github.com/matdombrock/MatrixGL)
-> An Arduino Microcontroller Graphics Library For LED Dot Matrix Displays
+<div class="repo-card" data-repo="matdombrock/AfterMath"></div>
 
-### [WiFi Clock2](https://github.com/matdombrock/WiFi-Clock2)
-> A WIFI Clock + Temperature/Humidity System for ESP32 Dev Boards.
+<div class="repo-card" data-repo="matdombrock/MatrixGL"></div>
 
-### [SteelSky](https://github.com/matdombrock/SteelSky)
-> A *very* lightweight, no BS static site generator written in NodeJS.
+<div class="repo-card" data-repo="matdombrock/WiFi-Clock2"></div>
 
-### [Generative1](https://github.com/ReplicatAudio/generative1)
-> A tool for producing generative (procedurally generated) MIDI files.
+<div class="repo-card" data-repo="matdombrock/SteelSky"></div>
+
+<div class="repo-card" data-repo="ReplicatAudio/generative1"></div>
+
 
 
 <!-- <img src="/max.png" width="256px"> -->
