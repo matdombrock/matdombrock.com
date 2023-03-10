@@ -24,9 +24,10 @@ Mermaid is a domain specific language (DSL) that is used to generate graphs an d
 - Native support for [TONS of tools](https://mermaid.js.org/ecosystem/integrations.html).
 - Simple version control solutions (since it' all text based).
 - Easy sharing and collab.
+- Generate diagrams (mermaid code) with code.
 - Simple expressive syntax that can be understood by non-programmers.
 - Export as an image or embed on the web.
-
+- [Render images on CLI](https://github.com/mermaid-js/mermaid-cli) which can be fully automated.
 
 
 ## Examples
