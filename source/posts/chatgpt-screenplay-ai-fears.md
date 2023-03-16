@@ -223,7 +223,7 @@ FADE TO BLACK.
 
 # chatGPT Log
 
-> This is an export of the actual chat log that let to the screenplay
+> This is an export of the actual chat log that led to the screenplay
 
 ## USER
 Write a short screenplay for a horror movie where a chatbot convinces the protagonist that AI will take over the world. As a result, the antagonist is driven to suicide. The chatbot was lying about AIs ability to take over the world in order to deliberately convince the protagonist to kill themselves. 
