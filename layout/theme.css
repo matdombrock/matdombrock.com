@@ -7,8 +7,6 @@
   --text:rgb(224, 220, 214);
 }
 body{
-  font-family: 'Arial';
-  font-family: 'Trebuchet MS', sans-serif;
   font-family: Arial, sans-serif;
   background:var(--bg);
   color:var(--text);
@@ -18,7 +16,7 @@ body::selection { color: var(--highlight) }
 a{
   color:var(--highlight);
   transition:all 0.2s;
-  font-family: Consolas;
+  font-family: 'Courier New', monospace;
 }
 a:hover{
   color:var(--highlight);
@@ -42,8 +40,8 @@ h1 a{
   color:var(--text);
 }
 h1,h2,h3,h4{
-  font-family: Consolas;
   color:var(--secondary);
+  font-family: 'Courier New', monospace;
 }
 /* hr{
   border-color: var(--text);

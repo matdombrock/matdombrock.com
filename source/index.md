@@ -27,6 +27,8 @@ Hello and welcome to my website! My name is Mathieu Dombrock, and I've been deve
 <!--https://anmolgautam.com/repo-card/-->
 <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
 
+<div class="repo-card" data-repo="matdombrock/lifelab" data-theme="dark-theme"></div>
+
 <div class="repo-card" data-repo="ReplicatAudio/DSPGraph" data-theme="dark-theme"></div>
 
 <div class="repo-card" data-repo="matdombrock/AfterMath" data-theme="dark-theme"></div>
