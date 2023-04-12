@@ -3,7 +3,7 @@
     "mtime": 1672684358041
   },
   "about.md": {
-    "mtime": 1672758857771
+    "mtime": 1674524390330
   },
   "favicon.ico": {
     "mtime": 1672684358041
@@ -37,6 +37,12 @@
   },
   "img/md-banner.jpg": {
     "mtime": 1672741352080
+  },
+  "img/me.jpg": {
+    "mtime": 1674523432730
+  },
+  "img/me_cropped.jpg": {
+    "mtime": 1674524287105
   },
   "img/spellcheck.png": {
     "mtime": 1672684358069
@@ -104,8 +110,11 @@
   "posts/can-chatgpt-write-software.md": {
     "mtime": 1673218680294
   },
+  "posts/cellular-automata.md": {
+    "mtime": 1674650837638
+  },
   "posts/chatgpt-screenplay-ai-fears.md": {
-    "mtime": 1672748476643
+    "mtime": 1673474186106
   },
   "posts/detect-keypress-js.md": {
     "mtime": 1672684358077
@@ -166,6 +175,9 @@
   },
   "posts/linux-largest-file.md": {
     "mtime": 1672684358085
+  },
+  "posts/mermaid.md": {
+    "mtime": 1678943892711
   },
   "posts/moving-within-a-matrix.md": {
     "mtime": 1672684358085
