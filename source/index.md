@@ -5,7 +5,7 @@
 }
 </steelsky>
 
-## Welcome
+## Hello!
 
 Hello and welcome to my website! My name is Mathieu Dombrock, and I've been developing software professionally for over 10 years. I have a particular interest in web technologies, electronics hacking and audio software, and I enjoy sharing my knowledge and experiences with others through this site. Thank you for stopping by, and I hope you enjoy reading about my adventures in computing.
 
