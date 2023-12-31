@@ -1,0 +1,526 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"HC-SR04 Ultrasonic Distance Sensor With Arduino",
+  "description":"How ultrasonic distance works",
+  "tags":"#arduino #electronics #sensor"
+}
+;</script>
+<h1 id="hcsr04ultrasonicdistancesensorwitharduino">HC-SR04 Ultrasonic Distance Sensor With Arduino</h1>
+<p><img src="img/Ultrasonic-sensor-header.jpg" alt="Ultrasonic-sensor-header.jpg" /></p>
+<h2 id="requiredcomponents">Required Components:</h2>
+<ul>
+<li>Arduino Uno or comparable board</li>
+<li>HC-SR04 or comparable component</li>
+<li>4 F/M jumper cables</li>
+</ul>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>I'm not an Electronic Engineer. I don't really know what I'm doing and I might be outright wrong about everything you are about to read.</p>
+<h2 id="whatexactlyisanecho">What exactly is an echo?</h2>
+<p>The basic idea here is just understanding the concept of an "echo". Yes, the same kind of echo you loved making in canyons or empty gyms as a kid. When you cause an echo, what you're experiencing is the sound traveling to some distant wall and then coming back to you. </p>
+<p>This is something that actually happens all the time, everywhere you go. Unless you are either in a very, very open space, a room with <strong>perfect</strong> sound treatment, or you happen to be in vacuum, the sounds you make are echoing. </p>
+<p>The reason you don't normally perceive the echo is that its happening so fast that its essentially indistinguishable from the original sound. Depending on the hardness of the surfaces around you, the echo might also be so quiet you just can't hear it. </p>
+<h3 id="asidenoteaboutechoandreverbforaudionerds">A Side Note About Echo and "Reverb" (For Audio Nerds):</h3>
+<p>If you are a musician or familiar with audio concepts you might know these "mini echos" as something called "reverb". Even if you're not an audio nerd you might recognize "reverb" as the effect you get when talking in an unfurnished house or apartment. </p>
+<p>Essentially the difference between echo and "reverb" is just how long it takes for the sound to come back. If we perceive the sound as coming back to our ears very quickly and <em>before the original sound is complete</em> that is  "reverb" and if there is a distinct gap period between the original sound and the reflection coming back to our ear, that is what we call echo. </p>
+<h2 id="whatisultrasound">What Is Ultrasound</h2>
+<p>Most people have only heard the term "ultrasound" in terms of looking at an unborn child. While that technology uses a very similar concept to what we're talking about here, in this context "ultrasound" is just referring to any frequency that is above the limit of what humans can usually hear. </p>
+<p>So, since most humans can hear tones between 20 and 20,000 hertz, we call anything &gt; 20k hz ultrasound. Not that its necessary to know for this application, but anything below 20 hz is known as "infrasound". Just to complete the picture, tones between 20 hz and 20k hz are commonly referred to simply as "sound".</p>
+<h2 id="howdoesanultrasonicdistancesensorwork">How Does An Ultrasonic Distance Sensor Work?</h2>
+<p>Ok, now that you (probably) scrolled right down to this section (at least skim the other parts), we can get started with the good stuff. </p>
+<p>An ultrasonic distance sensor works by sending a ultrasonic pulse and measuring the time it takes for that pulse to reflect and return to it's sensor. </p>
+<p>In more simple terms we are creating a pulse and measuing how long it takes for the echo to come back. The echo we are waiting for is just like the ones you hear in a canyon except for two things: </p>
+<ul>
+<li><p>It is happening super fast (we're talking microseconds)</p></li>
+<li><p>It is ultrasound (Actually, I think most echos you make technically contain ultrasound)</p></li>
+</ul>
+<p><img src="img/Ultrasonic-sensor-drawing.png" alt="Ultrasonic-sensor-drawing.png" /></p>
+<p><em>Note that this image is not to scale (Unless you know of some very small penguins or very large sensors). Also note that this is a terribly inaccurate depiction of how sound waves reflect.</em> </p>
+<p>Setting my copyright free drawing aside, here is what we need to do:</p>
+<ul>
+<li>Send a pulse</li>
+<li>Wait/listen for the pulse to come back</li>
+<li>Measure the amount of time the pulse took</li>
+<li>Do some math to convert the time measurement into distance</li>
+</ul>
+<h2 id="waitthereismath">Wait, There Is Math?</h2>
+<p>No, not really. If you don't want to understand this part you really don't have to. You can just plug in the constants, consider them to be magic beyond your understanding and move on with your life. However, you are going to miss out on a lot of boring numbers. </p>
+<p>If you don't want to understand the math and physics of how this works just skip to the part about setting up the board.</p>
+<h2 id="establishingaconstantforthespeedofsoundgottagofasthttpswwwyoutubecomwatchvz9g1mf6tzrs">Establishing A Constant For The Speed Of Sound (<a href="https://www.youtube.com/watch?v=Z9G1Mf6TZRs">Gotta' Go Fast</a>)</h2>
+<p>This first thing we need to understand is the speed of sound. This value is <strong>NOT</strong> a constant, but we are going to pretend that it is just to keep things simple. </p>
+<p>In "dry" air at about 20 degrees Celsius, sound will travel at ~343m/s. Since we're working on microsecond scales for time and centimeter scales for distance (get outta' here imperial measurements) we can also think of that as being <strong>~0.0343cm/μs</strong> (centimeters per microsecond).</p>
+<p><code>C = Speed Of Sound</code>
+or
+<code>C = 0.0343</code></p>
+<p>Another way to think about this would be to say that sound takes <strong>~29.154</strong> microseconds to travel 1cm. </p>
+<h2 id="establishingourvariables">Establishing Our Variables</h2>
+<p>The variables we are dealing with are:</p>
+<ul>
+<li>Δt (time delay)</li>
+<li>D (distance)</li>
+</ul>
+<p><strong>Time delay</strong> is the amount of time it takes between sending the signal and reviving the reflection of the signal. This value will be measured in microseconds (μs). </p>
+<p><strong>Distance</strong> is the distance from the sensor that the detected object is. This value will be calculated as centimeters. </p>
+<h2 id="theequation">The Equation</h2>
+<pre><code class="hljs">Δ<span class="hljs-variable">t</span> <span class="hljs-operator">=</span> <span class="hljs-variable">Time</span> <span class="hljs-variable">Delay</span> <span class="hljs-punctuation">(</span>μ<span class="hljs-variable">s</span><span class="hljs-punctuation">)</span>
+<span class="hljs-built_in">C</span> <span class="hljs-operator">=</span> <span class="hljs-variable">Speed</span> <span class="hljs-variable">of</span> <span class="hljs-built_in">Sound</span> <span class="hljs-punctuation">[</span><span class="hljs-number">0.0343</span><span class="hljs-variable">cm</span><span class="hljs-operator">/</span>μ<span class="hljs-variable">s</span><span class="hljs-punctuation">]</span>
+<span class="hljs-built_in">D</span> <span class="hljs-operator">=</span> <span class="hljs-variable">Distance</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">cm</span><span class="hljs-punctuation">)</span>
+</code></pre>
+<p>The cleanest way to represent the our calculation in my opinion is this:</p>
+<p><code>D = (Δt/2)C</code></p>
+<p>However, we could also do:</p>
+<p><code>D = (Δt/2)/29.154</code></p>
+<p>Or if you don't care much about accuracy and just want to use integers:</p>
+<p><code>D = Δt/29/2</code></p>
+<h2 id="settinguptheboard">Setting up the board</h2>
+<p>Ok, so now that we have the cool parts out of the way, let's actually setup to board. </p>
+<p>Connections:</p>
+<ul>
+<li>Vcc &lt;- 5 V</li>
+<li>Trig &lt;- pin 13 (digital pin)</li>
+<li>Echo -&gt; pin 12 (digital pin)</li>
+<li>GND -&gt; GND</li>
+</ul>
+<p><img src="img/Ultrasonic-sensor-sketch.png" alt="Ultrasonic-sensor-sketch.png" /></p>
+<p>Note: The direction of the arrows above indicates the signal flow but has no bearing on how you actually connect the pins.  </p>
+<h2 id="thecode">The Code</h2>
+<p>Before we get started with the code, if you are new to programming on Arduino, take a few moments to look over the docs for the functions from the standard library that will be used in this example:</p>
+<p><a href="https://www.arduino.cc/reference/en/language/variables/data-types/long/">Long</a></p>
+<p><a href="https://www.arduino.cc/reference/en/language/variables/data-types/unsignedint/">Unsigned Int</a></p>
+<p><a href="https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/">Pin Mode</a></p>
+<p><a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/">Serial</a></p>
+<p><a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/">Digital Write</a></p>
+<p><a href="https://www.arduino.cc/reference/en/language/functions/time/delaymicroseconds/">Delay Microseconds</a></p>
+<p><a href="https://www.arduino.cc/reference/en/language/functions/time/delay/">Delay</a></p>
+<p><a href="https://www.arduino.cc/reference/en/language/functions/advanced-io/pulsein/">Pulse In</a></p>
+<p>First we need to setup our constant unsigned integer variables to store the pin numbers we are using. Since we put the <code>Trig</code> input on pin 13 and the <code>Echo</code> output on pin 12 we will set up we will say:</p>
+<pre class="cpp language-cpp"><code class="hljs cpp language-cpp"><span class="hljs-comment">// Setup the pins</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> TRIG_PIN=<span class="hljs-number">13</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> ECHO_PIN=<span class="hljs-number">12</span>;
+</code></pre>
+<p>Then we need to declare out setup function that will initialize the board.</p>
+<p>First we will use <code>pinMode()</code> to setup the <code>TRIG_PIN</code> as output and the <code>ECHO_PIN</code> as input. </p>
+<p>Then we turn on serial data writing so we can monitor the device on our development system.</p>
+<p>Finally we will send a <code>LOW</code> value to the <code>TRIG_PIN</code> for 2 microseconds to ensure that when out main loop starts we don't get a false reading. </p>
+<p>Note: In other tutorials I've seen this logic for initializing the <code>TRIG_PIN</code> put into the main loop but I don't think that's actually necessary or efficient. Please correct me if I'm wrong. </p>
+<pre class="cpp language-cpp"><code class="hljs cpp language-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-built_in">pinMode</span>(TRIG_PIN, OUTPUT);
+  <span class="hljs-built_in">pinMode</span>(ECHO_PIN, INPUT);
+  Serial.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+  <span class="hljs-built_in">digitalWrite</span>(TRIG_PIN, LOW);
+  <span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">2</span>);
+}
+</code></pre>
+<p>Next we will setup an integer variable to store our old distance value. This will be used to prevent the serial monitor from being spammed with readings. Before writing a new line to serial we will make sure that its not the same value we wrote last time. </p>
+<p>This value is initialized to negative one so because we will be using values zero and positive one to indicate errors (more on that later). </p>
+<pre class="cpp language-cpp"><code class="hljs cpp language-cpp"><span class="hljs-keyword">int</span> oldVal = <span class="hljs-number">-1</span>;
+</code></pre>
+<p>We're almost done. Now we just need to write the main loop. </p>
+<p>We'll start off the main loop by using <code>digitalWrite()</code> to write <code>HIGH</code> to <code>TRIG_PIN</code>. This will cause the sensor (HC-SR04) to emit an ultrasonic tone. </p>
+<p>We'll let it do that for 10 microseconds by using <code>delayMicroseconds()</code>.</p>
+<p>Then we turn of <code>TRIG_PIN</code> by sending a value of <code>LOW</code>. By doing this we have emitted a 10 microsecond pulse signal. </p>
+<p>Now we use <code>pulseIn()</code> to wait for the signal to reflect back to the sensor and measure that amount of time. What we get here is an integer value representing the amount of time it took for the signal to "echo" in microseconds. </p>
+<p>Now we can use the formula we discussed above to calculate the actual distance in centimeters. </p>
+<p>If the duration was zero then we know something is wrong and we should print <code>0</code> which can be interpreted as an error code.   </p>
+<p>Since the effective range of the HC-SR04 is between 2cm and 400cm, if we get a distance of less than 2 (cm) or more than 400 (cm) we can assume that the object we are detecting is out of range. We will print <code>1</code> which can be also be interpreted as an error code. </p>
+<p>If the distance is within a valid range but is the same as the old value we don't want to print again. So we will check that they are not equal before printing. If they are equal we should assign a new value to <code>oldVal</code> and start checking against that in further loop iterations. </p>
+<p>Finally we will use <code>delay()</code> to wait 100ms so that we are not running this loop <em>too</em> often. Not that this value is arbitrary, you can go a lot lower if you are a mad scientist or something. </p>
+<pre class="cpp language-cpp"><code class="hljs cpp language-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-built_in">digitalWrite</span>(TRIG_PIN, HIGH);
+  <span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">10</span>);
+  <span class="hljs-built_in">digitalWrite</span>(TRIG_PIN, LOW);
+  <span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> duration = <span class="hljs-built_in">pulseIn</span>(ECHO_PIN, HIGH);
+  <span class="hljs-keyword">int</span> distance = (duration/<span class="hljs-number">2</span>)*<span class="hljs-number">0.03432</span>;
+  <span class="hljs-keyword">if</span>(duration==<span class="hljs-number">0</span>){
+   Serial.<span class="hljs-built_in">println</span>(<span class="hljs-number">0</span>);
+  }
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(distance &gt;= <span class="hljs-number">400</span> || distance &lt;= <span class="hljs-number">2</span>){
+    Serial.<span class="hljs-built_in">println</span>(<span class="hljs-number">1</span>); 
+  }
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(distance != oldVal){
+    Serial.<span class="hljs-built_in">println</span>(distance);
+    oldVal = distance;
+  }
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">100</span>);
+}
+</code></pre>
+<p>That's it. Here is the final code.</p>
+<h2 id="finalformorisit">Final Form (Or Is It?)</h2>
+<p>Without Comments:</p>
+<pre class="cpp language-cpp"><code class="hljs cpp language-cpp"><span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> TRIG_PIN=<span class="hljs-number">13</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> ECHO_PIN=<span class="hljs-number">12</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-built_in">pinMode</span>(TRIG_PIN, OUTPUT);
+  <span class="hljs-built_in">pinMode</span>(ECHO_PIN, INPUT);
+  Serial.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+  <span class="hljs-built_in">digitalWrite</span>(TRIG_PIN, LOW);
+  <span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">2</span>);
+}
+<span class="hljs-keyword">int</span> oldVal = <span class="hljs-number">-1</span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-built_in">digitalWrite</span>(TRIG_PIN, HIGH);
+  <span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">10</span>);
+  <span class="hljs-built_in">digitalWrite</span>(TRIG_PIN, LOW);
+  <span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> duration= <span class="hljs-built_in">pulseIn</span>(ECHO_PIN, HIGH);
+  <span class="hljs-keyword">int</span> distance = (duration/<span class="hljs-number">2</span>)*<span class="hljs-number">0.03432</span>;
+  <span class="hljs-keyword">if</span>(duration==<span class="hljs-number">0</span>){
+   Serial.<span class="hljs-built_in">println</span>(<span class="hljs-number">0</span>);
+  }
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(distance &gt;= <span class="hljs-number">400</span> || distance &lt;= <span class="hljs-number">2</span>){
+    Serial.<span class="hljs-built_in">println</span>(<span class="hljs-number">1</span>); 
+  }
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(distance != oldVal){
+    Serial.<span class="hljs-built_in">println</span>(distance);
+    oldVal = distance;
+  }
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">100</span>);
+}
+</code></pre>
+<p>With (Somewhat Verbose) Comments:</p>
+<pre class="cpp language-cpp"><code class="hljs cpp language-cpp"><span class="hljs-comment">// Connections:</span>
+<span class="hljs-comment">// Vcc &lt;- 5 V</span>
+<span class="hljs-comment">// Trig &lt;- pin 13 (digital pin)</span>
+<span class="hljs-comment">// Echo -&gt; pin 12 (digital pin)</span>
+<span class="hljs-comment">// GND -&gt; GND</span>
+
+<span class="hljs-comment">// Converted to cm with </span>
+<span class="hljs-comment">// distance = (duration/2)*0.0343;</span>
+<span class="hljs-comment">// `duration` is measured in microseconds</span>
+<span class="hljs-comment">// Sound travels at about 0.0343cm per microsecond</span>
+
+
+<span class="hljs-comment">// The max range of this sensor is 2cm to 400cm</span>
+<span class="hljs-comment">// Readings of 0 or 1 respesent an error</span>
+<span class="hljs-comment">// 0 : No reading</span>
+<span class="hljs-comment">// 1 : Out of Range</span>
+
+<span class="hljs-comment">// Setup the pins</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> TRIG_PIN=<span class="hljs-number">13</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> ECHO_PIN=<span class="hljs-number">12</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-built_in">pinMode</span>(TRIG_PIN, OUTPUT);
+  <span class="hljs-built_in">pinMode</span>(ECHO_PIN, INPUT);
+  <span class="hljs-comment">// Start writing serial data</span>
+  Serial.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+  <span class="hljs-comment">// Output LOW to TRIG_PIN for 2 microseconds</span>
+  <span class="hljs-comment">// This ensures the pin is initalised to LOW</span>
+  <span class="hljs-built_in">digitalWrite</span>(TRIG_PIN, LOW);
+  <span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">2</span>);<span class="hljs-comment">// 2 microseconds is an arbitrary value</span>
+  <span class="hljs-comment">// We just need to make sure the pin is initialized</span>
+}
+
+<span class="hljs-comment">// Create a variable to store or old, cached value</span>
+<span class="hljs-keyword">int</span> oldVal = <span class="hljs-number">-1</span>;<span class="hljs-comment">// Set to negative 1 as to not be confused with an error</span>
+
+<span class="hljs-comment">// Define out main loop</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// Output HIGH to TRIG_PIN for 10 microseconds</span>
+  <span class="hljs-built_in">digitalWrite</span>(TRIG_PIN, HIGH);
+  <span class="hljs-built_in">delayMicroseconds</span>(<span class="hljs-number">10</span>);
+  <span class="hljs-comment">// Turn off TRIG_PIN</span>
+  <span class="hljs-built_in">digitalWrite</span>(TRIG_PIN, LOW);
+  <span class="hljs-comment">// Wait for a response on ECHO_PIN</span>
+  <span class="hljs-comment">// https://www.arduino.cc/reference/en/language/functions/advanced-io/pulsein/</span>
+  <span class="hljs-comment">// Specifically, we are measuring how long the pin stays HIGH</span>
+  <span class="hljs-keyword">const</span> <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> duration= <span class="hljs-built_in">pulseIn</span>(ECHO_PIN, HIGH);
+  <span class="hljs-comment">// Calculate the distance</span>
+  <span class="hljs-keyword">int</span> distance = (duration/<span class="hljs-number">2</span>)*<span class="hljs-number">0.03432</span>;
+  <span class="hljs-comment">// If duration is 0 something is wrong</span>
+  <span class="hljs-comment">// No pulse from sensor</span>
+  <span class="hljs-keyword">if</span>(duration==<span class="hljs-number">0</span>){
+   Serial.<span class="hljs-built_in">println</span>(<span class="hljs-number">0</span>);
+  }
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(distance &gt;= <span class="hljs-number">400</span> || distance &lt;= <span class="hljs-number">2</span>){
+    <span class="hljs-comment">// Out of range</span>
+    Serial.<span class="hljs-built_in">println</span>(<span class="hljs-number">1</span>); 
+  }
+  <span class="hljs-comment">// Make sure we are only printing if we have a new value to print</span>
+  <span class="hljs-comment">// Remove the conditional if you want to print every tick</span>
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(distance != oldVal){
+    Serial.<span class="hljs-built_in">println</span>(distance);
+    <span class="hljs-comment">// Record the old value</span>
+    oldVal = distance;
+  }
+  <span class="hljs-comment">// Wait 0.1 seconds before looping again</span>
+  <span class="hljs-comment">// This is an abitrary value, you can loop a lot faster if you want</span>
+  <span class="hljs-built_in">delay</span>(<span class="hljs-number">100</span>);
+ }
+</code></pre>
+<h2 id="bonusvideo">Bonus Video</h2>
+<p>This is an example of using the device as a midi controller via a Python. </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p4j3gs_Jz74" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

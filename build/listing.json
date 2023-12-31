@@ -1,0 +1,1047 @@
+[
+  {
+    "path": {
+      "root": "",
+      "dir": "",
+      "base": "about-you.md",
+      "ext": ".html",
+      "name": "about-you"
+    },
+    "location": "about-you.html",
+    "meta": {
+      "title": "About You",
+      "description": "Some info about you."
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "",
+      "base": "about.md",
+      "ext": ".html",
+      "name": "about"
+    },
+    "location": "about.html",
+    "meta": {
+      "title": "About Me and This Site",
+      "description": "Some info about me and this website."
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "",
+      "base": "favicon.ico",
+      "ext": ".ico",
+      "name": "favicon"
+    },
+    "location": "favicon.ico",
+    "meta": {},
+    "originalExt": ".ico"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "",
+      "base": "header-image.jpg",
+      "ext": ".jpg",
+      "name": "header-image"
+    },
+    "location": "header-image.jpg",
+    "meta": {},
+    "originalExt": ".jpg"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img",
+      "base": "Ultrasonic-sensor-drawing.png",
+      "ext": ".png",
+      "name": "Ultrasonic-sensor-drawing"
+    },
+    "location": "img/Ultrasonic-sensor-drawing.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img",
+      "base": "Ultrasonic-sensor-header.jpg",
+      "ext": ".jpg",
+      "name": "Ultrasonic-sensor-header"
+    },
+    "location": "img/Ultrasonic-sensor-header.jpg",
+    "meta": {},
+    "originalExt": ".jpg"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img",
+      "base": "Ultrasonic-sensor-sketch.png",
+      "ext": ".png",
+      "name": "Ultrasonic-sensor-sketch"
+    },
+    "location": "img/Ultrasonic-sensor-sketch.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img/design",
+      "base": "donuts.png",
+      "ext": ".png",
+      "name": "donuts"
+    },
+    "location": "img/design/donuts.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img/design",
+      "base": "max.png",
+      "ext": ".png",
+      "name": "max"
+    },
+    "location": "img/design/max.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img/design",
+      "base": "md.png",
+      "ext": ".png",
+      "name": "md"
+    },
+    "location": "img/design/md.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img/design",
+      "base": "stocknw.png",
+      "ext": ".png",
+      "name": "stocknw"
+    },
+    "location": "img/design/stocknw.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img/design",
+      "base": "theWPFixers.png",
+      "ext": ".png",
+      "name": "theWPFixers"
+    },
+    "location": "img/design/theWPFixers.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img",
+      "base": "md-banner.jpg",
+      "ext": ".jpg",
+      "name": "md-banner"
+    },
+    "location": "img/md-banner.jpg",
+    "meta": {},
+    "originalExt": ".jpg"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img",
+      "base": "me.jpg",
+      "ext": ".jpg",
+      "name": "me"
+    },
+    "location": "img/me.jpg",
+    "meta": {},
+    "originalExt": ".jpg"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img",
+      "base": "me_cropped.jpg",
+      "ext": ".jpg",
+      "name": "me_cropped"
+    },
+    "location": "img/me_cropped.jpg",
+    "meta": {},
+    "originalExt": ".jpg"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img",
+      "base": "spellcheck.png",
+      "ext": ".png",
+      "name": "spellcheck"
+    },
+    "location": "img/spellcheck.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img",
+      "base": "yt-web-app-chrome.png",
+      "ext": ".png",
+      "name": "yt-web-app-chrome"
+    },
+    "location": "img/yt-web-app-chrome.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "img",
+      "base": "yt-web-app-vivaldi.png",
+      "ext": ".png",
+      "name": "yt-web-app-vivaldi"
+    },
+    "location": "img/yt-web-app-vivaldi.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "",
+      "base": "index.md",
+      "ext": ".html",
+      "name": "index"
+    },
+    "location": "index.html",
+    "meta": {
+      "title": "Home",
+      "description": "The home page."
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "lab",
+      "base": "colorbrain.html",
+      "ext": ".html",
+      "name": "colorbrain"
+    },
+    "location": "lab/colorbrain.html",
+    "meta": {},
+    "originalExt": ".html"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "",
+      "base": "max.png",
+      "ext": ".png",
+      "name": "max"
+    },
+    "location": "max.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/archive",
+      "base": "_radio-links.md",
+      "ext": ".html",
+      "name": "_radio-links"
+    },
+    "location": "posts/archive/_radio-links.html",
+    "meta": {
+      "title": "Various Radio Links",
+      "description": "Links to some cool radio stuff.",
+      "tags": "#radio #link"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/archive",
+      "base": "create-wp-db-cli.md",
+      "ext": ".html",
+      "name": "create-wp-db-cli"
+    },
+    "location": "posts/archive/create-wp-db-cli.html",
+    "meta": {
+      "title": "Create A New WordPress Database From MYSQL CLI",
+      "description": "Creating a new database for WordPress from the MYSQL command line interface is easy.",
+      "tags": "#programming #wordpress #mysql"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/archive",
+      "base": "download-files-nodejs.md",
+      "ext": ".html",
+      "name": "download-files-nodejs"
+    },
+    "location": "posts/archive/download-files-nodejs.html",
+    "meta": {
+      "title": "Downloading Files with NodeJS",
+      "description": "NodeJs gives us native access to the local drives. Learn how to download files.",
+      "tags": "#programming #js #guide"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/archive",
+      "base": "js-promises.md",
+      "ext": ".html",
+      "name": "js-promises"
+    },
+    "location": "posts/archive/js-promises.html",
+    "meta": {
+      "title": "JS Promises Explained",
+      "description": "A guide on JS promises.",
+      "tags": "#programming #js #guide"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/archive",
+      "base": "node-async-readline.md",
+      "ext": ".html",
+      "name": "node-async-readline"
+    },
+    "location": "posts/archive/node-async-readline.html",
+    "meta": {
+      "title": "NodeJS read CLI input asynchronously.",
+      "description": "Read CLI input without callback hell.",
+      "tags": "#js #programming #example"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/archive",
+      "base": "parasails-utilities.md",
+      "ext": ".html",
+      "name": "parasails-utilities"
+    },
+    "location": "posts/archive/parasails-utilities.html",
+    "meta": {
+      "title": "Using Parasails Utility Functions With SailsJS to Re-use Front-End Code",
+      "description": "When developing anything but the most trivial web apps, you often end up writing code that you want to use in multiple places. This is a guide for doing that with SailsJS/Vue.",
+      "tags": "#programming #js #vue #guide"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/archive",
+      "base": "quest-telemetry.md",
+      "ext": ".html",
+      "name": "quest-telemetry"
+    },
+    "location": "posts/archive/quest-telemetry.html",
+    "meta": {
+      "title": "Disable Oculus Quest Telemetry",
+      "description": "adb commands for disabling facebook telemetry on the Oculus Quest and Quest 2.",
+      "tags": "#hacking #electronics #guide"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/archive",
+      "base": "require-on-front-end.md",
+      "ext": ".html",
+      "name": "require-on-front-end"
+    },
+    "location": "posts/archive/require-on-front-end.html",
+    "meta": {
+      "title": "Using require() on the Front-end",
+      "description": "How to use require in front-end javascript.",
+      "tags": "#programming #js #guide"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/archive",
+      "base": "setup-lamp-wp.md",
+      "ext": ".html",
+      "name": "setup-lamp-wp"
+    },
+    "location": "posts/archive/setup-lamp-wp.html",
+    "meta": {
+      "title": "Setting Up an Ubuntu Server For WordPress (LAMP)",
+      "description": "How we used to setup LAMP way back in the day.",
+      "tags": "#programming #wordpress"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/archive",
+      "base": "vuejs-components.md",
+      "ext": ".html",
+      "name": "vuejs-components"
+    },
+    "location": "posts/archive/vuejs-components.html",
+    "meta": {
+      "title": "VueJS Components Guide",
+      "description": "This guide will attempt to explain and demonstrate the powerful \"components\" system used in VueJS.",
+      "tags": "#programming #js #vue #guide"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "arduino-ultrasonic-distance.md",
+      "ext": ".html",
+      "name": "arduino-ultrasonic-distance"
+    },
+    "location": "posts/arduino-ultrasonic-distance.html",
+    "meta": {
+      "title": "HC-SR04 Ultrasonic Distance Sensor With Arduino",
+      "description": "How ultrasonic distance works",
+      "tags": "#arduino #electronics #sensor"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "argument-for-static-langs.md",
+      "ext": ".html",
+      "name": "argument-for-static-langs"
+    },
+    "location": "posts/argument-for-static-langs.html",
+    "meta": {
+      "title": "An argument for statically typed languages",
+      "description": "Why I think data types matter.",
+      "tags": "#programming #javascript #thoughts"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "backup-restore-mysql-db-cli.md",
+      "ext": ".html",
+      "name": "backup-restore-mysql-db-cli"
+    },
+    "location": "posts/backup-restore-mysql-db-cli.html",
+    "meta": {
+      "title": "Backing Up & Restoring a MySQL Database from the Command Line",
+      "description": "A quick guide on using the MySQL CLI to manage your database backups.",
+      "tags": "#programming #mysql"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "beginner-radio-guide.md",
+      "ext": ".html",
+      "name": "beginner-radio-guide"
+    },
+    "location": "posts/beginner-radio-guide.html",
+    "meta": {
+      "title": "Beginner Radio Guide",
+      "description": "A beginner radio guide, specifically for the Baofeng UV-5R.",
+      "tags": "#radio"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "breakout-of-parent-css.md",
+      "ext": ".html",
+      "name": "breakout-of-parent-css"
+    },
+    "location": "posts/breakout-of-parent-css.html",
+    "meta": {
+      "title": "Breaking Out of Parent Element with CSS",
+      "description": "How to get out of a parent element with CSS.",
+      "tags": "#programming #css #front-end"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "can-chatgpt-write-software.md",
+      "ext": ".html",
+      "name": "can-chatgpt-write-software"
+    },
+    "location": "posts/can-chatgpt-write-software.html",
+    "meta": {
+      "title": "Can chatGPT Write Software?",
+      "description": "An exploration of chatGPT's software writing ability."
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "cellular-automota.draft.md",
+      "ext": ".html",
+      "name": "cellular-automota.draft"
+    },
+    "location": "posts/cellular-automota.draft.html",
+    "meta": {
+      "title": "Exploring the Game of Life",
+      "description": "Exploring the Game of Life",
+      "tags": ""
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "chatgpt-screenplay-ai-fears.md",
+      "ext": ".html",
+      "name": "chatgpt-screenplay-ai-fears"
+    },
+    "location": "posts/chatgpt-screenplay-ai-fears.html",
+    "meta": {
+      "title": "A chatGPT Screenplay",
+      "description": "Why I think data types matter.",
+      "tags": "#programming #javascript #thoughts"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "detect-keypress-js.md",
+      "ext": ".html",
+      "name": "detect-keypress-js"
+    },
+    "location": "posts/detect-keypress-js.html",
+    "meta": {
+      "title": "Detecting A Key Press In JavaScript",
+      "description": "Detecting and accepting keyboard input on your web app or site or game is something that can greatly improve the experience of your users.",
+      "tags": "#programming #js"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "download-files-nodejs.md",
+      "ext": ".html",
+      "name": "download-files-nodejs"
+    },
+    "location": "posts/download-files-nodejs.html",
+    "meta": {
+      "title": "Downloading Files with NodeJS",
+      "description": "NodeJs gives us native access to the local drives. Learn how to download files.",
+      "tags": "#programming #js #guide"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "emoji-math.md",
+      "ext": ".html",
+      "name": "emoji-math"
+    },
+    "location": "posts/emoji-math.html",
+    "meta": {
+      "title": "Emoji Math",
+      "description": "Basic Algebra with Emojis",
+      "tags": "#math #guide"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "frequency-and-wavelength.md",
+      "ext": ".html",
+      "name": "frequency-and-wavelength"
+    },
+    "location": "posts/frequency-and-wavelength.html",
+    "meta": {
+      "title": "Frequency & Wavelength",
+      "description": "A short guide on dealing with frequency and wavelength.",
+      "tags": "#radio #waves #electronics #hacking"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "git-cli.md",
+      "ext": ".html",
+      "name": "git-cli"
+    },
+    "location": "posts/git-cli.html",
+    "meta": {
+      "title": "Using Git from the Command Line Interface",
+      "description": "Git is a powerful tool that is used to track software versions and help teams collaborate on large projects. Learn how to use it.",
+      "tags": "#programming #git #guide"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "github-3d.md",
+      "ext": ".html",
+      "name": "github-3d"
+    },
+    "location": "posts/github-3d.html",
+    "meta": {
+      "title": "Github 3D Files",
+      "description": "Tracking and rendering 3D files on Github.",
+      "tags": "#programming #3d"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "ide-spellcheck.md",
+      "ext": ".html",
+      "name": "ide-spellcheck"
+    },
+    "location": "posts/ide-spellcheck.html",
+    "meta": {
+      "title": "Should Your IDE Have Spellcheck?",
+      "description": "My thoughts on spellcheck in your IDE.",
+      "tags": "#programming #thoughts"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/img",
+      "base": "Ultrasonic-sensor-drawing.png",
+      "ext": ".png",
+      "name": "Ultrasonic-sensor-drawing"
+    },
+    "location": "posts/img/Ultrasonic-sensor-drawing.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/img",
+      "base": "Ultrasonic-sensor-header.jpg",
+      "ext": ".jpg",
+      "name": "Ultrasonic-sensor-header"
+    },
+    "location": "posts/img/Ultrasonic-sensor-header.jpg",
+    "meta": {},
+    "originalExt": ".jpg"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/img",
+      "base": "Ultrasonic-sensor-sketch.png",
+      "ext": ".png",
+      "name": "Ultrasonic-sensor-sketch"
+    },
+    "location": "posts/img/Ultrasonic-sensor-sketch.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/img",
+      "base": "carmack-twitter-gpt-reply.png",
+      "ext": ".png",
+      "name": "carmack-twitter-gpt-reply"
+    },
+    "location": "posts/img/carmack-twitter-gpt-reply.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/img",
+      "base": "carmack-twitter-gpt.png",
+      "ext": ".png",
+      "name": "carmack-twitter-gpt"
+    },
+    "location": "posts/img/carmack-twitter-gpt.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/img",
+      "base": "hdsdr-waterfall.png",
+      "ext": ".png",
+      "name": "hdsdr-waterfall"
+    },
+    "location": "posts/img/hdsdr-waterfall.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/img",
+      "base": "radio-antenna-connectors.png",
+      "ext": ".png",
+      "name": "radio-antenna-connectors"
+    },
+    "location": "posts/img/radio-antenna-connectors.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/img",
+      "base": "saw-fs.png",
+      "ext": ".png",
+      "name": "saw-fs"
+    },
+    "location": "posts/img/saw-fs.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/img",
+      "base": "scanner-radio.jpg",
+      "ext": ".jpg",
+      "name": "scanner-radio"
+    },
+    "location": "posts/img/scanner-radio.jpg",
+    "meta": {},
+    "originalExt": ".jpg"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/img",
+      "base": "spellcheck.png",
+      "ext": ".png",
+      "name": "spellcheck"
+    },
+    "location": "posts/img/spellcheck.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts/img",
+      "base": "square-fs.png",
+      "ext": ".png",
+      "name": "square-fs"
+    },
+    "location": "posts/img/square-fs.png",
+    "meta": {},
+    "originalExt": ".png"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "laws-of-ux.md",
+      "ext": ".html",
+      "name": "laws-of-ux"
+    },
+    "location": "posts/laws-of-ux.html",
+    "meta": {
+      "title": "Laws of UX",
+      "description": "The rule and regulations of good user experience.",
+      "tags": "#thoughts #programming"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "linux-largest-file.md",
+      "ext": ".html",
+      "name": "linux-largest-file"
+    },
+    "location": "posts/linux-largest-file.html",
+    "meta": {
+      "title": "Listing The Largest Files On A Linux System",
+      "description": "How to deal with full drives on linux.",
+      "tags": "#linux #programming"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "mermaid.md",
+      "ext": ".html",
+      "name": "mermaid"
+    },
+    "location": "posts/mermaid.html",
+    "meta": {
+      "title": "Mermaids?",
+      "description": "My thoughts on spellcheck in your IDE.",
+      "tags": "#programming #thoughts"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "moving-within-a-matrix.md",
+      "ext": ".html",
+      "name": "moving-within-a-matrix"
+    },
+    "location": "posts/moving-within-a-matrix.html",
+    "meta": {
+      "title": "Moving With A Matrix",
+      "description": "This guide will attempt to explain how we can move (translate) an object (set or shape) in a two dimensional matrix which is a key concept of graphics programming",
+      "tags": "#programming #js #guide #hacking #electronics"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "negative-features.md",
+      "ext": ".html",
+      "name": "negative-features"
+    },
+    "location": "posts/negative-features.html",
+    "meta": {
+      "title": "Negative Features",
+      "description": "Thoughts.",
+      "tags": "#programming #thoughts"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "neural-web.md",
+      "ext": ".html",
+      "name": "neural-web"
+    },
+    "location": "posts/neural-web.html",
+    "meta": {
+      "title": "Neural Web",
+      "description": "Exploring Neural Nets In The Browser",
+      "tags": "#ai #web"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "node-async-readline.md",
+      "ext": ".html",
+      "name": "node-async-readline"
+    },
+    "location": "posts/node-async-readline.html",
+    "meta": {
+      "title": "NodeJS read CLI input asynchronously.",
+      "description": "Read CLI input without callback hell.",
+      "tags": "#js #programming #example"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "popular-sdrs.md",
+      "ext": ".html",
+      "name": "popular-sdrs"
+    },
+    "location": "posts/popular-sdrs.html",
+    "meta": {
+      "title": "Comparison of Popular SDRs",
+      "description": "Getting started with software defined radio.",
+      "tags": "#radio #guide"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "problem-solving.md",
+      "ext": ".html",
+      "name": "problem-solving"
+    },
+    "location": "posts/problem-solving.html",
+    "meta": {
+      "title": "Problem Solving",
+      "description": "A valuable thought on problem solving.",
+      "tags": "#thoughts"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "rg351-synth.md",
+      "ext": ".html",
+      "name": "rg351-synth"
+    },
+    "location": "posts/rg351-synth.html",
+    "meta": {
+      "title": "Using An RG351 As A cSound Synth",
+      "description": "These things can run linux, so naturally I made one into a cSound synth.",
+      "tags": "#hacking #audio"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "sdr-tools.md",
+      "ext": ".html",
+      "name": "sdr-tools"
+    },
+    "location": "posts/sdr-tools.html",
+    "meta": {
+      "title": "SDR Tools",
+      "description": "The rule and regulations of good user experience.",
+      "tags": "#radio #link"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "traverse-fs-nodejs.md",
+      "ext": ".html",
+      "name": "traverse-fs-nodejs"
+    },
+    "location": "posts/traverse-fs-nodejs.html",
+    "meta": {
+      "title": "Traverse A Filesystem With Node",
+      "description": "How to traverse through a local file system with NodeJS.",
+      "tags": "#programming #js"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "posts",
+      "base": "using-dipole-antennas.md",
+      "ext": ".html",
+      "name": "using-dipole-antennas"
+    },
+    "location": "posts/using-dipole-antennas.html",
+    "meta": {
+      "title": "Using Dipole Antennas",
+      "description": "A guide by RTL-SDR.",
+      "tags": "#radio #link #guide #archive"
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "",
+      "base": "projects.md",
+      "ext": ".html",
+      "name": "projects"
+    },
+    "location": "projects.html",
+    "meta": {
+      "title": "Projects",
+      "description": "Project Info."
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "",
+      "base": "search.md",
+      "ext": ".html",
+      "name": "search"
+    },
+    "location": "search.html",
+    "meta": {
+      "title": "Search Site Directory",
+      "description": "A list of all assets on this website."
+    },
+    "originalExt": ".md"
+  },
+  {
+    "path": {
+      "root": "",
+      "dir": "weather",
+      "base": "index.md",
+      "ext": ".html",
+      "name": "index"
+    },
+    "location": "weather/index.html",
+    "meta": {
+      "title": "Weather",
+      "description": "Wrapper for wttr.in"
+    },
+    "originalExt": ".md"
+  }
+]

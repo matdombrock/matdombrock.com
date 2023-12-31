@@ -1,0 +1,803 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"VueJS Components Guide",
+  "description":"This guide will attempt to explain and demonstrate the powerful \"components\" system used in VueJS.",
+  "tags":"#programming #js #vue #guide"
+}
+;</script>
+<h1 id="vuejscomponentsguide">VueJS Components Guide</h1>
+<div class="archive-msg">ARCHIVED: This is for historical purposes only!</div>
+<h2 id="introduction">Introduction</h2>
+<p><strong>NOTE:</strong> <em>This guide assumes that you are already somewhat familiar with VueJS. This is not a guide for basic VueJS usage. If you want to learn the basics of VueJS there is an excellent tutorial on <a href="https://vuejs.org/v2/guide/installation.html">VueJS.org</a>.</em></p>
+<p>This guide will attempt to explain and demonstrate the powerful "components" system used in VueJS. There is already great documentation available on <a href="https://vuejs.org/v2/guide/components.html">VueJS.org</a>. However, this guide will go more in-depth and will demonstrate how to nest elements within other elements. It also includes a slightly less trivial example than what is shown in the main documentation.</p>
+<p>What we will do here is setup a small "database" with information about a few <a href="https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System">SNES</a> games. We will then render the list elements using VueJS components. </p>
+<p><strong>You can see all of this code in action on <a href="https://repl.it/@mathieudombrock/VueJS-Components">repl.it</a>!</strong></p>
+<h2 id="settingupourdata">Setting Up Our Data</h2>
+<p>To get started we need to sample data to play with. Let's set that up now. </p>
+<p>To do this, we simply need to supply our list of games to the Vue instance inside of it's data object. Our Vue instance might look something like this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">var</span> app =  <span class="hljs-keyword">new</span>  Vue({
+    <span class="hljs-attr">el</span>:  <span class="hljs-string">&#x27;#app&#x27;</span>,
+    <span class="hljs-attr">data</span>:  {
+        <span class="hljs-attr">games</span>:[
+            {
+                <span class="hljs-attr">title</span>:  <span class="hljs-string">&quot;The Legend of Zelda: A Link to the Past&quot;</span>,
+                <span class="hljs-attr">publisher</span>:  <span class="hljs-string">&quot;Nintendo&quot;</span>,
+                <span class="hljs-attr">developer</span>:  <span class="hljs-string">&quot;Nintendo&quot;</span>,
+                <span class="hljs-attr">year</span>:  <span class="hljs-number">1992</span>
+            },
+            {
+                <span class="hljs-attr">title</span>:  <span class="hljs-string">&quot;Super Mario World&quot;</span>,
+                <span class="hljs-attr">publisher</span>:  <span class="hljs-string">&quot;Nintendo&quot;</span>,
+                <span class="hljs-attr">developer</span>:  <span class="hljs-string">&quot;Nintendo&quot;</span>,
+                <span class="hljs-attr">year</span>:  <span class="hljs-number">1991</span>
+            },
+            {
+                <span class="hljs-attr">title</span>:  <span class="hljs-string">&quot;Super Metroid&quot;</span>,
+                <span class="hljs-attr">publisher</span>:  <span class="hljs-string">&quot;Nintendo&quot;</span>,
+                <span class="hljs-attr">developer</span>:  <span class="hljs-string">&quot;Intelligent Systems&quot;</span>,
+                <span class="hljs-attr">year</span>:  <span class="hljs-number">1994</span>
+            },
+            {
+                <span class="hljs-attr">title</span>:  <span class="hljs-string">&quot;Chrono Trigger&quot;</span>,
+                <span class="hljs-attr">publisher</span>:  <span class="hljs-string">&quot;Square Co., Ltd.&quot;</span>,
+                <span class="hljs-attr">developer</span>:  <span class="hljs-string">&quot;Square Co., Ltd.&quot;</span>,
+                <span class="hljs-attr">year</span>:  <span class="hljs-number">1995</span>
+            },
+            {
+                <span class="hljs-attr">title</span>:  <span class="hljs-string">&quot;Donkey Kong Country&quot;</span>,
+                <span class="hljs-attr">publisher</span>:  <span class="hljs-string">&quot;Nintendo&quot;</span>,
+                <span class="hljs-attr">developer</span>:  <span class="hljs-string">&quot;Rare, Ltd.&quot;</span>,
+                <span class="hljs-attr">year</span>:  <span class="hljs-number">1994</span>
+            },
+            {
+                <span class="hljs-attr">title</span>:  <span class="hljs-string">&quot;Secret of Mana&quot;</span>,
+                <span class="hljs-attr">publisher</span>:  <span class="hljs-string">&quot;Square Co., Ltd.&quot;</span>,
+                <span class="hljs-attr">developer</span>:  <span class="hljs-string">&quot;Square Co., Ltd.&quot;</span>,
+                <span class="hljs-attr">year</span>:  <span class="hljs-number">1993</span>
+            },
+            {
+                <span class="hljs-attr">title</span>:  <span class="hljs-string">&quot;Super Mario World 2: Yoshi&#x27;s Island&quot;</span>,
+                <span class="hljs-attr">publisher</span>:  <span class="hljs-string">&quot;Nintendo&quot;</span>,
+                <span class="hljs-attr">developer</span>:  <span class="hljs-string">&quot;Nintendo&quot;</span>,
+                <span class="hljs-attr">year</span>:  <span class="hljs-number">1995</span>
+            },
+        ]
+    },
+})
+</code></pre>
+<h2 id="renderingthedatawithoutcomponents">Rendering The Data Without Components</h2>
+<p>Since rendering this data would be somewhat trivial, it's easy to do this without using components. For the sake of comparison, I will show how we can render the data without components, and then we will rebuild the system using components. </p>
+<pre><code class="hljs"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>  <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>  <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;game in games&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            </span><span class="hljs-template-variable">{{<span class="hljs-name">game.title</span>}}</span><span class="xml"> - </span><span class="hljs-template-variable">{{<span class="hljs-name">game.year</span>}}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            Publisher: </span><span class="hljs-template-variable">{{<span class="hljs-name">game.publisher</span>}}</span><span class="xml"> | Developer: </span><span class="hljs-template-variable">{{<span class="hljs-name">game.developer</span>}}</span><span class="xml">
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
+<p>To make things a little more complex. Let's sort our list of games by year. To do this we will need to add a method to our Vue instance.</p>
+<p>Add a new method to your view instance like this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">var</span> app =  <span class="hljs-keyword">new</span>  Vue({
+    <span class="hljs-attr">el</span>:  <span class="hljs-string">&#x27;#app&#x27;</span>,
+    <span class="hljs-attr">data</span>:  {
+        <span class="hljs-attr">games</span>:[
+            <span class="hljs-comment">// your data from before</span>
+        ]
+    },
+    <span class="hljs-function"><span class="hljs-title">mounted</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">this</span>.sortByYear()
+    },
+    <span class="hljs-attr">methods</span>:{
+        <span class="hljs-attr">sortByYear</span>:  <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-built_in">this</span>.games.sort(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>)</span>{
+                <span class="hljs-keyword">if</span>(a.year &lt; b.year){
+                    <span class="hljs-keyword">return</span>  -<span class="hljs-number">1</span>
+                }
+                <span class="hljs-keyword">if</span>(a.year &gt; b.year){
+                    <span class="hljs-keyword">return</span>  <span class="hljs-number">1</span>
+                }
+                <span class="hljs-keyword">return</span>  <span class="hljs-number">0</span>
+            })
+        },
+    }
+})
+</code></pre>
+<p><strong>NOTE:</strong> <em>I won't get into the sorting function here because that's outside the scope of this guide. Also, there is probably a better "Vue-style" way to do this anyways.</em></p>
+<p>Notice that we also call the 'sortByYear()' function on <code>mounted()</code> this makes sure that our data is sorted as soon as Vue loads.</p>
+<h2 id="creatingavuejscomponent">Creating A VueJS Component</h2>
+<p>As stated in the official documentation, "Components are reusable Vue instances with a name".</p>
+<p>Let's start with a super simple example. </p>
+<p>Add this code <strong>above</strong> your main Vue instance:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;example-component&#x27;</span>, { 
+    <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;&lt;div&gt;example content&lt;/div&gt;&#x27;</span> 
+})
+<span class="hljs-comment">// main view instance code</span>
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<p>This creates a new element called:</p>
+<pre><code class="hljs"><span class="hljs-section">&lt;example-component&gt;</span>
+</code></pre>
+<p>We can use this anywhere inside of our main Vue instance in the HTML file:</p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">example-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">example-component</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>This will render out to:</p>
+<pre><code class="hljs">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    &lt;<span class="hljs-keyword">div</span>&gt;example content&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<p>That on it's own is pretty useful, but the true power of components lie in their ability to use their own data structures.</p>
+<p><strong>NOTE:</strong> <em>Each component template must contain exactly ONE root element or it will not work!</em></p>
+<h2 id="passingparameterstoacomponent">Passing Parameters To A Component</h2>
+<p>In order to get data from your parent Vue instance into a child component you need to pass in some data parameters in Vue land these are called "props" (short for properties). </p>
+<p>Lets pass some parameters to the component we created above:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;example-component-2&#x27;</span>, {
+    <span class="hljs-attr">props</span>: [
+        <span class="hljs-string">&#x27;title&#x27;</span>,
+        <span class="hljs-string">&#x27;year&#x27;</span>
+    ],
+    <span class="hljs-attr">template</span>: <span class="hljs-string">`
+        &lt;div&gt;
+            &lt;div&gt;
+                {{title}}
+            &lt;/div&gt;
+            &lt;div&gt;
+                {{year}}
+            &lt;/div&gt;
+        &lt;/div&gt;
+    `</span> 
+})
+<span class="hljs-comment">// main view instance code</span>
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<p><strong>NOTE:</strong> *This time I'm calling it 'example-component-2' to avoid confusion.</p>
+<p>Here we passed some parameters (props) called <strong>'title'</strong> and <strong>'content'</strong> and rendered them out inside of the div. </p>
+<p>Notice the use of JS backticks (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template_literals</a>) so that we could write the template out in multiple lines.</p>
+<p>We include this in our HTML file just like we did before. However this time we need to pass are parameters as properties.</p>
+<p>Something like:</p>
+<pre><code class="hljs">&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;
+    &lt;example-component<span class="hljs-number">-2</span> title=<span class="hljs-string">&quot;Super Mario World&quot;</span>  <span class="hljs-built_in">year</span>=<span class="hljs-string">&quot;1991&quot;</span>&gt;&lt;/example-component<span class="hljs-number">-2</span>&gt;
+&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+<h3 id="passingalldataasoneparameter">Passing All Data As One Parameter</h3>
+<p>If we need to pass a lot of data to a child component, it could get very cumbersome very quickly. Imagine working with something like this:</p>
+<pre><code class="hljs">&lt;example-component-X <span class="hljs-attribute">title</span>=<span class="hljs-string">&quot;Super Mario World&quot;</span> <span class="hljs-attribute">year</span>=<span class="hljs-string">&quot;1991&quot;</span> <span class="hljs-attribute">publisher</span>=<span class="hljs-string">&quot;Nintendo&quot;</span> <span class="hljs-attribute">developer</span>=<span class="hljs-string">&quot;Nintendo&quot;</span>&gt;&lt;/example-component-X&gt;
+</code></pre>
+<p>It's certainly manageable, but it's not ideal. With a very complex data model, it can become nearly impossible to maintain. The good news is that there is a better way.</p>
+<p>We can actually pass an <strong>object</strong> to as a parameter through the properties just like we can with a JavaScript function. </p>
+<p>Consider this vanilla JS code:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> gameData = {
+    <span class="hljs-attr">title</span>:  <span class="hljs-string">&quot;Super Mario World&quot;</span>,
+    <span class="hljs-attr">publisher</span>:  <span class="hljs-string">&quot;Nintendo&quot;</span>,
+    <span class="hljs-attr">developer</span>:  <span class="hljs-string">&quot;Nintendo&quot;</span>,
+    <span class="hljs-attr">year</span>:  <span class="hljs-number">1991</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">example</span>(<span class="hljs-params">data</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(data.title)
+    <span class="hljs-built_in">console</span>.log(data.year)
+}
+example(gameData)
+<span class="hljs-comment">/*outputs*/</span>
+<span class="hljs-comment">// Super Mario World</span>
+<span class="hljs-comment">// 1991</span>
+</code></pre>
+<p>We can do something very similar with Vue. Consider the following Vue HTML:</p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;game in games&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">example-component-3</span> <span class="hljs-attr">v-bind:data</span>=<span class="hljs-string">&quot;game&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">example-component-3</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>This will iterate through each game in our list object called 'games' and it will pass each individual 'game' object into our example component as a property parameter. Notice the use of 'v-bind:' prefixed to the property to make sure it's hooked into the Vue instance. If we didn't use 'v-bind:' we would just be passing in a string "game". Since we are using 'v-bind:' we instead are passing the Vue object known as "game" that was created by our 'v-for' loop.</p>
+<p>To make this work we need to register the 'example-component-3' component:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;example-component-3&#x27;</span>, {
+    <span class="hljs-attr">props</span>: [
+        <span class="hljs-string">&#x27;data&#x27;</span>,
+    ],
+    <span class="hljs-attr">template</span>: <span class="hljs-string">`
+        &lt;div&gt;
+            &lt;div&gt;
+                {{data.title}}
+            &lt;/div&gt;
+            &lt;div&gt;
+                {{data.year}}
+            &lt;/div&gt;
+        &lt;/div&gt;
+    `</span> 
+})
+<span class="hljs-comment">// main view instance code</span>
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<p>Notice that that each piece of info like <strong>'year'</strong> and <strong>'title'</strong> are now prefixed with <strong>'data.'</strong> because they are a child object of the data property. </p>
+<p>If we try this out we will see a list of all of our games and the years they were released. </p>
+<h3 id="passingallparentdata">Passing ALL Parent Data</h3>
+<p>Sometimes it's useful to just pass all of your parent/root element's data to your child object. There are actually two ways to go about this but one is not <em>really</em> passing the data. This isn't something we will use in the main example project for the guide but I will demonstrate anyway.</p>
+<h4 id="actuallypassingthedata">Actually passing the data</h4>
+<p>To actually <strong>pass</strong> the parent's full data we can do something like this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;example-component-4&#x27;</span>, {
+    <span class="hljs-attr">props</span>: [
+        <span class="hljs-string">&#x27;parent&#x27;</span>,
+    ],
+    <span class="hljs-attr">template</span>: <span class="hljs-string">`
+        &lt;span&gt;
+            &lt;div v-for=&quot;game in parent.games&quot;&gt;
+                {{game.title}}
+            &lt;/div&gt;
+        &lt;/span&gt;
+    `</span> 
+})
+<span class="hljs-comment">// main view instance code</span>
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<p><strong>NOTE:</strong> <em>Each component needs exactly ONE root element, and this element can not contain 'v-for' logic. So in this case the root element is a span.</em></p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">example-component-4</span> <span class="hljs-attr">v-bind:parent</span>=<span class="hljs-string">&quot;this&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">example-component-4</span>&gt;</span>
+</code></pre>
+<p>By passing <strong>'this'</strong> as our property argument, we sent a full reference to our self (the Vue parent element) and we can now access our parent's data just like we would in the parent element it's self. Except now we need to append the references with 'parent'.</p>
+<p><strong>NOTE:</strong> <em>Since we are passing an instance of 'self' down to the child, this means that the child can not alter the original parent data. So for instance, you could not change the data in <strong>'parent.games[0].title'</strong> and have it affect the actual parent data. In most cases this is a desired behavior.</em></p>
+<h4 id="usingglobalthisdparent">Using Global this.$parent</h4>
+<p>There is another way to get data from your parent element into a child component. However, not only is this method not actually passing anything, it's also usually a bad idea. None the less here it is. </p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;example-component-5&#x27;</span>, {
+    <span class="hljs-attr">template</span>: <span class="hljs-string">`
+        &lt;span&gt;
+            &lt;div v-for=&quot;game in this.$parent.games&quot;&gt;
+                {{game.title}}
+            &lt;/div&gt;
+        &lt;/span&gt;
+    `</span> 
+})
+<span class="hljs-comment">// main view instance code</span>
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<pre><code class="hljs"><span class="hljs-section">&lt;example-component-5&gt;</span><span class="hljs-section">&lt;/example-component-5&gt;</span>
+</code></pre>
+<p>Trying out <strong>'example-component-5'</strong> you will see that the output is exactly the same as <strong>'example-component-4'</strong>. However, using this code directly exposes the parent data as a global variable which allows you to alter that data directly from a child. Thus breaking the parent child relationship to some extent. For instance you could now write a method that says:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-built_in">this</span>.$parent.games[<span class="hljs-number">0</span>].title = <span class="hljs-string">&quot;Not the actual title&quot;</span>
+</code></pre>
+<p>This might sound like a good idea and it either isn't because you don't know what you're doing, or it actually is because you really know what you're doing. I'll leave that part up to you. Usually we aim to build modular and reusable components, but sometimes building components that are intrinsically linked makes sense.</p>
+<p><strong>NOTE:</strong> <em>If you <strong>do</strong> need to alter data in the parent element, then the best way to do that is with <a href="#pushing-data-back-up-to-the-parent-the-right-way-emitters">emitters</a>.</em></p>
+<h2 id="usingcomponentdata">Using Component Data</h2>
+<p>Components can also have their own internal data that is not passed down or inherited from their parent. This is also not something that will be used in the main example project in this guide but it is worth mentioning none the less. </p>
+<p>Since this is not something that is used in the example project. I will be using the code examples found on <a href="https://vuejs.org/v2/guide/components.html#Reusing-Components">VueJS.org</a>.</p>
+<p>Using internal data for a component works like this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;button-counter&#x27;</span>, { 
+    <span class="hljs-attr">data</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> { 
+            <span class="hljs-attr">count</span>: <span class="hljs-number">0</span> 
+        } 
+    }, 
+    <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;&lt;button v-on:click=&quot;count++&quot;&gt;You clicked me {{ count }} times.&lt;/button&gt;&#x27;</span> 
+})
+</code></pre>
+<p>The way this works is very similar to the way that the data in the root/parent Vue element works, except for the fact that the data must be stored in a function (essentially a constructor function). This is because this data is <strong>unique</strong> to each individual instance of the component and is <strong>NOT</strong> shared between them. Meaning this data is local and <strong>not global</strong>.</p>
+<p>If you were to try the following HTML it would output 3 counter buttons.</p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button-counter</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button-counter</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button-counter</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button-counter</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button-counter</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button-counter</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>Since each button has it's own instance of 'count', clicking one button does not affect the data in the other buttons.</p>
+<h3 id="usingdataandpropstogether">Using Data And Props Together</h3>
+<p>You can of course use data and properties together but at the time of writing this is not clearly demonstrated in the docs. Consider this example:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;button-counter-2&#x27;</span>, { 
+    <span class="hljs-attr">data</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> { 
+            <span class="hljs-attr">count</span>: <span class="hljs-number">0</span> 
+        } 
+    },
+    <span class="hljs-attr">props</span>: [
+        <span class="hljs-string">&#x27;offset&#x27;</span>,
+    ],
+    <span class="hljs-attr">template</span>: <span class="hljs-string">&#x27;&lt;button v-on:click=&quot;count++&quot;&gt;You clicked me {{ count + parseInt(offset) }} times.&lt;/button&gt;&#x27;</span>
+})
+</code></pre>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button-counter-2</span> <span class="hljs-attr">offset</span>=<span class="hljs-string">&quot;1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button-counter-2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button-counter-2</span> <span class="hljs-attr">offset</span>=<span class="hljs-string">&quot;5&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button-counter-2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button-counter-2</span> <span class="hljs-attr">offset</span>=<span class="hljs-string">&quot;-1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button-counter-2</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>Notice that that both the data and the props are treated equally as local variables. However since in the case the props we are using are passed as a string, in order o do math on them we need to convert them to integers using the inbuilt JS function 'parseInt()'. </p>
+<p><strong>NOTE:</strong> <em>This would be a good place to point out that generally speaking you can use any inbuilt JS functions as part of your VueJS markup.</em></p>
+<h2 id="nestingcomponents">Nesting Components</h2>
+<p>To create complex and truly modular apps, we can take advantage of the ability to "nest" components. Put simply, we can use components inside of other components. </p>
+<p>First let's build a component that will take a property called "games" (the list of games in the parent element's data), and output all of the data in an organized way. Then we will split it up into child components.</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;example-component-parent-1&#x27;</span>, {
+    <span class="hljs-attr">props</span>: [
+        <span class="hljs-string">&#x27;games&#x27;</span>,
+    ],
+    <span class="hljs-attr">template</span>: <span class="hljs-string">`
+        &lt;div&gt;
+            &lt;div v-for=&quot;game in games&quot;&gt;
+                &lt;div&gt;
+                    {{game.title}} - {{game.year}}
+                &lt;/div&gt;
+                &lt;div&gt;
+                    Publisher: {{game.publisher}} | Developer: {{game.developer}}
+                &lt;/div&gt;
+                &lt;hr&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    `</span> 
+})
+<span class="hljs-comment">// main view instance code</span>
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">example-component-parent-1</span> <span class="hljs-attr">v-bind:games</span>=<span class="hljs-string">&quot;games&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">example-component-parent-1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>Notice that this is so far, very similar to our original non-component based example.</p>
+<p>What we will do from here is split this up into two more parts. One part will handle displaying the title and year, and the other will handle displaying the publisher and developer.</p>
+<p>Let's rewrite our 'component-parent-1' component to support this split:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;games-list&#x27;</span>,  {
+    <span class="hljs-attr">data</span>:  <span class="hljs-function"><span class="hljs-keyword">function</span>  (<span class="hljs-params"></span>)  </span>{
+        <span class="hljs-keyword">return</span>  {
+            <span class="hljs-attr">games_list</span>:  [...this.games]
+        }
+    },
+    <span class="hljs-attr">props</span>:  [
+        <span class="hljs-string">&#x27;games&#x27;</span>,
+    ],
+    <span class="hljs-function"><span class="hljs-title">mounted</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">this</span>.sortByYearReverse()
+    },
+    <span class="hljs-attr">methods</span>:{
+        <span class="hljs-attr">sortByYearReverse</span>:  <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-built_in">this</span>.games_list.sort(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>)</span>{
+                <span class="hljs-keyword">if</span>(a.year &gt; b.year){
+                    <span class="hljs-keyword">return</span>  -<span class="hljs-number">1</span>
+                }
+                <span class="hljs-keyword">if</span>(a.year &lt; b.year){
+                    <span class="hljs-keyword">return</span>  <span class="hljs-number">1</span>
+                }
+                <span class="hljs-keyword">return</span>  <span class="hljs-number">0</span>
+            })
+        },
+    },
+    <span class="hljs-attr">template</span>:  <span class="hljs-string">`
+        &lt;div&gt;
+            &lt;div v-for=&quot;game in games_list&quot;&gt;
+                &lt;title-and-year v-bind:game=&quot;game&quot;&gt;&lt;/title-and-year&gt;
+                &lt;publisher-and-developer v-bind:game=&quot;game&quot;&gt;&lt;/publisher-and-developer&gt;
+                &lt;hr&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    `</span>
+})
+<span class="hljs-comment">// main view instance code</span>
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<p>Notice that we took in the prop 'games' and assigned it to a value 'games_list' in the data constructor function as a new array. It is important to use the correct syntax for creating a new array:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">var</span> new_array = [...old_array]
+</code></pre>
+<p>If we created the new array like this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">games_list:  <span class="hljs-built_in">this</span>.games
+</code></pre>
+<p>It would actually create a reference to the parent games array instead of creating a new copy of the array. So if we made changes to our new 'games_list' variable, it can have unintended consequences on the 'games' array in the parent. Since we don't want the changes we make to the array here to affect the parent we need to <strong>clone</strong> the array instead of <strong>copying</strong> it.</p>
+<p>This would not be the case with most other types of objects in JS (strings ect). To put it simply, JS arrays are just kind of strange. For more information on this see <a href="https://www.samanthaming.com/tidbits/35-es6-way-to-clone-an-array">this guide by Samantha Ming</a>.</p>
+<p>Notice that we also added two new child components that do not exist yet:</p>
+<pre><code class="hljs"><span class="hljs-section">&lt;title-and-year&gt;</span>
+</code></pre>
+<p>And</p>
+<pre><code class="hljs"><span class="hljs-section">&lt;publisher-and-developer&gt;</span>
+</code></pre>
+<p>Each of these take a prop that is an instance of the object "game" created by our 'v-for' loop.</p>
+<p>Let's create these components now:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;title-and-year&#x27;</span>, {
+    <span class="hljs-attr">props</span>: [
+        <span class="hljs-string">&#x27;game&#x27;</span>,
+    ],
+    <span class="hljs-attr">methods</span>:{
+        <span class="hljs-attr">twoDigitYear</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">year</span>)</span>{
+            <span class="hljs-comment">// converts 4 digit year into 2 digit year</span>
+            <span class="hljs-comment">// assumes all dates fall in one century</span>
+            <span class="hljs-keyword">return</span>  <span class="hljs-string">&quot;&#x27;&quot;</span>+year.toString().substring(<span class="hljs-number">2</span>)
+        }
+    },
+    <span class="hljs-attr">template</span>: <span class="hljs-string">`
+        &lt;div&gt;
+            {{game.title}} ({{twoDigitYear(game.year)}})
+        &lt;/div&gt;
+    `</span> 
+})
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<p>Notice that we added a method called 'twoDigitYear()' that will turn the four digit year into a two digit year. Since this method is only used in this component, the best practice is to write it here instead of in the parent component.</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;publisher-and-developer&#x27;</span>, {
+    <span class="hljs-attr">props</span>: [
+        <span class="hljs-string">&#x27;game&#x27;</span>,
+    ],
+    <span class="hljs-attr">methods</span>:{
+        <span class="hljs-attr">checkSame</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">publisher,developer</span>)</span>{
+            <span class="hljs-comment">// Checks if the publisher and developer are the same </span>
+            <span class="hljs-keyword">if</span>(publisher == developer){
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+            }
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+        }
+    },
+    <span class="hljs-attr">template</span>: <span class="hljs-string">`
+        &lt;div&gt;
+            &lt;span v-if=&quot;checkSame(game.publisher,game.developer)&quot;&gt;
+                {{game.publisher}}
+            &lt;/span&gt;
+            &lt;span v-else&gt;
+                Publisher: {{game.publisher}} | Developer: {{game.developer}}
+            &lt;/span&gt;
+        &lt;/div&gt;
+    `</span> 
+})
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<p>Notice that we created a local method called 'checkSame()' that will check if the developer and the publisher are the same. We then call this in the template to return a bool that is used to check what how we should render the component.</p>
+<p>We can put this all together now by creating out custom component 'games-list' in the HTML file:</p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">games-list</span> <span class="hljs-attr">v-bind:games</span>=<span class="hljs-string">&quot;games&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">games-list</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>This should output something very much like our original non-components example just with the added functionality we put into the two new methods. </p>
+<h2 id="pushingdatabackuptotheparenttherightwayemitters">Pushing Data Back Up To The Parent The Right Way (Emitters)</h2>
+<p>In our project, there is no real reason that we need to pass data from a child component back up to the parent, but for the sake of example, let's come up with one. </p>
+<p>Suppose we wanted to allow our user to choose their favorite game and have it display in a special way at the top of the list. The best way to handle this is by "emitting" and event from the child that can be acted upon by the parent. </p>
+<p>We've already technically done something like this when we were working with the button example:</p>
+<pre><code class="hljs"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">v-on:click</span>=<span class="hljs-string">&quot;count++&quot;</span>&gt;</span>You clicked me </span><span class="hljs-template-variable">{{ <span class="hljs-name">count</span> }}</span><span class="xml"> times.<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</span></code></pre>
+<p>Now let's make a new 'games-list' component that supports a custom "favorite item" button:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;games-list-2&#x27;</span>,  {
+    <span class="hljs-attr">data</span>:  <span class="hljs-function"><span class="hljs-keyword">function</span>  (<span class="hljs-params"></span>)  </span>{
+        <span class="hljs-keyword">return</span>  {
+            <span class="hljs-attr">games_list</span>:  [...this.games],
+            <span class="hljs-attr">favorite</span>: <span class="hljs-string">&quot;None&quot;</span>
+        }
+    },
+    <span class="hljs-attr">props</span>:  [
+        <span class="hljs-string">&#x27;games&#x27;</span>,
+    ],
+    <span class="hljs-function"><span class="hljs-title">mounted</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">this</span>.sortByYearReverse()
+    },
+    <span class="hljs-attr">methods</span>:{
+        <span class="hljs-attr">sortByYearReverse</span>:  <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-built_in">this</span>.games_list.sort(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>)</span>{
+                <span class="hljs-keyword">if</span>(a.year &gt; b.year){
+                    <span class="hljs-keyword">return</span>  -<span class="hljs-number">1</span>
+                }
+                <span class="hljs-keyword">if</span>(a.year &lt; b.year){
+                    <span class="hljs-keyword">return</span>  <span class="hljs-number">1</span>
+                }
+                <span class="hljs-keyword">return</span>  <span class="hljs-number">0</span>
+            })
+        },
+    },
+    <span class="hljs-attr">template</span>:  <span class="hljs-string">`
+        &lt;div&gt;
+            &lt;strong&gt;Favorite Game: {{favorite}}&lt;/strong&gt;
+            &lt;hr&gt;
+            &lt;div v-for=&quot;game in games_list&quot;&gt;
+                &lt;title-and-year v-bind:game=&quot;game&quot;&gt;&lt;/title-and-year&gt;
+                &lt;publisher-and-developer v-bind:game=&quot;game&quot;&gt;&lt;/publisher-and-developer&gt;
+                &lt;favorite-button v-bind:title=&quot;game.title&quot; v-on:setFavorite=&quot;favorite = $event&quot;&gt;
+                &lt;/favorite-button&gt;
+                &lt;hr&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    `</span>
+})
+<span class="hljs-comment">// main view instance code</span>
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<p>Notice the use of <strong>'v-on'</strong>:</p>
+<pre><code class="hljs">v-<span class="hljs-keyword">on</span>:setFavorite=<span class="hljs-string">&quot;favorite = <span class="hljs-subst">$event</span>&quot;</span>
+</code></pre>
+<p>This creates an event listener that can is waiting to do something when the component emits an event called <strong>'setFavortie'</strong>. <strong>'$event'</strong> is the value of the argument that is passed with the emitter, in this case the title of the game.</p>
+<p>Since our components are reusable and modular, we can just reuse the <strong>'title-and-year'</strong> and <strong>'publisher-and-developer'</strong> components we already created. We just need to create a new component for our <strong>'favorite-button'</strong>:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">Vue.component(<span class="hljs-string">&#x27;favorite-button&#x27;</span>, {
+    <span class="hljs-attr">props</span>: [
+        <span class="hljs-string">&#x27;title&#x27;</span>,
+    ],
+    <span class="hljs-attr">template</span>: <span class="hljs-string">`
+        &lt;div&gt;
+            &lt;button v-on:click=&quot;$emit(&#x27;setFavorite&#x27;, title)&quot;&gt;
+                {{title}} is my favorite game
+            &lt;/button&gt;
+        &lt;/div&gt;
+    `</span> 
+})
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<p>Here we are emitting the <strong>'setFavorite'</strong> event on click and sending the value 'title' along with it. The value of title is passed up as <strong>'$event'</strong>.</p>
+<p>Notice that we put the event listener on:</p>
+<pre><code class="hljs"><span class="hljs-section">&lt;favorite-button&gt;</span>
+</code></pre>
+<p>Not on the root element like this:</p>
+<pre><code class="hljs"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-on:setFavorite</span>=<span class="hljs-string">&quot;favorite = $event&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Favorite Game: </span><span class="hljs-template-variable">{{<span class="hljs-name">favorite</span>}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;game in games_list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title-and-year</span> <span class="hljs-attr">v-bind:game</span>=<span class="hljs-string">&quot;game&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title-and-year</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">publisher-and-developer</span> <span class="hljs-attr">v-bind:game</span>=<span class="hljs-string">&quot;game&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">publisher-and-developer</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">favorite-button</span> <span class="hljs-attr">v-bind:title</span>=<span class="hljs-string">&quot;game.title&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">favorite-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span></code></pre>
+<p>This is because an emitter can only pass data to its direct parent. The code above will never see the emitter fire. In other words, emitters are <strong>not global</strong>, they can only go one level up.</p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

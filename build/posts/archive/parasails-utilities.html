@@ -1,0 +1,391 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Using Parasails Utility Functions With SailsJS to Re-use Front-End Code",
+  "description":"When developing anything but the most trivial web apps, you often end up writing code that you want to use in multiple places. This is a guide for doing that with SailsJS/Vue.",
+  "tags":"#programming #js #vue #guide"
+}
+;</script>
+<h1 id="usingparasailsutilityfunctionswithsailsjstoreusefrontendcode">Using Parasails Utility Functions With SailsJS to Re-use Front-End Code</h1>
+<div class="archive-msg">ARCHIVED: This is for historical purposes only!</div>
+<p>When developing anything but the most trivial web apps, you often end up writing code that you want to use in multiple places. If you have some back-end NodeJS code you want to re-use can use <a href="https://sailsjs.com/documentation/concepts/helpers">Sails Helpers</a>. However, reusing front-end Javascript with Sails is not quite so straight-forward. </p>
+<h2 id="theproblem">The Problem</h2>
+<p>So, here's the problem. Imagine that we have a file <code>pageA.page.js</code> that looks like this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">parasails.registerPage(<span class="hljs-string">&#x27;pageA&#x27;</span>, {
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">modal</span>: <span class="hljs-string">&#x27;&#x27;</span>,
+    <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;red&#x27;</span>,
+  },
+  <span class="hljs-attr">beforeMount</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    _.extend(<span class="hljs-built_in">this</span>, SAILS_LOCALS);
+  },
+  <span class="hljs-attr">mounted</span>: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">//…</span>
+  },
+  <span class="hljs-attr">methods</span>: {
+    <span class="hljs-attr">methodA</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">this</span>.content += <span class="hljs-string">&quot; is the best fruit!&quot;</span>;
+    },
+    <span class="hljs-attr">methodB</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">this</span>.content += <span class="hljs-string">&quot; apple!&quot;</span>;
+    }
+  }
+});
+</code></pre>
+<p>Imagine that we also have a <code>pageB.page.js</code> that looks like this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">parasails.registerPage(<span class="hljs-string">&#x27;pageB&#x27;</span>, {
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">modal</span>: <span class="hljs-string">&#x27;&#x27;</span>,
+    <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;yellow&#x27;</span>,
+  },
+  <span class="hljs-attr">beforeMount</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    _.extend(<span class="hljs-built_in">this</span>, SAILS_LOCALS);
+  },
+  <span class="hljs-attr">mounted</span>: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">//…</span>
+  },
+  <span class="hljs-attr">methods</span>: {
+    <span class="hljs-attr">methodA</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">this</span>.content += <span class="hljs-string">&quot; is the best fruit!&quot;</span>;
+    },
+    <span class="hljs-attr">methodB</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">this</span>.content += <span class="hljs-string">&quot; banana!&quot;</span>;
+    }
+  }
+});
+</code></pre>
+<p>As you can see, in both of these files, <code>methodA</code> does the exact same thing. Any good programmer will tell you this is a <em>BAD</em> practice that should be avoided at all costs. Code should never be duplicated when it can be avoided. </p>
+<h2 id="thesolution">The Solution</h2>
+<p>I would argue that the "best" way to go about this is by using <a href="https://webpack.js.org/">webpack</a> as illustrated in the write-up by @Noitidart <a href="https://medium.com/@Noitidart/adding-code-split-react-frontend-without-losing-vue-to-sails-1-x-app-5642131ed8a0">here</a>.</p>
+<p>However, if you take a look at the source code for the Sails example web app, you will see that they are not using webpack at all. So let's see how the Sails team has chosen to handle it. </p>
+<h2 id="parasailsutilities">Parasails Utilities</h2>
+<p>Parasils utilities give us the ability to re-use code across multiple files in a fairly clean manner. Unfortunately however, at the time of this writing, the documentation on this aspect of Sails is very much lacking. The <a href="https://github.com/mikermcneil/parasails">Github page for Parasails</a> currently mentions utilities as a feature but doesn't go into any detail about how they work.</p>
+<p>If you're using the Sails example web app you can find the utility scripts in <code>/assets/js/utilities/</code>. You can also see an example utility at <code>/assets/js/utilities/open-stripe-checkout.js</code>. </p>
+<h2 id="setupanewutility">Setup A New Utility</h2>
+<p>Despite the current lack of documentation, implementation of a Parasails utility is pretty straight-forward. to solve the problem above, we would create a new Parasails utility at <code>/assets/js/utilities/doA.js</code>. In this file we would write:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-comment">/**
+ * methodA
+ * -----------------------------------------------------------------
+ * <span class="hljs-doctag">@param <span class="hljs-type">{String}</span> <span class="hljs-variable">content</span></span>
+ * -----------------------------------------------------------------
+ * <span class="hljs-doctag">@returns <span class="hljs-type">{String?}</span>  </span>
+ * -----------------------------------------------------------------
+ */</span>
+
+parasails.registerUtility(<span class="hljs-string">&#x27;doA&#x27;</span>, <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doA</span>(<span class="hljs-params">content</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>)=&gt;</span>{
+      <span class="hljs-keyword">try</span> {
+        content += <span class="hljs-string">&quot; is the best fruit!&quot;</span>;
+        resolve(content);
+      } <span class="hljs-keyword">catch</span> (err) {
+        reject(err);
+      }
+    });
+});
+</code></pre>
+<p>So now we have a parasails utility that could be called from a <code>page.js</code> file as follows:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">parasails.util.doA(<span class="hljs-string">&quot;some content&quot;</span>);
+</code></pre>
+<h2 id="useyournewutility">Use Your New Utility</h2>
+<p>Let's re-write the code for <code>pageA.page.js</code> to use this new utility:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">parasails.registerPage(<span class="hljs-string">&#x27;pageA&#x27;</span>, {
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">modal</span>: <span class="hljs-string">&#x27;&#x27;</span>,
+    <span class="hljs-attr">content</span>: <span class="hljs-string">&#x27;red&#x27;</span>,
+  },
+  <span class="hljs-attr">beforeMount</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    _.extend(<span class="hljs-built_in">this</span>, SAILS_LOCALS);
+  },
+  <span class="hljs-attr">mounted</span>: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">//…</span>
+  },
+  <span class="hljs-attr">methods</span>: {
+    <span class="hljs-attr">methodA</span>: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">this</span>.content = <span class="hljs-keyword">await</span> parasails.util.doA(<span class="hljs-built_in">this</span>.content);
+    },
+    <span class="hljs-attr">methodB</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">this</span>.content += <span class="hljs-string">&quot; apple!&quot;</span>;
+    }
+  }
+});
+</code></pre>
+<p>The only change that was made was to <code>methodA</code>:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">methodA: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">this</span>.content = <span class="hljs-keyword">await</span> parasails.util.doA(<span class="hljs-built_in">this</span>.content);
+},
+</code></pre>
+<p>Notice that in addition to being setup to call the new utility, <code>methodA</code> has also been converted to an <code>async function</code>. This is required to use <code>await</code>. </p>
+<p>From here you could easily implement the same logic into the the <code>pageB.page.js</code> file. Now you will only need to make changes to the code in one place and you will not have to worry about any of the issues related to duplicating code. </p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

@@ -1,0 +1,372 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Setting Up an Ubuntu Server For WordPress (LAMP)",
+  "description":"How we used to setup LAMP way back in the day.",
+  "tags":"#programming #wordpress"
+}
+;</script>
+<h1 id="settingupanubuntuserverforwordpresslamp">Setting Up an Ubuntu Server For WordPress (LAMP)</h1>
+<div class="archive-msg">ARCHIVED: This is for historical purposes only!</div>
+<h2 id="update">Update</h2>
+<p>A lot has changed in Ubuntu LAMP land since this guide was originally written. I've gone back through and updated everything as best I can for Ubuntu 20.04LTS and MySQL8 support!</p>
+<h2 id="gettingready">Getting Ready</h2>
+<p>Update your package list and install upgrades:</p>
+<pre><code class="hljs">sudo apt <span class="hljs-meta">update</span> <span class="hljs-variable">&amp;&amp;</span> sudo apt upgrade
+</code></pre>
+<h2 id="installapache">Install Apache</h2>
+<pre><code class="hljs"><span class="hljs-attribute">sudo</span> apt install apache<span class="hljs-number">2</span>
+</code></pre>
+<h2 id="installmysqlserver">Install MYSQL Server</h2>
+<pre><code class="hljs">sudo apt install mysql-<span class="hljs-keyword">server</span>
+</code></pre>
+<h2 id="configuremysqlserver">Configure MYSQL Server</h2>
+<p>Login to the MYSQL shell with:</p>
+<pre><code class="hljs"><span class="hljs-attribute">sudo mysql -u root</span>
+</code></pre>
+<p>Create a new database for WordPress:</p>
+<p><strong>UPDATE</strong>: The follwing was an acceptable shorthand command in MySQL 8 and lower. However, this shorthand is no longer possible.</p>
+<p><strong>MYSQL 7</strong></p>
+<pre class="sql language-sql"><code class="hljs sql language-sql"><span class="hljs-keyword">CREATE</span> DATABASE wordpress;
+<span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">ON</span> wordpress.<span class="hljs-operator">*</span> <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;wordpress&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;password&#x27;</span>;
+</code></pre>
+<p><strong>MYSQL 8</strong></p>
+<pre class="sql language-sql"><code class="hljs sql language-sql"><span class="hljs-keyword">CREATE</span> DATABASE wordpress;
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;wordpress&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;password&#x27;</span>;
+<span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">ON</span> wordpress.<span class="hljs-operator">*</span> <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;wordpress&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span>;
+</code></pre>
+<p><em>Make sure to set your password to something secure!</em></p>
+<p>Exit the shell:</p>
+<pre><code class="hljs"><span class="hljs-keyword">quit</span>
+</code></pre>
+<p>Run the MYSQL Secure Installation:</p>
+<pre><code class="hljs"><span class="hljs-attribute">sudo mysql_secure_installation</span>
+</code></pre>
+<p>Make sure to read each option carefully, but generally speaking you can answer yes to all in most cases.</p>
+<h2 id="installphp">Install PHP</h2>
+<p><strong>UPDATE:</strong> Current versions of Ubuntu (20.04LTS) will need PHP 7.4 packages.</p>
+<h3 id="1804lts">18.04LTS</h3>
+<pre><code class="hljs"><span class="hljs-attribute">sudo</span> apt install php<span class="hljs-number">7</span>.<span class="hljs-number">2</span> libapache<span class="hljs-number">2</span>-mod-php<span class="hljs-number">7</span>.<span class="hljs-number">2</span> php-mysql
+</code></pre>
+<h3 id="2004lts">20.04LTS</h3>
+<pre><code class="hljs"><span class="hljs-attribute">sudo</span> apt install php<span class="hljs-number">7</span>.<span class="hljs-number">4</span> libapache<span class="hljs-number">2</span>-mod-php<span class="hljs-number">7</span>.<span class="hljs-number">4</span> php-mysql
+</code></pre>
+<h3 id="all">All</h3>
+<p>Also install some extra packages that might be needed by WordPress:</p>
+<pre><code class="hljs">sudo apt <span class="hljs-keyword">install </span>php-curl php-<span class="hljs-keyword">json </span>php-cgi
+</code></pre>
+<h2 id="finishserversetup">Finish Server Setup</h2>
+<h3 id="allowyourserverthroughthefirewall">Allow Your Server Through The Firewall</h3>
+<pre><code class="hljs"><span class="hljs-attribute">sudo</span> ufw <span class="hljs-literal">allow</span> in <span class="hljs-string">&quot;Apache Full&quot;</span>
+</code></pre>
+<h3 id="restartapache">Restart Apache</h3>
+<pre><code class="hljs"><span class="hljs-attribute">sudo</span> service apache<span class="hljs-number">2</span> restart
+</code></pre>
+<h2 id="wehavelamp">We Have LAMP</h2>
+<p>If all you really wanted was a LAMP stack and you don't really need WordPress, you can stop here!</p>
+<h2 id="installwordpress">Install WordPress</h2>
+<p>First download the <code>unzip</code> package so that we can unzip the WordPress files we download.</p>
+<pre><code class="hljs">sudo apt <span class="hljs-keyword">install</span> unzip
+</code></pre>
+<p>Now download the latest WordPress release from WordPress.org</p>
+<pre><code class="hljs">wget https:<span class="hljs-regexp">//</span>wordpress.org/latest.zip
+</code></pre>
+<p>Unzip the release </p>
+<p><strong>NOTE:</strong> This will unzip the file into your working directory. This can really be wherever you want it to go because we will move the file soon.</p>
+<pre><code class="hljs"><span class="hljs-attribute">unzip</span> latest.zip
+</code></pre>
+<p>Move the newly unzipped files into the web root (<code>/var/www/html</code>).</p>
+<pre><code class="hljs">mv wordpress<span class="hljs-regexp">/* /</span>var<span class="hljs-regexp">/www/</span>html/
+</code></pre>
+<p>Delete the empty <code>wordpress</code> directory inside our current working directory. </p>
+<pre><code class="hljs"><span class="hljs-attribute">rm -r wordpress</span>
+</code></pre>
+<h2 id="changingpermissions">Changing Permissions</h2>
+<p>In order for WordPress to run correctly, it needs to have the right file permissions in place. </p>
+<p>First, navigate to right above the web root:</p>
+<pre><code class="hljs">cd <span class="hljs-regexp">/var/</span>www
+</code></pre>
+<p>Then, let Apache be owner:</p>
+<pre><code class="hljs"><span class="hljs-title">chown</span> www-<span class="hljs-class"><span class="hljs-keyword">data</span>:www-<span class="hljs-keyword">data</span>  -<span class="hljs-type">R</span> *</span>
+</code></pre>
+<p>Change directory permissions <code>rwxr-xr-x</code>:</p>
+<pre><code class="hljs"><span class="hljs-title">find</span> . -<span class="hljs-keyword">type</span> d -exec chmod 755 {} \;
+</code></pre>
+<p>Change file permissions <code>rw-r--r--</code>:</p>
+<pre><code class="hljs"><span class="hljs-title">find</span> . -<span class="hljs-keyword">type</span> f -exec chmod 644 {} \;
+</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>You should now have a fully function Ubuntu server running LAMP stack as well as a fully function WordPress installation. I won't go into the the full details of moving through the WordPress installer GUI but to get started just head to <code>&lt;your_server_ip&gt;/wp-admin</code>.</p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

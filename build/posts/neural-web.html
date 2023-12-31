@@ -1,0 +1,729 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Neural Web",
+  "description":"Exploring Neural Nets In The Browser",
+  "tags":"#ai #web"
+}
+;</script>
+<h2 id="exploringneuralnetsinthebrowser">Exploring Neural Nets In The Browser</h2>
+<div class="wrapper">
+    <div class="input">
+        <input type="color" id="input" oninput="checkColor()">
+        <br>
+        <h4>Select a color!</h4>
+        <button onclick="random()">Randomize</button>
+        <hr>
+        This software is powered almost entirely by a series of small neural networks 
+        (or "mini-nets"). Each one is responsible for determining a different property
+        of the color. This is running entirely in your web browser!
+    </div>
+    <div id="output">
+        ...
+    </div>
+</div>
+<script>
+    (function () {
+'use strict';
+
+function likely(obj, map = {}){
+    let top = ['IDK',0];
+    let second = ['IDK',0];
+    for(let [key, val] of Object.entries(obj)){
+        if(val > top[1]){
+            top = [key,val];
+            continue;
+        }
+        if(val > second[1]){
+            second = [key,val];
+            continue;
+        }
+    }
+    const value = (map[top[0]] ? map[top[0]] : top[0]);
+    const value2 = (map[second[0]] ? map[second[0]] : second[0]);
+    const percent = (top[1]*100).toFixed();
+    return [percent, value, value2];
+}
+
+var rgb2norm = (rgb)=>{
+    return [rgb[0]/255,rgb[1]/255,rgb[2]/255];
+};
+
+function anonymous$2(input
+) {
+return {"d":1/(1+1/Math.exp((3.1040520668029785-7.0267014503479*1/(1+1/Math.exp((-1.742794394493103+9.730846405029297*(input[0]||0))))-1.500612497329712*1/(1+1/Math.exp((-0.850113570690155+2.91298246383667*(input[0]||0))))+1.4769114255905151*1/(1+1/Math.exp((0.4718296527862549-1.000786304473877*(input[0]||0))))))),"b":1/(1+1/Math.exp((-3.1454811096191406+7.0166239738464355*1/(1+1/Math.exp((-1.742794394493103+9.730846405029297*(input[0]||0))))+1.5518741607666016*1/(1+1/Math.exp((-0.850113570690155+2.91298246383667*(input[0]||0))))-1.4331409931182861*1/(1+1/Math.exp((0.4718296527862549-1.000786304473877*(input[0]||0)))))))};
+}
+
+function anonymous$1(input
+) {
+return {"r":1/(1+1/Math.exp((-0.5311358571052551-5.5094313621521*1/(1+1/Math.exp((-0.3776005208492279-2.3450746536254883*(input[0]||0)+6.397401332855225*(input[1]||0)-2.0922303199768066*(input[2]||0))))-5.364185333251953*1/(1+1/Math.exp((-0.42260363698005676-2.0069634914398193*(input[0]||0)-2.2474381923675537*(input[1]||0)+6.361815929412842*(input[2]||0))))+3.3930163383483887*1/(1+1/Math.exp((-0.2628178894519806+6.300031661987305*(input[0]||0)-2.051769971847534*(input[1]||0)-2.437774658203125*(input[2]||0))))))),"y":1/(1+1/Math.exp((-5.56922721862793+3.6157193183898926*1/(1+1/Math.exp((-0.3776005208492279-2.3450746536254883*(input[0]||0)+6.397401332855225*(input[1]||0)-2.0922303199768066*(input[2]||0))))-5.043540000915527*1/(1+1/Math.exp((-0.42260363698005676-2.0069634914398193*(input[0]||0)-2.2474381923675537*(input[1]||0)+6.361815929412842*(input[2]||0))))+3.8453660011291504*1/(1+1/Math.exp((-0.2628178894519806+6.300031661987305*(input[0]||0)-2.051769971847534*(input[1]||0)-2.437774658203125*(input[2]||0))))))),"g":1/(1+1/Math.exp((-0.17454378306865692+3.1632063388824463*1/(1+1/Math.exp((-0.3776005208492279-2.3450746536254883*(input[0]||0)+6.397401332855225*(input[1]||0)-2.0922303199768066*(input[2]||0))))-5.667236328125*1/(1+1/Math.exp((-0.42260363698005676-2.0069634914398193*(input[0]||0)-2.2474381923675537*(input[1]||0)+6.361815929412842*(input[2]||0))))-5.506833553314209*1/(1+1/Math.exp((-0.2628178894519806+6.300031661987305*(input[0]||0)-2.051769971847534*(input[1]||0)-2.437774658203125*(input[2]||0))))))),"c":1/(1+1/Math.exp((-5.4039626121521+3.785426139831543*1/(1+1/Math.exp((-0.3776005208492279-2.3450746536254883*(input[0]||0)+6.397401332855225*(input[1]||0)-2.0922303199768066*(input[2]||0))))+3.5260753631591797*1/(1+1/Math.exp((-0.42260363698005676-2.0069634914398193*(input[0]||0)-2.2474381923675537*(input[1]||0)+6.361815929412842*(input[2]||0))))-5.704789161682129*1/(1+1/Math.exp((-0.2628178894519806+6.300031661987305*(input[0]||0)-2.051769971847534*(input[1]||0)-2.437774658203125*(input[2]||0))))))),"b":1/(1+1/Math.exp((-0.24869006872177124-5.272212028503418*1/(1+1/Math.exp((-0.3776005208492279-2.3450746536254883*(input[0]||0)+6.397401332855225*(input[1]||0)-2.0922303199768066*(input[2]||0))))+3.0490713119506836*1/(1+1/Math.exp((-0.42260363698005676-2.0069634914398193*(input[0]||0)-2.2474381923675537*(input[1]||0)+6.361815929412842*(input[2]||0))))-5.4028191566467285*1/(1+1/Math.exp((-0.2628178894519806+6.300031661987305*(input[0]||0)-2.051769971847534*(input[1]||0)-2.437774658203125*(input[2]||0))))))),"m":1/(1+1/Math.exp((-5.608136177062988-5.605924129486084*1/(1+1/Math.exp((-0.3776005208492279-2.3450746536254883*(input[0]||0)+6.397401332855225*(input[1]||0)-2.0922303199768066*(input[2]||0))))+3.8874704837799072*1/(1+1/Math.exp((-0.42260363698005676-2.0069634914398193*(input[0]||0)-2.2474381923675537*(input[1]||0)+6.361815929412842*(input[2]||0))))+3.6749556064605713*1/(1+1/Math.exp((-0.2628178894519806+6.300031661987305*(input[0]||0)-2.051769971847534*(input[1]||0)-2.437774658203125*(input[2]||0)))))))};
+}
+
+function anonymous(input
+) {
+return {"v":1/(1+1/Math.exp((-2.851224899291992-6.9077935218811035*1/(1+1/Math.exp((1.7535384893417358-6.4406938552856445*(input[0]||0)-5.519856929779053*(input[1]||0)-5.78088903427124*(input[2]||0))))+6.646029472351074*1/(1+1/Math.exp((-0.3975197970867157+2.066161870956421*(input[0]||0)-9.319145202636719*(input[1]||0)+2.10994029045105*(input[2]||0))))+6.718785285949707*1/(1+1/Math.exp((-0.6700934171676636-4.956906318664551*(input[0]||0)+7.031759738922119*(input[1]||0)-4.967671871185303*(input[2]||0))))))),"m":1/(1+1/Math.exp((2.8563897609710693+6.936727046966553*1/(1+1/Math.exp((1.7535384893417358-6.4406938552856445*(input[0]||0)-5.519856929779053*(input[1]||0)-5.78088903427124*(input[2]||0))))-6.656985282897949*1/(1+1/Math.exp((-0.3975197970867157+2.066161870956421*(input[0]||0)-9.319145202636719*(input[1]||0)+2.10994029045105*(input[2]||0))))-6.730003833770752*1/(1+1/Math.exp((-0.6700934171676636-4.956906318664551*(input[0]||0)+7.031759738922119*(input[1]||0)-4.967671871185303*(input[2]||0)))))))};
+}
+
+function avg(arr){
+    let sum = 0;
+    for(let item of arr){
+        sum += item;
+    }
+    return sum / arr.length;
+}
+
+function check(color = [0, 255, 170]){
+    const test = rgb2norm(color);
+
+    const rgbl = likely(anonymous$1(test),{
+        'r':'red',
+        'y':'yellow',
+        'g':'green',
+        'c':'cyan',
+        'b':'blue',
+        'm':'magenta'
+    });
+    const dbl = likely(anonymous$2([avg(test)]),{
+        'd':'dark',
+        'b':'bright'
+    });
+    const vml = likely(anonymous(test),{
+        'v':'vibrant',
+        'm':'muted'
+    });
+
+    let out = "";
+    out += `I'm ${rgbl[0]}% sure this is ${rgbl[1]}.`;
+    if(rgbl[0] < 75){
+        out += "<br>";
+        out += `However, it could also be ${rgbl[2]}.`;
+    }
+    out += "<br><br>";
+    out += `I'm ${dbl[0]}% sure this is ${dbl[1]}.`;
+    out += "<br><br>";
+    out += `I'm ${vml[0]}% sure this is ${vml[1]}.`;
+    return out;
+}
+
+function hexToRGB(hex) {
+    // Check if the input is a valid hex color string
+    if (!/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(hex)) {
+        console.error("Invalid hex color string.");
+        return;
+    }
+
+    // If the hex string is 3 characters long (e.g. #fff), we need to expand it to 6 characters (e.g. #ffffff)
+    if (hex.length === 4) {
+        hex = "#" + hex[1] + hex[1] + hex[2] + hex[2] + hex[3] + hex[3];
+    }
+
+    // Parse the hex string into its individual R, G, and B values
+    let r = parseInt(hex.slice(1, 3), 16);
+    let g = parseInt(hex.slice(3, 5), 16);
+    let b = parseInt(hex.slice(5, 7), 16);
+
+    // Return the RGB values as an array
+    return [r, g, b];
+}
+
+function RGBToHex(rgb) {
+    // Check if the input is a valid RGB array
+    if (!Array.isArray(rgb) || rgb.length !== 3 || rgb.some(isNaN)) {
+        console.error("Invalid RGB array.");
+        return;
+    }
+    rgb[0] = Math.round(rgb[0]);
+    rgb[1] = Math.round(rgb[1]);
+    rgb[2] = Math.round(rgb[2]);
+    // Convert the RGB values to hexadecimal strings
+    let r = Math.max(0, Math.min(rgb[0], 255)).toString(16).padStart(2, "0");
+    let g = Math.max(0, Math.min(rgb[1], 255)).toString(16).padStart(2, "0");
+    let b = Math.max(0, Math.min(rgb[2], 255)).toString(16).padStart(2, "0");
+
+    // Return the hex color string
+    return "#" + r + g + b;
+    }
+
+function checkColor(){
+    const hex = document.getElementById('input').value;
+    const rgb = hexToRGB(hex);
+    document.getElementById('output').innerHTML = check(rgb);
+}
+function random(){
+    const randRGB = RGBToHex([Math.random()*255,Math.random()*255,Math.random()*255]);
+    document.getElementById('input').value = randRGB;
+    checkColor();
+}
+random();
+window.random = random;
+
+window.checkColor = checkColor;
+
+})();
+
+</script>
+<style>
+    html{
+        background:rgb(16, 16, 16);
+        color:rgb(220,220,220);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .wrapper{
+        min-height:420px;
+        margin:0 auto;
+        position:relative;
+        width:calc(100vw - 2.5rem);
+        background:rgb(33,33,33);
+        /* top:25vh; */
+        padding:1rem;
+    }
+    .input{
+        max-width:45vw;
+        padding:0;
+        word-wrap: break-word;
+        /* text-align: center; */
+    }
+    .input #input{
+        height:256px; 
+        width:calc(100% - 4rem);
+        max-width: 256px;
+        margin:0 auto;
+    }
+    #output{
+        padding:1rem;
+        position:absolute;
+        right:0;
+        left:50vw;
+        top:0;
+        bottom:0;
+        background:rgb(22,22,22);
+    }
+</style>
+<hr />
+<h2 id="neuralnetworkbasics">Neural Network Basics</h2>
+<p>As software developers, we often need to build applications that can make predictions or classify data in real-time. One way to do this is by using neural networks, which are powerful machine learning models that can learn to perform tasks by analyzing patterns in data. While traditionally, running neural networks requires specialized hardware and software, it is now possible to run them directly in a web browser using JavaScript libraries like Brain.js.</p>
+<p>Neural networks are a type of computer program that can learn to do certain tasks, like recognize patterns or make predictions, by analyzing data. They are made up of layers of interconnected "neurons," which are like tiny processing units. To train a neural network, we give it a bunch of data and tell it what we want it to do with it. It then figures out the best way to do that by adjusting the connections between neurons. One of the benefits of neural networks is that they can learn and get better at their tasks over time, without being specifically programmed for each one. This makes them useful for a lot of different things, like identifying objects in photos or understanding language. However, running neural networks can require a lot of computer power. That's where libraries like Brain.js come in - they allow you to use neural networks in your web browser, using JavaScript, which makes it easier to build and run them.</p>
+<h2 id="helloworldwithbrainjs">"Hello World" With Brain.js</h2>
+<p>While Brain.js can run entirely in your browser, for these examples, I will be using the NodeJS version. You can install it with:</p>
+<pre class="bash language-bash"><code class="hljs bash language-bash">npm install --save brain.js
+</code></pre>
+<pre class="js language-js"><code class="hljs js language-js"><span class="hljs-keyword">const</span> brain = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;brain.js&#x27;</span>);
+
+<span class="hljs-comment">// Create a new neural network with 1 input layer and 1 output layer</span>
+<span class="hljs-keyword">const</span> net = <span class="hljs-keyword">new</span> brain.NeuralNetwork({
+  <span class="hljs-attr">input</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">output</span>: <span class="hljs-number">1</span>
+});
+
+<span class="hljs-comment">// Train the network with a single training example</span>
+net.train([
+  { <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: [<span class="hljs-number">0</span>] },
+  { <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: [<span class="hljs-number">1</span>] }
+]);
+
+<span class="hljs-comment">// Test the network with a single test example</span>
+<span class="hljs-keyword">const</span> output = net.run([<span class="hljs-number">1</span>]);
+<span class="hljs-built_in">console</span>.log(output); <span class="hljs-comment">// [0.9]</span>
+</code></pre>
+<p>We could also train this as a LTSM like this:</p>
+<pre class="js language-js"><code class="hljs js language-js"><span class="hljs-comment">// Create a new LTSM network with 1 input layer and 1 output layer</span>
+<span class="hljs-keyword">const</span> net = <span class="hljs-keyword">new</span> brain.recurrent.LSTM({
+  <span class="hljs-attr">input</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">output</span>: <span class="hljs-number">1</span>
+});
+</code></pre>
+<h2 id="terms">Terms</h2>
+<p><strong>Models</strong> are mathematical representations of a system or process that is trained to perform a specific task. For example, a model might be trained to classify images into different categories, or to predict the likelihood of a customer churning. A model is trained using a set of input data and corresponding labels, and the goal is to learn a function that can map the input data to the labels as accurately as possible. Once a model has been trained, it can be used to make predictions or classify new, unseen data.</p>
+<p><strong>Networks</strong>, in the context of machine learning, are a set of interconnected nodes or units that can process and transmit information. Networks can be used to model a wide range of systems, including biological networks, social networks, and transportation networks. In the context of neural networks, a network is composed of layers of interconnected "neurons," which process and transmit information using weighted connections and activation functions. Neural networks are a powerful tool for machine learning, and they can be used to learn complex patterns in data and make predictions or decisions.</p>
+<p><strong>Overfitting</strong> is when a model is too specifically trained on the data it has, and it doesn't work well with new data. This means that the model might work well on the data it's seen before, but it won't be able to make accurate predictions on new data. There are ways to prevent overfitting, like using different techniques while training the model or using the right type of model.</p>
+<p><strong>Hyperparameters</strong> are model parameters that are set before training a machine learning model and that cannot be learned from data. They are used to control the learning process and to tune the model's performance. Examples of hyperparameters include the learning rate, the regularization strength, and the number of hidden units in a neural network. Choosing appropriate hyperparameters is an important part of building and training a machine learning model, as they can significantly affect the model's ability to learn and generalize to new data.</p>
+<p><strong>LTSM</strong> stands for "long short-term memory." It is a type of recurrent neural network, which is a neural network that can process sequential data, such as time series or natural language. LTSM networks are particularly useful for tasks that require the network to remember and use information from long periods of time, as they are able to retain information in their internal state for longer periods than traditional recurrent neural networks. LTSM networks are widely used in natural language processing and speech recognition, among other applications.</p>
+<p><strong>Neurons</strong> are a basic unit of computation in a neural network. They are inspired by the structure and function of neurons in the human brain, and they are responsible for processing and transmitting information. A neuron takes in a set of inputs, processes them using weights and an activation function, and produces an output. The weights of the connections between neurons can be adjusted during training, allowing the network to learn complex patterns in data and make predictions or decisions.</p>
+<p><strong>Stochastic gradient descent (SGD)</strong> is an algorithm that helps us improve a model by adjusting its parameters to make it more accurate. It works by looking at one piece of data at a time and adjusting the model based on that. SGD is good for working with big datasets because it can be used to update the model as it goes along. However, it's also sensitive to how fast we want it to learn, which we call the learning rate, and we need to be careful to set it correctly.</p>
+<p><strong>Layers</strong> are groups of neurons that processes and send information. A neural network has multiple layers, including an input layer, one or more hidden layers, and an output layer. The input layer receives the data that we want the network to analyze, and the output layer produces the final result. The hidden layers use weights and special functions to process the data, and they help the network figure out how to do the task it's been trained for. The number and size of the hidden layers, and the connections between them, all affect how well the network can learn and perform.</p>
+<h2 id="trainingbasics">Training Basics</h2>
+<p>Training a neural network involves adjusting the weights of the connections between neurons in order to minimize the error between the predicted output of the network and the true label of the input data. This process is typically done using an optimization algorithm, such as stochastic gradient descent, which adjusts the weights to reduce the error.</p>
+<p>To train a neural network, you need a set of input data and corresponding labels, which are the true outputs for the input data. The input data is fed into the network, and the predicted output is compared to the true label. The error between the predicted output and the true label is then used to adjust the weights of the connections between neurons in order to improve the performance of the network. This process is repeated for multiple epochs, or passes through the training data, until the error is minimized and the network is able to make accurate predictions on the training data.</p>
+<p>Once the network is trained, it can be used to make predictions or classify new, unseen data. It is important to evaluate the performance of the network on a separate test set, to ensure that it is able to generalize well to new data.</p>
+<h2 id="normalizingscaling">Normalizing &amp; Scaling</h2>
+<p>Normalizing or scaling data is important when training a neural network because it can help to improve the performance of the model. This is because the features in the input data may have different scales and ranges, and this can cause problems for the optimization algorithm that is used to train the network.</p>
+<p>For example, consider a dataset with two features, one that ranges from 0 to 1 and another that ranges from 0 to 1000. If the data is not normalized, the optimization algorithm may prioritize adjusting the weights of the feature that ranges from 0 to 1000, because it has a larger scale. This can slow down the training process and make it difficult for the network to converge to a good solution.</p>
+<p>Normalizing or scaling the data can help to mitigate these problems by transforming the features to have a similar scale and range. There are several ways to normalize or scale data, such as min-max normalization, standardization, and z-score normalization. By using normalized or scaled data, the optimization algorithm can more easily find a good set of weights for the network, which can improve the performance of the model.</p>
+<h2 id="ensemblemodels">Ensemble Models</h2>
+<p>Using multiple purpose-trained neural networks, also known as "ensemble models," can often be more effective and easier to train than a single general-purpose network. This is because ensemble models can combine the predictions of multiple models, which can improve the overall accuracy of the ensemble.</p>
+<p>One way to create an ensemble model is by training multiple neural networks on different subsets of the data and then averaging or weighted averaging their predictions. This is known as "bagging," and it can help to reduce overfitting, which is when a model performs well on the training data but poorly on new, unseen data.</p>
+<p>Another approach is to train multiple neural networks on the same data, but with different model architectures or hyperparameters. This is known as "boosting," and it can help to improve the generalization of the ensemble model, as the different models may learn complementary features from the data.</p>
+<p>Ensemble models can also be easier to train than a single general-purpose network, as the individual models can be trained in parallel, which can speed up the training process. Additionally, the performance of an ensemble model is often more robust and stable than a single model, as it is less prone to overfitting and can achieve better results on a wide range of tasks.</p>
+<h2 id="exportingnetworksasvanillajs">Exporting Networks as Vanilla JS</h2>
+<p>Brain.js is able to export trained networks as JavaScript functions using the toFunction method. This method returns a pure JavaScript function that can be used to run the trained network, without requiring the brain.js library to be included in the project.</p>
+<p>Here is an example of how to export a trained Brain.js network as a JavaScript function:</p>
+<pre class="js language-js"><code class="hljs js language-js"><span class="hljs-comment">// Export the network as a JavaScript function</span>
+<span class="hljs-keyword">const</span> runNetwork = net.toFunction();
+
+<span class="hljs-comment">// Test the network with a single test example</span>
+<span class="hljs-keyword">const</span> output = runNetwork([<span class="hljs-number">1</span>]);
+<span class="hljs-built_in">console</span>.log(output); <span class="hljs-comment">// [0.9]</span>
+</code></pre>
+<p>The function can then be used to run the network on new input data, and it will return the output of the network. This allows you to use the trained network in any JavaScript project, without having to include the brain.js library.</p>
+<p>Note that the toFunction method only works for neural networks, and it is not available for other types of networks, such as LTSM networks.</p>
+<h2 id="doingalittlewithalot">Doing A Little With A Lot</h2>
+<p>The examples above are trivial. However, it is possible for a neural network to achieve high accuracy with a small amount of training data in certain situations. This can occur when the task being learned is simple and the data is easy to classify, or when the data is highly structured and contains strong patterns that are easy for the network to learn.</p>
+<p>For example, a neural network might be able to achieve high accuracy on a binary classification task, such as determining whether an image contains a cat or a dog, with only a few hundred training examples. This is because the task is relatively simple and the data is well-structured, with clear visual differences between the two classes.</p>
+<p>Another example is a task that involves predicting a continuous value, such as the temperature or humidity, based on a small number of features, such as the day of the week and the time of day. In this case, the data may contain strong patterns that are easy for the network to learn, and the network may be able to achieve high accuracy with only a small amount of training data.</p>
+<hr />
+<h2 id="thetrainingdata">The Training Data</h2>
+<p>Keeping with the theme of "Doing a little with a lot", the training data used in the example at the top of this page is fairly minimal. The output that you see there is created by running your chosen color input through 3 very simple, but separate neural networks. </p>
+<p>These data sets are composed of RGB color values that have been scaled into the range of 0 -&gt; 1.</p>
+<h3 id="rgb">RGB</h3>
+<p>Perhaps the most "complex" network is the "RGB" network. This network is responsible for determining the base color you have selected. This set consists of 6 basic colors as well as black and white. </p>
+<p><strong>KEY:</strong></p>
+<pre class="text language-text"><code class="hljs text language-text">r - red
+y - yellow
+g - green
+c - cyan
+b - blue
+m - magenta
+</code></pre>
+<pre class="js language-js"><code class="hljs js language-js"><span class="hljs-comment">// Color Spectrum</span>
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">1</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">1</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">1</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">1</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">1</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">1</span>} },
+<span class="hljs-comment">// Black &amp; White</span>
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} }
+</code></pre>
+<h3 id="darkbright">Dark/Bright</h3>
+<p>This network is trained to return the brightness of the color. This is the simplest network as it is only trained on rows of data.</p>
+<p><strong>KEY:</strong></p>
+<pre class="text language-text"><code class="hljs text language-text">d - dark
+b - bright
+</code></pre>
+<pre class="js language-js"><code class="hljs js language-js">{ <span class="hljs-attr">input</span>: [avg([<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>])], <span class="hljs-attr">output</span>: {<span class="hljs-attr">d</span>:<span class="hljs-number">1</span>, <span class="hljs-attr">b</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [avg([<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>])], <span class="hljs-attr">output</span>: {<span class="hljs-attr">d</span>:<span class="hljs-number">0</span>, <span class="hljs-attr">b</span>:<span class="hljs-number">1</span>} }
+</code></pre>
+<h3 id="vibrantmuted">Vibrant/Muted</h3>
+<p>The Vibrant/Muted network needs a bit more in-depth training due to some edge cases.</p>
+<p><strong>KEY:</strong></p>
+<pre class="text language-text"><code class="hljs text language-text">v - vibrant
+m - muted
+</code></pre>
+<pre class="js language-js"><code class="hljs js language-js">{ <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">v</span>:<span class="hljs-number">1</span>, <span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">v</span>:<span class="hljs-number">1</span>, <span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">v</span>:<span class="hljs-number">1</span>, <span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">v</span>:<span class="hljs-number">1</span>, <span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">v</span>:<span class="hljs-number">1</span>, <span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">v</span>:<span class="hljs-number">1</span>, <span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+<span class="hljs-comment">// Black, White, Grey</span>
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">v</span>:<span class="hljs-number">0</span>, <span class="hljs-attr">m</span>:<span class="hljs-number">1</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">v</span>:<span class="hljs-number">0</span>, <span class="hljs-attr">m</span>:<span class="hljs-number">1</span>} },
+{ <span class="hljs-attr">input</span>: [<span class="hljs-number">0.5</span>,<span class="hljs-number">0.5</span>,<span class="hljs-number">0.5</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">v</span>:<span class="hljs-number">0</span>, <span class="hljs-attr">m</span>:<span class="hljs-number">1</span>} }
+</code></pre>
+<h2 id="settingupatrainer">Setting Up A Trainer</h2>
+<p>To facilitate training multiple models, I wrote a simple trainer class take care of some basic tasks involved in training.</p>
+<pre class="js language-js"><code class="hljs js language-js"><span class="hljs-keyword">import</span> brain <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;brain.js&#x27;</span>;
+<span class="hljs-keyword">import</span> fs <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;fs&#x27;</span>;
+<span class="hljs-keyword">const</span> trainer = {
+    <span class="hljs-attr">network</span>: <span class="hljs-keyword">new</span> brain.NeuralNetwork(),
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;net&quot;</span>,
+    <span class="hljs-attr">trainingData</span>: [],
+    <span class="hljs-attr">options</span>: {
+        <span class="hljs-comment">// Defaults values --&gt; expected validation</span>
+        <span class="hljs-attr">iterations</span>: <span class="hljs-number">20000</span>, <span class="hljs-comment">// the maximum times to iterate the training data --&gt; number greater than 0</span>
+        <span class="hljs-attr">errorThresh</span>: <span class="hljs-number">0.005</span>, <span class="hljs-comment">// the acceptable error percentage from training data --&gt; number between 0 and 1</span>
+        <span class="hljs-attr">log</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// true to use console.log, when a function is supplied it is used --&gt; Either true or a function</span>
+        <span class="hljs-attr">logPeriod</span>: <span class="hljs-number">10</span>, <span class="hljs-comment">// iterations between logging out --&gt; number greater than 0</span>
+        <span class="hljs-attr">learningRate</span>: <span class="hljs-number">0.3</span>, <span class="hljs-comment">// scales with delta to effect training rate --&gt; number between 0 and 1</span>
+        <span class="hljs-attr">momentum</span>: <span class="hljs-number">0.1</span>, <span class="hljs-comment">// scales with next layer&#x27;s change value --&gt; number between 0 and 1</span>
+        <span class="hljs-attr">callback</span>: <span class="hljs-function">()=&gt;</span>{}, <span class="hljs-comment">// a periodic call back that can be triggered while training --&gt; null or function</span>
+        <span class="hljs-attr">callbackPeriod</span>: <span class="hljs-number">10</span>, <span class="hljs-comment">// the number of iterations through the training data between callback calls --&gt; number greater than 0</span>
+        <span class="hljs-attr">timeout</span>: <span class="hljs-number">1024</span>*<span class="hljs-number">1024</span>, <span class="hljs-comment">// the max number of milliseconds to train for --&gt; number greater than 0. Default --&gt; Infinity</span>
+    },
+    <span class="hljs-function"><span class="hljs-title">setType</span>(<span class="hljs-params">type</span>)</span>{
+        <span class="hljs-keyword">switch</span>(type){
+            <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;nn&quot;</span>:
+                <span class="hljs-built_in">this</span>.network = <span class="hljs-keyword">new</span> brain.NeuralNetwork();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;ltsm&quot;</span>:
+                <span class="hljs-built_in">this</span>.network = <span class="hljs-keyword">new</span> brain.recurrent.LSTM();
+                <span class="hljs-keyword">break</span>;
+        }
+    },
+    <span class="hljs-function"><span class="hljs-title">loadSet</span>(<span class="hljs-params">set</span>)</span>{
+        <span class="hljs-built_in">this</span>.trainingData.push(...set);
+    },
+    <span class="hljs-function"><span class="hljs-title">loadSetStatic</span>(<span class="hljs-params">set, out</span>)</span>{
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> item <span class="hljs-keyword">of</span> set){
+            <span class="hljs-built_in">this</span>.trainingData.push({<span class="hljs-attr">input</span>:item, <span class="hljs-attr">output</span>:out});
+        }
+    },
+    <span class="hljs-function"><span class="hljs-title">train</span>(<span class="hljs-params">orLoad = <span class="hljs-literal">false</span>, saveNet = <span class="hljs-literal">true</span></span>)</span>{
+        <span class="hljs-keyword">if</span>(orLoad){
+            <span class="hljs-keyword">if</span>(fs.existsSync(<span class="hljs-string">&#x27;./nets/builds/&#x27;</span>+<span class="hljs-built_in">this</span>.name+<span class="hljs-string">&#x27;.net.json&#x27;</span>)){
+                <span class="hljs-built_in">this</span>.load();
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Loading Network...&#x27;</span>);
+                <span class="hljs-keyword">return</span>;
+            }
+        }
+        <span class="hljs-built_in">this</span>.network.train(<span class="hljs-built_in">this</span>.trainingData, <span class="hljs-built_in">this</span>.options);
+        <span class="hljs-keyword">if</span>(saveNet){
+            <span class="hljs-built_in">this</span>.save();
+        }
+    },
+    <span class="hljs-function"><span class="hljs-title">checkData</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-keyword">let</span> ins = [];
+        <span class="hljs-keyword">let</span> outs = [];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> item <span class="hljs-keyword">of</span> <span class="hljs-built_in">this</span>.trainingData){
+            <span class="hljs-keyword">if</span>(ins.includes(item.input)){
+                <span class="hljs-built_in">console</span>.log(item);
+                <span class="hljs-keyword">return</span>;
+            }
+            <span class="hljs-keyword">if</span>(outs.includes(item.output)){
+                <span class="hljs-built_in">console</span>.log(item);
+                <span class="hljs-keyword">return</span>;
+            }
+        }
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;OK&#x27;</span>);
+    },
+    <span class="hljs-function"><span class="hljs-title">test</span>(<span class="hljs-params">set</span>)</span>{
+        <span class="hljs-keyword">let</span> correct = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">let</span> incorrect = [];
+        <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> item <span class="hljs-keyword">of</span> set){
+            <span class="hljs-keyword">const</span> res = <span class="hljs-built_in">this</span>.likely(item.input);
+            <span class="hljs-keyword">if</span>(<span class="hljs-built_in">JSON</span>.stringify(item.output).includes(res)){
+                correct++;
+            }<span class="hljs-keyword">else</span>{
+                incorrect.push([item.output, res]);
+            }
+            i++;
+        }
+        <span class="hljs-keyword">const</span> out = {
+            <span class="hljs-attr">string</span>: (correct / set.length)*<span class="hljs-number">100</span> + <span class="hljs-string">&quot;%&quot;</span>,
+            <span class="hljs-attr">correct</span>: correct,
+            <span class="hljs-attr">incorrect</span>: incorrect
+        }
+        <span class="hljs-keyword">return</span> out;
+    },
+    <span class="hljs-function"><span class="hljs-title">save</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-keyword">const</span> json = <span class="hljs-built_in">this</span>.network.toJSON();
+        fs.writeFileSync(<span class="hljs-string">&#x27;./nets/builds/&#x27;</span>+<span class="hljs-built_in">this</span>.name+<span class="hljs-string">&#x27;.net.json&#x27;</span>,<span class="hljs-built_in">JSON</span>.stringify(json, <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>));
+        <span class="hljs-keyword">const</span> func = <span class="hljs-built_in">this</span>.network.toFunction().toString();
+        fs.writeFileSync(<span class="hljs-string">&#x27;./nets/builds/&#x27;</span>+<span class="hljs-built_in">this</span>.name+<span class="hljs-string">&#x27;.net.js&#x27;</span>,<span class="hljs-string">&#x27;export default &#x27;</span>+func);
+    },
+    <span class="hljs-function"><span class="hljs-title">load</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-keyword">const</span> text = fs.readFileSync(<span class="hljs-string">&#x27;./nets/builds/&#x27;</span>+<span class="hljs-built_in">this</span>.name+<span class="hljs-string">&#x27;.net.json&#x27;</span>);
+        <span class="hljs-built_in">this</span>.network.fromJSON(<span class="hljs-built_in">JSON</span>.parse(text));
+    },
+    <span class="hljs-function"><span class="hljs-title">toFunction</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.network.toFunction();
+    },
+    <span class="hljs-function"><span class="hljs-title">run</span>(<span class="hljs-params">test</span>)</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.network.run(test) || <span class="hljs-string">&#x27;NA&#x27;</span>;
+    },
+    <span class="hljs-function"><span class="hljs-title">likely</span>(<span class="hljs-params">test</span>)</span>{
+        <span class="hljs-keyword">return</span> brain.likely(test, <span class="hljs-built_in">this</span>.network);
+    }
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> trainer;
+</code></pre>
+<h2 id="usingthetrainer">Using The Trainer</h2>
+<pre class="js language-js"><code class="hljs js language-js"><span class="hljs-keyword">import</span> trainer <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;../trainer.js&#x27;</span>;
+
+trainer.name = <span class="hljs-string">&quot;rgb&quot;</span>;
+trainer.setType(<span class="hljs-string">&#x27;nn&#x27;</span>);
+
+trainer.loadSet([
+  { <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">1</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+  { <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">1</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+  { <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">1</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+  { <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">1</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+  { <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">1</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+  { <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">1</span>} },
+  <span class="hljs-comment">// Black &amp; White</span>
+  { <span class="hljs-attr">input</span>: [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} },
+  { <span class="hljs-attr">input</span>: [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>], <span class="hljs-attr">output</span>: {<span class="hljs-attr">r</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">g</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">c</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">b</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">m</span>:<span class="hljs-number">0</span>} }
+]);
+
+trainer.train(<span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>);
+</code></pre>
+<p>This will output two files to <code>./nets/builds/</code>. One file will be a <code>.net.js</code> file and the other is a <code>.net.json</code>. The only file needed to run the network in the future is the <code>.net.js</code> file. The JSON can be loaded as well, but that is not the default behavior. </p>
+<p>Note that the <code>.net.json</code> and <code>.net.js</code> file suffixes are not a Brain.js related suffix and just something I've used to help sort files in this example code. </p>
+<h2 id="therestofthecode">The Rest Of The Code</h2>
+<p>The rest of the code is mostly boilerplate, but if you are interested in checking it our or running it yourself it is hosted on <a href="https://github.com/matdombrock/colorBrainJS">GitHub.com</a>.</p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

@@ -1,0 +1,379 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"An argument for statically typed languages",
+  "description":"Why I think data types matter.",
+  "tags":"#programming #javascript #thoughts"
+}
+;</script>
+<h1 id="anargumentforstaticallytypedlanguages">An argument for statically typed languages.</h1>
+<h2 id="whytypesmatter">Why Types matter</h2>
+<p>Consider the following code:</p>
+<p>C:</p>
+<pre class="c language-c"><code class="hljs c language-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">someFunction</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span></span>{
+  <span class="hljs-keyword">return</span> a+b;
+}
+</code></pre>
+<p>JS:</p>
+<pre class="js language-js"><code class="hljs js language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">someFunction</span>(<span class="hljs-params">a, b</span>)</span>{
+  <span class="hljs-keyword">return</span> a+b;
+}
+</code></pre>
+<p>Even if you don't have much familiarity with C code it should be clear what <code>someFunction</code> does. It takes into 2 integers and adds them together, returning the result. </p>
+<p>In the JS example, there is no way you can say if that is supposed to take 2 strings and concatenate them or add two numbers. Or some ungodly combination of the two. There is literally no correct and clear answer to what this function does. </p>
+<p>The reason that the JavaScript is ambiguous while the C code is very clear is because C is "statically typed". Meaning that every variable and parameter is assigned an immutable data type on declaration. </p>
+<p>So we can say for sure that the function in the C code is taking 2 integers and the only thing that the "plus" operator can actually do with 2 integers is to add them. We also can say for sure that the C code will ALWAYS return an integer. If the function is not able to return an integer it would cause an error message (which is good!).</p>
+<p>Which leads me to the next point. Another very important part of this concept is that we can statically analyses the code to detect problems without even running it. If there is some path in your function that would not produce the given return type then the code will have compiler errors (which is good!). </p>
+<p>If we tried to call <code>someFunction</code> from C like this:</p>
+<pre class="c language-c"><code class="hljs c language-c"><span class="hljs-keyword">char</span> a = <span class="hljs-string">&quot;1&quot;</span>;
+<span class="hljs-keyword">int</span> b = <span class="hljs-number">2</span>;
+someFunction(a, b);
+</code></pre>
+<p>The code would not compile and we would know that we made a mistake. This is very important because in dynamically typed languages like JavaScript and PHP, serious logic errors often DO NOT produce any actual error messages and they can be very hard to debug. The reason is these are interpreted languages and they need to be run before errors like that can really be detected (There are some static analysis tools for JS but they are rare).</p>
+<h2 id="whytypesshouldnotbemutable">Why types should not be mutable</h2>
+<p>The second major benefit aside from having statically typed variables is having immutable variable types. This means that once a variable or parameter is declared, its type can not be changed. </p>
+<p>I don't actually know if/think there is a functional reason for languages like JS and PHP to be dynamically typed (where types can change). But instance in JS you can create a variable that starts as a string, turns into an integer and then later becomes an object. </p>
+<p>I think the main reason that these languages are dynamically typed is to be more beginner friendly. I really can't think of a valid use case for changing a variable type at runtime. </p>
+<p>So the benefit of immutable types is that once we setup a variable we know it won't change its type and if anything tries to change its type that will cause an immediate and obvious error. </p>
+<h1 id="typescript">Typescript</h1>
+<p>I am really starting to think that <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">TypeScript</a> can be a valid solution to the problems listed here. </p>
+<p>It's something that can be used as needed and we don't have to fully convert to start using it for some things. We can integrate it slowly over time. </p>
+<p>There is no performance increase like we would get from an actual lower level language but this can help a lot with sanity and team projects. </p>
+<pre class="ts language-ts"><code class="hljs ts language-ts"><span class="hljs-keyword">import</span> moment = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;moment&#x27;</span>);
+
+<span class="hljs-comment">// An interface is a way of type checking an object</span>
+<span class="hljs-keyword">interface</span> User{
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">id</span>: <span class="hljs-built_in">number</span>,
+  <span class="hljs-attr">groups</span>: <span class="hljs-built_in">string</span>[],
+  <span class="hljs-attr">age</span>: <span class="hljs-built_in">number</span>
+}
+
+<span class="hljs-comment">// Create and instance based on the type checked interface</span>
+<span class="hljs-keyword">const</span> bob:User = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Bob&#x27;</span>,
+  <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">groups</span>: [<span class="hljs-string">&#x27;chess&#x27;</span>,<span class="hljs-string">&#x27;hiking&#x27;</span>],
+  <span class="hljs-attr">age</span>: <span class="hljs-number">60</span>
+}
+
+<span class="hljs-comment">// Types can be used to define parameters and return values</span>
+<span class="hljs-comment">// Since we have declared and interface for User it is type checked and automatically validated against missing parameters</span>
+<span class="hljs-comment">// We can know we will get a static error if we supply anything but a valid User object</span>
+<span class="hljs-comment">// We also know we will always return a string</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">describe</span>(<span class="hljs-params">user:User</span>):<span class="hljs-title">string</span></span>{
+  <span class="hljs-keyword">let</span> out:<span class="hljs-built_in">string</span> = <span class="hljs-string">`
+  <span class="hljs-subst">${user.name}</span> has an id of <span class="hljs-subst">${user.id}</span> and is in <span class="hljs-subst">${user.groups.length}</span> groups.
+  <span class="hljs-subst">${user.name}</span> was born on <span class="hljs-subst">${moment().subtract(user.age, <span class="hljs-string">&#x27;years&#x27;</span>).format()}</span> exactly!
+  `</span>;
+  <span class="hljs-keyword">return</span> out;
+}
+
+<span class="hljs-comment">// Regular variables can also have static types</span>
+<span class="hljs-keyword">const</span> description:<span class="hljs-built_in">string</span> = describe(bob);
+
+<span class="hljs-built_in">console</span>.log(description);
+
+<span class="hljs-comment">// Since an interface is just a check on an object, you can still declare the object directly</span>
+<span class="hljs-built_in">console</span>.log(
+  describe({
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Alice&#x27;</span>,
+    <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">groups</span>: [<span class="hljs-string">&#x27;chess&#x27;</span>, <span class="hljs-string">&#x27;biking&#x27;</span>],
+    <span class="hljs-attr">age</span>: <span class="hljs-number">72</span>
+  })
+);
+
+<span class="hljs-comment">// Another example of function parameters and return types</span>
+<span class="hljs-comment">// We can know we will get a static error if we supply anything but 2 valid User objects</span>
+<span class="hljs-comment">// We also know we will always return a string</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">older</span>(<span class="hljs-params">a:User, b:User</span>):<span class="hljs-title">string</span></span>{
+  <span class="hljs-keyword">if</span>(a.age&gt;b.age){
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${a.name}</span> is older than <span class="hljs-subst">${b.name}</span>!`</span>;
+  }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a.age&lt;b.age){
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${b.name}</span> is older than <span class="hljs-subst">${a.name}</span>!`</span>;
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${a.name}</span> is the same exact age as <span class="hljs-subst">${b.name}</span>!`</span>;
+}
+
+<span class="hljs-keyword">const</span> oldest:<span class="hljs-built_in">string</span> = older(bob, {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&#x27;Alice&#x27;</span>,
+  <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-attr">groups</span>: [<span class="hljs-string">&#x27;chess&#x27;</span>, <span class="hljs-string">&#x27;biking&#x27;</span>],
+  <span class="hljs-attr">age</span>: <span class="hljs-number">72</span>
+});
+<span class="hljs-built_in">console</span>.log(oldest);
+</code></pre></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

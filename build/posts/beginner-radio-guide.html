@@ -1,0 +1,1657 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Beginner Radio Guide",
+  "description":"A beginner radio guide, specifically for the Baofeng UV-5R.",
+  "tags":"#radio"
+}
+;</script>
+<h1 id="beginnerradioguide">Beginner Radio Guide</h1>
+<p><a href="https://github.com/matdombrock/radio/raw/master/RADIO%20INFORMATION%20_%20radio.pdf">Download This Document As A PDF</a> (May not be up to date)</p>
+<p><a href="https://github.com/matdombrock/radio/raw/master/UV-5R-Owners-Manual-2.pdf">Download The Full Open Source User Manual</a> (Not created by me)</p>
+<p><a href="https://raw.githubusercontent.com/matdombrock/radio/master/baofeng-freqs.csv">Download The Full Frequency List</a> (CSV)</p>
+<p><em>DISCLAIMER: A lot of the text here has been blatantly copied from other sources with only minor changes and commentary. This document was created for my personal use (but you are free to use it too) as a compilation of available resources and documentation. I've tried my best to list my sources inline as well as at the end of the document.</em></p>
+<p><strong>WARNING: I take absolutley no legal responsibility for what you do with the information listed below. It is YOUR responsibility to make sure you know the laws and etiquette involved in proper radio usage. The BaoFeng UV-5R is fully capable of transmitting fairly powerful signals on frequencies you ARE NOT allowed to operate on. Make sure you know what you're doing, especially before you transmit anything!</strong> </p>
+<!-- # TABLE OF CONTENTS
+
+[BaoFeng Usage](#baofeng-usage)
+
+[Family Radio Service (FRS) (WALKIE TALKIES)](#family-radio-service-frs)
+
+[Multi-Use Radio Service (MURS)](#multi-use-radio-service-murs)
+
+[General Mobile Radio Service (GMRS)](#general-mobile-radio-service-gmrs)
+
+[NOAA (Weather)](#noaa-weather-broadcast-frequencies)
+
+[Police, Fire, EMS](#police-fire-ems)
+
+[Police Codes](#police-codes) -->
+<h1 id="baofengusage">BaoFeng Usage</h1>
+<p>(Source: <a href="http://www.bugoutbagbuilder.com/learning-tutorials/baofeng-uv-5r-basic-setup-emergency-frequencies">http://www.bugoutbagbuilder.com/learning-tutorials/baofeng-uv-5r-basic-setup-emergency-frequencies</a>)</p>
+<p><strong>BaoFeng UV-5R Dual Band Two Way Radio</strong></p>
+<p>Range: VHF (136-174), UHF (400-520)</p>
+<h2 id="commandskeysbuttons">Commands, Keys &amp; Buttons</h2>
+<p><strong>PTT (PUSH-TO-TALK)</strong>: Press and hold to transmit, release it to receive.</p>
+<p><strong>SIDE KEY1/[CALL]</strong>: Press to activate the FM radio. Press it again to deactivate. Press and hold to activate the alarm button. Hold again to deactivate.</p>
+<p><strong>SIDE KEY2/[MONI]</strong>: Press to turn on the flashlight. Hold the key to monitor the signal (temporarily disable squelch).</p>
+<p><strong>[VFO/MR] BUTTON</strong>: Press to switch between pre-programmed channel mode, and frequency mode.</p>
+<p><strong>[A/B] BUTTON</strong>: Press to switch the frequency display. This will determine which of the two displayed frequencies you’re transmitting and receiving on.</p>
+<p><strong>[BAND] BUTTON</strong>: Press to switch the band you’re operating on, which is wither VHF (136 mHz) or UHF (470 mHz). While the FM radio is activated, press to switch the FM radio bands (65-75MHZ or 76-108 MHZ).</p>
+<p><strong>[SCAN] KEY</strong>: Hold the button for two seconds to start scanning for active channels (channels that are transmitting). The radio will automatically stop at a frequency if it detects activity. While the FM radio is active, hold to search for radio stations.</p>
+<p><strong>[#”KEY”] KEY</strong>: Press while in Channel mode, press to switch between High and Low transmit power. Press and hold for two seconds to lock and unlock the keypad. This is useful for when the radio is on and you want to receive communications, but you want to store the radio without button-mashing any settings.</p>
+<p><strong>[MENU] KEY</strong>: Press to enter the main menu and to select and confirm settings (acts as “ENTER” key).</p>
+<p><strong>ARROW KEYS</strong>: Press and hold the UP or DOWN arrow keys to dial the frequency or programmed channels up or down while not in the menu. Use the arrows to navigate the menu, too.</p>
+<p><strong>[EXIT] KEY</strong>: Press to cancel a function or exit a menu or screen.</p>
+<h2 id="importantmenuoptions">Important Menu Options</h2>
+<h3 id="0sqlsquelchlevel">0: SQL - Squelch Level</h3>
+<p>Squelch is the "cutoff" or "gate" for incoming transmissions, the higher the value the more distinct the transmission must be to come through.</p>
+<p>Setting the squelch to 0 will open up the squelch entirely, setting it to 9 will close it almost entirely. </p>
+<h3 id="1stepfrequencystep">1: STEP - Frequency Step</h3>
+<p>Selects the step in frequency step when using [UP] the [DOWN] keys. This is also the interval the scanner will run at.</p>
+<h3 id="2txptransmitpower">2: TXP - Transmit Power</h3>
+<p>This controls how much power output your transmissions will use.</p>
+<p>HIGH: 4-5w
+LOW: 1-2W</p>
+<p>Transmit power is only settable in Frequency(VFO) Mode. In Memory(MR) Mode transmit power will be set to the level programmed in memory for any given channel.</p>
+<h3 id="3savebatterysave">3: SAVE - Battery Save</h3>
+<p>Sampling ratio of the Receiver to acknowledge a signal. I think the higher value will sample more often (look for incoming transmissions) and use more battery.</p>
+<h3 id="5wnwidebandnarrowband">5: WN - Wideband / Narrowband</h3>
+<p>In the USA, FCC part 90 radios are mandated to switch over to Narrowband communication by January 1st 2013. Meaning all commercial users. This does not affect Amateur Radio operators. If you don't know what this means you should probably be using Narrowband.</p>
+<h3 id="6abrdisplayilluminationtime">6: ABR - Display Illumination Time</h3>
+<p>Time-out for the LCD back-light in seconds.</p>
+<h3 id="7tdrdualwatch">7: TDR - Dual Watch</h3>
+<p>When enabled it allows you to monitor two frequencies simultaneously. It should be noted that this radio does not possess a dual VFO, meaning that the Dual Watch feature is a time sharing operation. Your radio will flip-flop between A and B channels at a fixed rate. This will not allow you to receive two frequencies in parallel.</p>
+<p>NOTE: Be careful when using this setting because your radio will by default, transmit on whatever the active channel is!</p>
+<h3 id="8beepkeypadbeep">8: BEEP - Keypad Beep</h3>
+<p>When enabled your radio will emit an audible tone at every key press.</p>
+<h3 id="14voicevoiceprompt">14: VOICE - Voice Prompt</h3>
+<p>When enabled your radio will "talk back" to you, meaning audible confirmation when pressing keys and working the menu system. Can be set to Chinese, English or Off.</p>
+<h3 id="18screvscannerresumemethod">18: SC-REV - Scanner Resume Method</h3>
+<p>Sets the behavior of the scanner upon finding active frequencies.</p>
+<p>• Time Operation: The scanner will resume after a pre set time. 
+• Carrier Operation: The scanner will resume once the signal disappears. 
+• Search Operation: The scanner holds on the frequency with detected activity</p>
+<h3 id="21mdfachannelmodeadisplay">21: MDF-A - Channel Mode A Display</h3>
+<p>Sets the display mode for the upper display to either text or freq.</p>
+<p>NOTE: Channel name can only be set via Computer.</p>
+<h3 id="22mdfbchannelmodebdisplay">22: MDF-B - Channel Mode B Display</h3>
+<p>Sets the display mode for the lower display to either text or freq.</p>
+<p>NOTE: Channel name can only be set via Computer.</p>
+<h3 id="23bclbusychannellockout">23: BCL - Busy Channel Lock-out</h3>
+<p>If enabled your radio will prevent you from transmitting on active frequencies.</p>
+<p>NOTE: You should probably have this on!</p>
+<h3 id="32almodalarmmode">32: AL-MOD - Alarm Mode</h3>
+<ul>
+<li>SITE: Cycling tone over the air</li>
+<li>TONE: Radio speaker only</li>
+<li>CODE: Transmit 5s tone followed by Morse</li>
+</ul>
+<p>NOTE: You should set this to TONE to avoid transmitting an alarm when that is not needed.</p>
+<h3 id="34tdrabtransmitselectionwhileindualwatchmode">34: TDR-AB - Transmit selection while in Dual Watch mode</h3>
+<p>If enabled, this will force the radio to transmit on the selected frequency when in Dual Watch mode</p>
+<h2 id="resetzeroouttheradio">Reset/“Zero Out” The Radio</h2>
+<p>To setup the radio, ensure the battery pack is snapped to the back of the transceiver. Thread the antenna onto the antenna post and tighten. Turn the radio on by rotating the volume knob clockwise. It’ll click, the radio will beep twice, and then a voice will state “Frequency Mode” or “Channel Mode”.</p>
+<ul>
+<li>Press MENU.</li>
+<li>Use the up and down arrows on the keypad to navigate to menu option 40.</li>
+<li>Press MENU again to select “ALL”.</li>
+<li>Press MENU a third time to select “SOURCE?”.</li>
+<li>Press MENU a fourth time to reset the radio.
+///////</li>
+<li>The radio will reset and default to a Chinese voice. To select your preferred language:</li>
+<li>Navigate to menu option 14.</li>
+<li>Press MENU again to select the language selection.</li>
+<li>Use the arrows to locate “ENG” for English (or your preferred language).</li>
+<li>Press MENU again to confirm the language selection.</li>
+<li>Exit.</li>
+</ul>
+<h2 id="usetheuv5rasanfmradio">Use the UV-5R as an FM radio</h2>
+<p>The UV-5R’s most simple function is acting like an FM radio for your favorite stations. This is useful during disasters, when emergency broadcasts and information are put out through local radio stations. To enable FM mode, just press the orange “CALL” button on the size of the radio. Scan each station available by repeatedly pressing the */”SCAN” key.</p>
+<h2 id="entersaveanduseanemergencyfrequency">Enter, save, and use an emergency frequency</h2>
+<p>You can enter a frequency and start receiving and transmitting simply by typing the appropriate numbers on the keypad. For example, typing in 162.400 will key you into the NOAA weather broadcast. Typing in 151.940 will key you into the most common national emergency channel.</p>
+<p>We want to program some emergency channels so we don’t have to remember all the digits to every frequency we might use. To save a frequency and make a new channel:</p>
+<ul>
+<li>Press VFO/MR to put the radio into Frequency (VFO) Mode.</li>
+<li>Press the A/B button to select the top frequency. Note the arrow to the left of the frequency on the display, indicating your selection. All programming must be done using the top frequency.</li>
+<li>Turn off TDR/Dual Standby (it should be off but confirm it is).</li>
+<li>Press MENU.</li>
+<li>Press 7.</li>
+<li>Press MENU to select the menu option.</li>
+<li>Use the up and down arrows to select “OFF”.</li>
+<li>Press Menu to confirm.</li>
+<li>Exit.</li>
+<li>Type in the frequency you want to save using the keypad.</li>
+<li>Press MENU.</li>
+<li>Navigate to option 27.</li>
+<li>Press MENU again to enter the channel selection.</li>
+<li>Select the desired channel (000 to 127) by pressing the up and down arrows. We recommend starting at channel 1, then 2, and so on. If a channel number has “CH-“ in front of it, that channel already has a frequency saved.</li>
+<li>Press MENU to save the frequency to the selected channel.</li>
+<li>Exit.</li>
+</ul>
+<p>You can now select the saved frequency by pressing VFO/MR to select Channel Mode, and then pressing the up and down arrows. The radio will cycle through all the saved frequencies’ channels. While in Channel Mode, the display will show two of your saved frequencies, and the channel each frequency is saved on.</p>
+<h2 id="deleteasavedfrequencychannel">Delete a saved frequency/channel</h2>
+<p>Deleting a frequency or channel is even easier:</p>
+<ul>
+<li>Press MENU.</li>
+<li>Navigate to option 28.</li>
+<li>Press MENU to enter channel selection.</li>
+<li>Select the channel/frequency you wish to delete.</li>
+<li>Press MENU again to delete it.</li>
+<li>Exit.</li>
+</ul>
+<h2 id="searchforactivefrequenciesandtransmissions">Search for active frequencies and transmissions</h2>
+<p>You may find yourself in a disaster situation with no known frequencies or channels. If this happens, you can still use the UV-5R to pick up emergency communications by using it to scan the airwaves:</p>
+<ul>
+<li>Press VFO/MR and ensure the radio is in Frequency Mode.</li>
+<li>Press and hold the */”SCAN” Key.</li>
+<li>The radio will scan through frequencies rapidly, stopping when it hears a transmission.</li>
+<li>To set the number of frequencies the radio jumps with each scan, press MENU.</li>
+<li>Navigate to option 1: “STEP”.</li>
+<li>Press MENU to enter the step selection.</li>
+<li>Use the up and down arrows to increase or decrease the amount of the step.</li>
+<li>The lowest step (2.5K) is the slowest and most thorough search. 50K is the fastest and least thorough frequency search.</li>
+<li>Change the radio’s operating band (VHF or UHF)</li>
+</ul>
+<p>The Baofeng operates in two bands: Very High and Ultra High Frequency. Only one of two bands can be monitored and used at a time. To switch between bands:</p>
+<ul>
+<li>Press MENU.</li>
+<li>Navigate to option 33: BAND.</li>
+<li>Press MENU again to enter the band selection.</li>
+<li>Use the up and down arrows to select VHF or UHF.</li>
+<li>Press MENU again to confirm.</li>
+<li>Exit.</li>
+</ul>
+<p>TIP: Many emergency radio frequencies, police, EMS, government agencies, and rescue operations use the VHF band.</p>
+<h2 id="ctcssanddcsprivatelineorplcommunications">CTCSS and DCS (“private line” or PL communications)</h2>
+<p>Sometimes, one radio frequency will be used for transmitting and receiving by multiple operators. This is especially likely in a disaster scenario. Many first responders, command centers, and rescue operations will stick to one frequency to ensure stable communications. But in order to separate all the operators on a single frequency from each other (and to avoid sharing transmissions and crowding up the airwaves), two possible systems of tonal frequencies are used.</p>
+<p>These tonal frequency systems are called CTCSS (Continuous Tone Coded Squelch System) and DCS (Digital Code Squelch). Both systems work largely the same, except DCS is digital.</p>
+<p>CTCSS has 50 universal tones measured in hertz (67.0 Hz)
+DCS has 105 universal tones measured alphanumerically (D023N)
+To have a better understanding of this, consider a wireless phone and the cellular network it operates on. Think of the frequency itself as the network, and the CTCSS or DCS tone as the phone number. You must be on the network to transmit or receive, but you also have to “dial” the right number to communicate (the CTCSS or DCS).</p>
+<p>There are universal, preprogrammed tones built into the UV-5R for both systems. You must know which tone the frequency in question is using, in order to transmit.</p>
+<p><strong>How to Program CTCSS and DCS to a Frequency/Channel</strong></p>
+<p>To program a CTCSS or DCS tone into a frequency that requires it (and save it to a channel):</p>
+<ul>
+<li>Press VFO/MR and put the radio in Channel Mode.</li>
+<li>Ensure you’re on Channel A by pressing A/B.</li>
+<li>Type in the frequency you want to save.</li>
+<li>Press MENU.</li>
+<li>Navigate to option 10 and 12 to set a transmitting and receiving DCS tone.</li>
+<li>Navigate to option 11 and 13 select a transmitting and receiving CTCS tone.</li>
+<li>Press MENU again to select the appropriate option.</li>
+<li>Use the up and down arrow keys to select the appropriate DCS or CTCS transmitting and receiving tones. In options 10 and 12, or 11 and 13.</li>
+<li>Press MENU to confirm your selection for each.</li>
+<li>Navigate to option 27 to store the frequency and the transmitting and receiving DCS or CTCS tones to a channel.</li>
+<li>Exit.</li>
+</ul>
+<p>Now, the frequency you just saved should be on the display with either “DCS” or “CT” to the left.</p>
+<h2 id="howtoprogramarepeaterfrequency">How to Program a Repeater Frequency</h2>
+<p>HAM radios can only travel certain distances directly, usually a few miles. Repeaters act like “waypoints” for a transmission, hopping it from one repeater to next, extending your communication range. This is incredibly useful in a disaster situation because it allows you to reach much greater distances. Some repeaters allow transmissions to reach thousands of miles.</p>
+<p>To program a repeater and transmit on its frequency, you’ll need to know some information about the repeater itself:</p>
+<ul>
+<li>Repeater frequency</li>
+<li>Shift (+ or -)</li>
+<li>Offset</li>
+<li>R-CTCS or R-DCS (rarely)</li>
+<li>T-CTCS or T-DCS</li>
+</ul>
+<p>Some repeaters use different tonal frequency systems that are not CTCS or DCS, or none at all. Those other systems cannot be programmed into the UV-5R. They are not covered in this guide.</p>
+<p><strong>To program a repeater:</strong></p>
+<ul>
+<li>Press VFO/MR and put the radio in Channel Mode.</li>
+<li>Ensure you’re on Channel A by pressing A/B.</li>
+<li>Type in the frequency for the repeater you want to save.</li>
+<li>Press MENU.</li>
+<li>Navigate to option 10 or 11 to input the R-DCS or R-CTCS (if applicable).</li>
+<li>Navigate to option 12 to 13 to input the T-CTCS or T-DCS.</li>
+<li>Navigate to option 25: SFT-D.</li>
+<li>Set the positive or negative shift for the CTCS/DCS (provided).</li>
+<li>Navigate to option 26: Offset.</li>
+<li>Set the appropriate offset (provided based on band).</li>
+<li>Navigate to option 27 and save your repeater to a channel.</li>
+<li>Exit.</li>
+</ul>
+<p>Now, in Channel mode, you can select the repeater channel and transmit on the repeater in question.</p>
+<h1 id="familyradioservicefrs">Family Radio Service (FRS)</h1>
+<h2 id="about">About</h2>
+<p>(Source: <a href="https://www.fcc.gov/wireless/bureau-divisions/mobility-division/family-radio-service-frs">https://www.fcc.gov/wireless/bureau-divisions/mobility-division/family-radio-service-frs</a>)
+The Family Radio Service (FRS) is a private, two-way, short-distance voice and data communications service for facilitating family and group activities. The most common use for FRS channels is short-distance, two-way voice communications using small hand-held radios that are similar to walkie-talkies.</p>
+<p>Other services that allow similar communications include the  <a href="https://www.fcc.gov/encyclopedia/general-mobile-radio-service-gmrs">General Mobile Radio Service (GMRS)</a>  and the  <a href="https://www.fcc.gov/encyclopedia/multi-use-radio-service-murs-0">Multi-Use Radio Service (MURS)</a>.</p>
+<p>The FRS is authorized 22 channels in the 462 MHz and 467 MHz range, all of which are shared with GMRS.</p>
+<h2 id="licensing">Licensing</h2>
+<p>FRS is licensed by rule. This means an individual license is not required to operate an FRS radio provided you comply with the rules. You may operate an FRS radio regardless of your age, and for personal or for business use if you are not a representative of a foreign government.</p>
+<h2 id="operatingafamilyradioservicefrsunit">Operating a Family Radio Service (FRS) Unit</h2>
+<p>You can operate a FRS transmitter at any place where the FCC regulates radio communications, subject to certain limitations. A FRS transmitter may not be modified and must be certified by the FCC.</p>
+<p>None of the FRS channels are assigned for the exclusive use of any user. You must cooperate in the selection and use of the channels in order to make the most effective use of them and to reduce the possibility of interference.</p>
+<p>The usual range of an FRS device on channels 8-14 is less than one-half mile, but longer range communications can be achieve on channels 1-7 and 15-22 depending on conditions. You may not interconnect FRS transmitters and radios with the telephone system.</p>
+<h2 id="gmrsfrsdualserviceradios">GMRS FRS Dual-service radios</h2>
+<p>Some manufacturers received approval to market radios that were certified under both FRS and GMRS, which allowed users to use one device to operate on FRS channels, which does not require a license, and GMRS, which requires an FCC license. In 2017, the FCC changed its rules to stop equipment authorization of FRS dual-service radios and it changed the rules for both FRS and GMRS such that existing radios would be reclassified as either FRS or GMRS to remove the confusion of whether a license was needed for legal operation.</p>
+<p>Specifically, if you have a radio that was sold as a dual-service FRS/GMRS radio and it is limited to the channels and power limits provided under the “Data” tab on this page, then that device can be operated as an FRS device without a licensing requirement. However, if the device exceeds the limits under the “Data” tab or includes any of the following channels (467.5500, 467.5750, 467.6000, 467.6250, 467.6500, 467.6750, 467.7000, and 467.7250 MHz), then it is a GMRS device and an individual FCC license is needed to operate the device other than on the channels and with the bandwidth and power limits shown under the “Data” tab.</p>
+<h2 id="channels">Channels</h2>
+<p>There are 22 FRS channels. Each channel has a bandwidth of 12.5 kHz, but the power of each channel may vary as indicated below. All channels are shared with GMRS, so you may hear communications from licensed GMRS stations on these channels.</p>
+<p>(Source: <a href="https://en.wikipedia.org/wiki/General_Mobile_Radio_Service">https://en.wikipedia.org/wiki/General<em>Mobile</em>Radio_Service</a>)</p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Frequency (MHz)</th>
+<th>FRS EIRP Restriction</th>
+<th>GMRS EIRP Restriction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>462.5625</td>
+<td>Up to 2 watt</td>
+<td>Up to 5 watts</td>
+</tr>
+<tr>
+<td>2</td>
+<td>462.5875</td>
+<td>Up to 2 watt</td>
+<td>Up to 5 watts</td>
+</tr>
+<tr>
+<td>3</td>
+<td>462.6125</td>
+<td>Up to 2 watt</td>
+<td>Up to 5 watts</td>
+</tr>
+<tr>
+<td>4</td>
+<td>462.6375</td>
+<td>Up to 2 watt</td>
+<td>Up to 5 watts</td>
+</tr>
+<tr>
+<td>5</td>
+<td>462.6625</td>
+<td>Up to 2 watt</td>
+<td>Up to 5 watts</td>
+</tr>
+<tr>
+<td>6</td>
+<td>462.6875</td>
+<td>Up to 2 watt</td>
+<td>Up to 5 watts</td>
+</tr>
+<tr>
+<td>7</td>
+<td>462.7125</td>
+<td>Up to 2 watt</td>
+<td>Up to 5 watts</td>
+</tr>
+<tr>
+<td>8</td>
+<td>467.5625</td>
+<td>Up to 0.5 watt</td>
+<td>Up to 0.5 watt[7]</td>
+</tr>
+<tr>
+<td>9</td>
+<td>467.5875</td>
+<td>Up to 0.5 watt</td>
+<td>Up to 0.5 watt[7]</td>
+</tr>
+<tr>
+<td>10</td>
+<td>467.6125</td>
+<td>Up to 0.5 watt</td>
+<td>Up to 0.5 watt[7]</td>
+</tr>
+<tr>
+<td>11</td>
+<td>467.6375</td>
+<td>Up to 0.5 watt</td>
+<td>Up to 0.5 watt[7]</td>
+</tr>
+<tr>
+<td>12</td>
+<td>467.6625</td>
+<td>Up to 0.5 watt</td>
+<td>Up to 0.5 watt[7]</td>
+</tr>
+<tr>
+<td>13</td>
+<td>467.6875</td>
+<td>Up to 0.5 watt</td>
+<td>Up to 0.5 watt[7]</td>
+</tr>
+<tr>
+<td>14</td>
+<td>467.7125</td>
+<td>Up to 0.5 watt</td>
+<td>Up to 0.5 watt[7]</td>
+</tr>
+<tr>
+<td>15</td>
+<td>462.5500</td>
+<td>Up to 2 watt</td>
+<td>Up to 50 watts</td>
+</tr>
+<tr>
+<td>16</td>
+<td>462.5750</td>
+<td>Up to 2 watt</td>
+<td>Up to 50 watts</td>
+</tr>
+<tr>
+<td>17</td>
+<td>462.6000</td>
+<td>Up to 2 watt</td>
+<td>Up to 50 watts</td>
+</tr>
+<tr>
+<td>18</td>
+<td>462.6250</td>
+<td>Up to 2 watt</td>
+<td>Up to 50 watts</td>
+</tr>
+<tr>
+<td>19</td>
+<td>462.6500</td>
+<td>Up to 2 watt</td>
+<td>Up to 50 watts</td>
+</tr>
+<tr>
+<td>20</td>
+<td>462.6750</td>
+<td>Up to 2 watt</td>
+<td>Up to 50 watts</td>
+</tr>
+<tr>
+<td>21</td>
+<td>462.7000</td>
+<td>Up to 2 watt</td>
+<td>Up to 50 watts</td>
+</tr>
+<tr>
+<td>22</td>
+<td>462.7250</td>
+<td>Up to 2 watt</td>
+<td>Up to 50 watts</td>
+</tr>
+</tbody>
+</table>
+<h1 id="multiuseradioservicemurs">Multi-Use Radio Service (MURS)</h1>
+<p>(Source: <a href="https://www.fcc.gov/wireless/bureau-divisions/mobility-division/multi-use-radio-service-murs">https://www.fcc.gov/wireless/bureau-divisions/mobility-division/multi-use-radio-service-murs</a>)</p>
+<h2 id="about-1">About</h2>
+<p>The Multi-Use Radio Service (MURS) uses channels in the 151 – 154 MHz spectrum range. The most common use of MURS channels is for short-distance, two-way communications using small, portable hand-held radios that function similar to walkie-talkies.</p>
+<p>Similar services include  <a href="https://www.fcc.gov/general/general-mobile-radio-service-gmrs">General Mobile Radio Service (GMRS)</a>  and  <a href="https://www.fcc.gov/general/family-radio-service-frs">Family Radio Service (FRS)</a>.</p>
+<p>MURS is authorized five channels that were previously in the industrial/business radio service and were known as the “color dot” frequencies in Part 90 of the FCC rules.</p>
+<h2 id="licensing-1">Licensing</h2>
+<p>MURS is licensed by rule. This means an individual license is not required for an entity to operate a MURS transmitter if it is not a representative of a foreign government and if it uses the transmitter in accordance with the MURS rules outlined in <a href="https://www.fcc.gov/encyclopedia/rules-regulations-title-47">47 C.F.R. Part 95 Subpart J</a>. There is no age restriction regarding who may operate an MURS transmitter.</p>
+<h2 id="operations">Operations</h2>
+<p>You may operate a MURS transmitter at any location the FCC regulates radio communications, subject to certain restrictions. A MURS transmitter must be certified by the FCC.</p>
+<p>None of the MURS channels are assigned for the exclusive use of any user. You must cooperate in the selection and use of the channels in order to make the most effective use of them and to reduce the possibility of interference.</p>
+<p>No MURS transmitter shall, under any condition of modulation, transmit more than 2 watts transmitter power output.</p>
+<p>The usual range of communications between MURS stations is less than a few miles; connecting a MURS radio to an external antenna can extend the range to ten miles or more. MURS stations are not allowed to be interconnected with the public switched telephone network. A station identification announcement is not required to be transmitted. Other restrictions on the use of MURS stations also apply.</p>
+<h2 id="channels-1">Channels</h2>
+<p>(Source: <a href="https://en.wikipedia.org/wiki/Multi-Use_Radio_Service">https://en.wikipedia.org/wiki/Multi-Use<em>Radio</em>Service</a>)</p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Frequency</th>
+<th>Maximumauthorized bandwidth</th>
+<th>Channel name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>151.82 MHz</td>
+<td>11.25 kHz</td>
+<td>MURS 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>151.88 MHz</td>
+<td>11.25 kHz</td>
+<td>MURS 2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>151.94 MHz</td>
+<td>11.25 kHz</td>
+<td>MURS 3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>154.57 MHz</td>
+<td>20.00 kHz</td>
+<td>Blue Dot</td>
+</tr>
+<tr>
+<td>5</td>
+<td>154.60 MHz</td>
+<td>20.00 kHz</td>
+<td>Green Dot</td>
+</tr>
+</tbody>
+</table>
+<h1 id="generalmobileradioservicegmrs">General Mobile Radio Service (GMRS)</h1>
+<p>(Source: <a href="https://www.fcc.gov/general-mobile-radio-service-gmrs">https://www.fcc.gov/general-mobile-radio-service-gmrs</a>)</p>
+<h2 id="about-2">About</h2>
+<p>The General Mobile Radio Service (GMRS) is a licensed radio service that uses channels around 462 MHz and 467 MHz. The most common use of GMRS channels is for short-distance, two-way voice communications using hand-held radios, mobile radios and repeater systems. In 2017, the FCC expanded GMRS to also allow short data messaging applications including text messaging and GPS location information.</p>
+<p>Services that provide functionality similar to GMRS include the Citizens Band Radio Service (CBRS), the Family Radio Service (FRS) and the Multi-Use Radio Service (MURS).</p>
+<p>The GMRS is available to an individual (one man or one woman) for short-distance two-way communications to facilitate the activities of licensees and their immediate family members. Each licensee manages a system consisting of one or more transmitting units (stations.) The rules for GMRS limit eligibility for new GMRS system licenses to individuals in order to make the service available to personal users. (Some previously licensed non-individual systems are allowed to continue using GMRS.)</p>
+<p>In 2017, the FCC updated the GMRS by allotting additional interstitial channels in the 467 MHz band, increased the license term from 5 to 10 years, allowed transmission of limited data applications such as text messaging and GPS location information and made other updates to the GMRS rules to reflect modern application of the service.</p>
+<h2 id="licensing-2">Licensing</h2>
+<p>An FCC license is required to operate GMRS system. Licenses are issued for a ten-year term and can be renewed between 90 days prior to the expiration date and up to the actual expiration date of the license. After a license expires, an individual must request a new GMRS license.</p>
+<p>A GMRS system licensed to a non-individual prior to July 31, 1987 is also eligible for renewal, but the licensee may not make any major modification to the system.</p>
+<p>You may apply for a GMRS license if you are 18 years or older and not a representative of a foreign government. If you receive a license, any family member, regardless of age, can operate GMRS stations and units within the licensed system.</p>
+<p>The FCC service rules for the GMRS are located in  <a href="https://www.fcc.gov/encyclopedia/rules-regulations-title-47">47 C.F.R. Part 95 Subpart E</a>. You can find information about GMRS licensing in the rules.</p>
+<h2 id="operations-1">Operations</h2>
+<p>You may operate a MURS transmitter at any location the FCC regulates radio communications, subject to certain restrictions. A MURS transmitter must be certified by the FCC.</p>
+<p>None of the MURS channels are assigned for the exclusive use of any user. You must cooperate in the selection and use of the channels in order to make the most effective use of them and to reduce the possibility of interference.</p>
+<p>No MURS transmitter shall, under any condition of modulation, transmit more than 2 watts transmitter power output.</p>
+<p>The usual range of communications between MURS stations is less than a few miles; connecting a MURS radio to an external antenna can extend the range to ten miles or more. MURS stations are not allowed to be interconnected with the public switched telephone network. A station identification announcement is not required to be transmitted. Other restrictions on the use of MURS stations also apply.</p>
+<h2 id="channels-2">Channels</h2>
+<p>There are 30 GMRS channels with a bandwidth of 25 kHz (20 KHz authorized bandwidth) or 12.5 kHz as outlined below:
+(Source: <a href="https://en.wikipedia.org/wiki/General_Mobile_Radio_Service">https://en.wikipedia.org/wiki/General<em>Mobile</em>Radio_Service</a>)</p>
+<table>
+<thead>
+<tr>
+<th>Frequency</th>
+<th>FRS Channel</th>
+<th>FRS Power</th>
+<th>FRS Bandwidth</th>
+<th>GMRS Power</th>
+<th>GMRS Bandwidth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>462.5625 MHz</td>
+<td>1</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>5 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.5875 MHz</td>
+<td>2</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>5 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.6125 MHz</td>
+<td>3</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>5 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.6375 MHz</td>
+<td>4</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>5 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.6625 MHz</td>
+<td>5</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>5 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.6875 MHz</td>
+<td>6</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>5 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.7125 MHz</td>
+<td>7</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>5 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>467.5625 MHz</td>
+<td>8</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+</tr>
+<tr>
+<td>467.5875 MHz</td>
+<td>9</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+</tr>
+<tr>
+<td>467.6125 MHz</td>
+<td>10</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+</tr>
+<tr>
+<td>467.6375 MHz</td>
+<td>11</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+</tr>
+<tr>
+<td>467.6625 MHz</td>
+<td>12</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+</tr>
+<tr>
+<td>467.6875 MHz</td>
+<td>13</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+</tr>
+<tr>
+<td>467.7125 MHz</td>
+<td>14</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+<td>0.5 W</td>
+<td>12.5 kHz</td>
+</tr>
+<tr>
+<td>462.5500 MHz</td>
+<td>15</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.5750 MHz</td>
+<td>16</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.6000 MHz</td>
+<td>17</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.6250 MHz</td>
+<td>18</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.6500 MHz</td>
+<td>19</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.6750 MHz</td>
+<td>20</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.7000 MHz</td>
+<td>21</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>462.7250 MHz</td>
+<td>22</td>
+<td>2 W</td>
+<td>12.5 kHz</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>467.5500 MHz</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>467.5750 MHz</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>467.6000 MHz</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>467.6250 MHz</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>467.6500 MHz</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>467.6750 MHz</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>467.7000 MHz</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+<tr>
+<td>467.7250 MHz</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>50 W</td>
+<td>20 kHz</td>
+</tr>
+</tbody>
+</table>
+<h1 id="noaaweatherbroadcastfrequencies">NOAA Weather Broadcast Frequencies</h1>
+<p>(Source: <a href="https://en.wikipedia.org/wiki/NOAA_Weather_Radio">https://en.wikipedia.org/wiki/NOAA<em>Weather</em>Radio</a>)
+<strong>NOAA Weather Radio</strong> (<strong>NWR</strong>; also known as <strong>NOAA Weather Radio All Hazards</strong>) is an automated 24-hour network of <a href="https://en.wikipedia.org/wiki/Very_high_frequency" title="Very high frequency">VHF</a>  <a href="https://en.wikipedia.org/wiki/Frequency_modulation" title="Frequency modulation">FM</a>  <a href="https://en.wikipedia.org/wiki/Weather_radio" title="Weather radio">weather radio</a> stations in the <a href="https://en.wikipedia.org/wiki/United_States" title="United States">United States</a> (U.S.) that broadcast weather information directly from a nearby <a href="https://en.wikipedia.org/wiki/National_Weather_Service" title="National Weather Service">National Weather Service</a> office. The routine programming cycle includes local or regional weather forecasts, synopsis, climate summaries, synopsis or zone/lake/coastal waters forecasts (when applicable). During severe conditions the cycle is shortened into: hazardous weather outlooks, short-term forecasts, special weather statements or tropical weather summaries (the first two aren't normally broadcast in most offices).</p>
+<pre><code class="hljs"><span class="hljs-attribute">162</span>.<span class="hljs-number">4000</span> MHz
+<span class="hljs-attribute">162</span>.<span class="hljs-number">4250</span> MHz
+<span class="hljs-attribute">162</span>.<span class="hljs-number">4500</span> MHz
+<span class="hljs-attribute">162</span>.<span class="hljs-number">4750</span> MHz
+<span class="hljs-attribute">162</span>.<span class="hljs-number">5000</span> MHz
+<span class="hljs-attribute">162</span>.<span class="hljs-number">5250</span> MHz
+<span class="hljs-attribute">162</span>.<span class="hljs-number">550</span> MHz
+</code></pre>
+<h1 id="policefireems">Police, Fire, EMS</h1>
+<h2 id="bellingham">Bellingham:</h2>
+<pre><code class="hljs"><span class="hljs-attribute">Whatcom</span> Fire - <span class="hljs-number">453</span>.<span class="hljs-number">28750</span> (<span class="hljs-number">173</span>.<span class="hljs-number">8</span> PL)
+<span class="hljs-attribute">Police</span> Dispatch - <span class="hljs-number">453</span>.<span class="hljs-number">22500</span> (<span class="hljs-number">91</span>.<span class="hljs-number">5</span> PL)
+<span class="hljs-attribute">Police</span> Special Operations - <span class="hljs-number">453</span>.<span class="hljs-number">38750</span>
+<span class="hljs-attribute">Police</span> Special Operations - <span class="hljs-number">453</span>.<span class="hljs-number">41250</span> 
+<span class="hljs-attribute">Police</span> Special Operations - <span class="hljs-number">453</span>.<span class="hljs-number">43750</span>
+<span class="hljs-attribute">Police</span> Tactical Home Base - <span class="hljs-number">154</span>.<span class="hljs-number">02500</span> 
+<span class="hljs-attribute">Police</span> Tactical KOB - <span class="hljs-number">155</span>.<span class="hljs-number">07000</span> 
+<span class="hljs-attribute">Public</span> Works - <span class="hljs-number">453</span>.<span class="hljs-number">75000</span>
+<span class="hljs-attribute">Whatcom</span> Regional Transit Authority - <span class="hljs-number">453</span>.<span class="hljs-number">42500</span>
+</code></pre>
+<h2 id="whatcom">Whatcom:</h2>
+<pre><code class="hljs"><span class="hljs-attribute">Sheriff</span> Dispatch - <span class="hljs-number">453</span>.<span class="hljs-number">32500</span> 
+<span class="hljs-attribute">Sheriff</span> East County - <span class="hljs-number">453</span>.<span class="hljs-number">67500</span> 
+<span class="hljs-attribute">Sheriff</span> Rural Area - <span class="hljs-number">155</span>.<span class="hljs-number">61000</span>
+<span class="hljs-attribute">Sheriff</span> Jail/Corrections - <span class="hljs-number">453</span>.<span class="hljs-number">30000</span> 
+<span class="hljs-attribute">Sheriff</span> Jail/Corrections - <span class="hljs-number">453</span>.<span class="hljs-number">10000</span>
+<span class="hljs-attribute">Jail</span> Operations - <span class="hljs-number">453</span>.<span class="hljs-number">97500</span>
+<span class="hljs-attribute">Simulcast</span> Patch Of WCSO <span class="hljs-number">155</span>.<span class="hljs-number">610</span> Dispatch - <span class="hljs-number">453</span>.<span class="hljs-number">92500</span>
+<span class="hljs-attribute">V</span>-Fire <span class="hljs-number">7</span> - <span class="hljs-number">153</span>.<span class="hljs-number">87500</span>
+<span class="hljs-attribute">V</span>-Fire <span class="hljs-number">2</span> - <span class="hljs-number">154</span>.<span class="hljs-number">22000</span>
+<span class="hljs-attribute">V</span>-Fire Tac <span class="hljs-number">12</span> - <span class="hljs-number">154</span>.<span class="hljs-number">32500</span>
+<span class="hljs-attribute">V</span>-Fire <span class="hljs-number">3</span> - <span class="hljs-number">154</span>.<span class="hljs-number">34000</span>
+<span class="hljs-attribute">V</span>-Fire <span class="hljs-number">1</span> - <span class="hljs-number">154</span>.<span class="hljs-number">43000</span>
+<span class="hljs-attribute">V</span>-Fire <span class="hljs-number">4</span> - <span class="hljs-number">155</span>.<span class="hljs-number">29500</span> 
+<span class="hljs-attribute">V</span>-Fire <span class="hljs-number">6</span> - <span class="hljs-number">158</span>.<span class="hljs-number">84250</span> 
+<span class="hljs-attribute">V</span>-Fire Tac <span class="hljs-number">8</span> - <span class="hljs-number">158</span>.<span class="hljs-number">97750</span>
+<span class="hljs-attribute">V</span>-Fire Tac <span class="hljs-number">9</span> - <span class="hljs-number">159</span>.<span class="hljs-number">09750</span> 
+<span class="hljs-attribute">V</span>-Fire Tac <span class="hljs-number">10</span> - <span class="hljs-number">159</span>.<span class="hljs-number">21750</span>
+<span class="hljs-attribute">V</span>-Fire Tac <span class="hljs-number">11</span> - <span class="hljs-number">159</span>.<span class="hljs-number">21750</span>
+<span class="hljs-attribute">V</span>-Fire Ch <span class="hljs-number">5</span> - <span class="hljs-number">159</span>.<span class="hljs-number">79500</span>
+<span class="hljs-attribute">Fire</span> - <span class="hljs-number">453</span>.<span class="hljs-number">18750</span>
+<span class="hljs-attribute">Fire</span> - <span class="hljs-number">453</span>.<span class="hljs-number">58750</span>
+<span class="hljs-attribute">Fire</span> + Vehicle Repeaters - <span class="hljs-number">460</span>.<span class="hljs-number">52500</span>
+</code></pre>
+<h1 id="policecodes">Police Codes</h1>
+<h2 id="10codes">10-CODES</h2>
+<table>
+<thead>
+<tr>
+<th>Was (Ten-Code)</th>
+<th>Now (Procedure Word)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10-0</td>
+<td>Use Caution</td>
+</tr>
+<tr>
+<td>10-1</td>
+<td>Unable to copy - change location</td>
+</tr>
+<tr>
+<td>10-3</td>
+<td>Stop transmitting</td>
+</tr>
+<tr>
+<td>10-4</td>
+<td>Roger</td>
+</tr>
+<tr>
+<td>10-5</td>
+<td>Relay</td>
+</tr>
+<tr>
+<td>10-6</td>
+<td>Busy</td>
+</tr>
+<tr>
+<td>10-7</td>
+<td>Out at…</td>
+</tr>
+<tr>
+<td>10-8</td>
+<td>Clear</td>
+</tr>
+<tr>
+<td>10-9</td>
+<td>Say again</td>
+</tr>
+<tr>
+<td>10-12</td>
+<td>Stand by</td>
+</tr>
+<tr>
+<td>10-13</td>
+<td>Weather report/road report</td>
+</tr>
+<tr>
+<td>10-15</td>
+<td>Disturbance</td>
+</tr>
+<tr>
+<td>10-17A</td>
+<td>Theft</td>
+</tr>
+<tr>
+<td>10-17B</td>
+<td>Vandalism</td>
+</tr>
+<tr>
+<td>10-17C</td>
+<td>Shoplifting</td>
+</tr>
+<tr>
+<td>10-18</td>
+<td>Urgent</td>
+</tr>
+<tr>
+<td>10-19</td>
+<td>Return to…</td>
+</tr>
+<tr>
+<td>10-20</td>
+<td>Location</td>
+</tr>
+<tr>
+<td>10-21</td>
+<td>Call…</td>
+</tr>
+<tr>
+<td>10-22</td>
+<td>Disregard</td>
+</tr>
+<tr>
+<td>10-23</td>
+<td>On scene</td>
+</tr>
+<tr>
+<td>10-25</td>
+<td>Meet…or contact…</td>
+</tr>
+<tr>
+<td>10-26</td>
+<td>Detaining subject, expedite</td>
+</tr>
+<tr>
+<td>10-27</td>
+<td>Drivers License information on…</td>
+</tr>
+<tr>
+<td>10-28</td>
+<td>Registration information on…</td>
+</tr>
+<tr>
+<td>10-29</td>
+<td>Check for wanted on…</td>
+</tr>
+<tr>
+<td>10-31A</td>
+<td>Burglary</td>
+</tr>
+<tr>
+<td>10-31B</td>
+<td>Robbery</td>
+</tr>
+<tr>
+<td>10-31C</td>
+<td>Homicide</td>
+</tr>
+<tr>
+<td>10-31D</td>
+<td>Kidnapping</td>
+</tr>
+<tr>
+<td>10-31E</td>
+<td>Shooting</td>
+</tr>
+<tr>
+<td>10-38</td>
+<td>Traffic stop on…</td>
+</tr>
+<tr>
+<td>10-42</td>
+<td>Off duty</td>
+</tr>
+<tr>
+<td>10-44</td>
+<td>Request for…</td>
+</tr>
+<tr>
+<td>10-46</td>
+<td>Assist motorist</td>
+</tr>
+<tr>
+<td>10-49</td>
+<td>East bound green light out (etc.)</td>
+</tr>
+<tr>
+<td>10-50</td>
+<td>Traffic F=Fatal PD=Property Damage Hit and run Injury No injury reported Unknown Private property, location</td>
+</tr>
+<tr>
+<td>10-56</td>
+<td>Drunk pedestrian</td>
+</tr>
+<tr>
+<td>10-63</td>
+<td>Prepare to copy</td>
+</tr>
+<tr>
+<td>10-70</td>
+<td>Fire</td>
+</tr>
+<tr>
+<td>10-74</td>
+<td>Negative</td>
+</tr>
+<tr>
+<td>10-76</td>
+<td>En route…</td>
+</tr>
+<tr>
+<td>10-77</td>
+<td>ETA (Estimated time of arrival)</td>
+</tr>
+<tr>
+<td>10-78</td>
+<td>Request assistance</td>
+</tr>
+<tr>
+<td>10-79</td>
+<td>Notify coroner (to be done by phone whenever possible)</td>
+</tr>
+<tr>
+<td>10-80</td>
+<td>Chase</td>
+</tr>
+<tr>
+<td>10-89</td>
+<td>Bomb threat</td>
+</tr>
+<tr>
+<td>10-90</td>
+<td>Alarm (type of alarm)</td>
+</tr>
+<tr>
+<td>10-91</td>
+<td>Pick up prisoner</td>
+</tr>
+<tr>
+<td>10-92</td>
+<td>Parking complaint</td>
+</tr>
+<tr>
+<td>10-95</td>
+<td>Prisoner in custody</td>
+</tr>
+<tr>
+<td>10-97</td>
+<td>Check traffic signal</td>
+</tr>
+<tr>
+<td>10-98</td>
+<td>Prison/jail break</td>
+</tr>
+<tr>
+<td>10-99</td>
+<td>Wanted/stolen</td>
+</tr>
+</tbody>
+</table>
+<h2 id="clearspeech">CLEAR SPEECH</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CODE ONE</td>
+<td>Informs all units to STANDBY - STOP TRANSMITTING. Do not transmit, except for emergency messages, while Code 1 is in effect. Dispatch shall announce, "Clear Code 1," when the condition is secured.</td>
+</tr>
+<tr>
+<td>CODE TWO</td>
+<td>Indicates an "urgent" call short of an "emergency" situation. A Code 2 call has priority over all other police activities except "emergencies". Proceed directly to Code 2 calls as quickly as is consistent with safety. Agents may, in exceptional cases, use their emergency equipment (both visual and audible to comply with state law) to traverse an otherwise clear intersection against a red traffic control device. Once clear of the intersection - turn off the emergency equipment.</td>
+</tr>
+<tr>
+<td>CODE THREE</td>
+<td>Indicates an EMERGENCY call. Red lights and siren are authorized. Proceed as quickly as possible with due regard for safety, and in compliance with the laws governing emergency vehicles.</td>
+</tr>
+<tr>
+<td>CODE FOUR</td>
+<td>Used to indicate that sufficient units have responded to a location, or that assistance is not needed, or is no longer needed.</td>
+</tr>
+<tr>
+<td>CODE FIVE</td>
+<td>Used when Wanted/Records checks are requested by an agent to alert the agent of a wanted felon, a person known to be dangerous or a person known to be mentally unstable. A backup unit shall be dispatched Code 2 on all Code 5's. Personnel will NOT proceed with Code 5 details until the receiving unit requests same. The unit receiving a Code 5 will request the details when he is in a safe position to do so, which might not be until his backup arrives.</td>
+</tr>
+<tr>
+<td>CODE SIX</td>
+<td>When an agent is dispatched to a traffic accident, and the dispatcher states, "Code 6," the agent will advise the drivers involved to proceed to the station to file their reports. This will only be done if there are no injuries, no unusual circumstance and the vehicles are safely operable. Driver Exchange Forms will be completed at the scene to include the C. R. number.</td>
+</tr>
+<tr>
+<td>CODE SEVEN</td>
+<td>Indicates "out of service - personal."</td>
+</tr>
+<tr>
+<td>CODE EIGHT</td>
+<td>Assist a fire department.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fulllist">Full List</h2>
+<pre><code class="hljs"><span class="hljs-number">10</span>-<span class="hljs-number">7</span>A Out <span class="hljs-keyword">of</span> service at home.
+<span class="hljs-number">10</span>-<span class="hljs-number">7</span>B Out <span class="hljs-keyword">of</span> service - personal.
+<span class="hljs-number">10</span>-<span class="hljs-number">7</span>od Out <span class="hljs-keyword">of</span> service - off duty
+<span class="hljs-number">10</span>-<span class="hljs-number">8</span> In service/available for assignment.
+<span class="hljs-number">10</span>-<span class="hljs-number">9</span> Repeat last transmission.
+<span class="hljs-number">10</span>-<span class="hljs-number">10</span> Off duty.
+<span class="hljs-number">10</span>-<span class="hljs-number">10</span>A Off duty at home.
+<span class="hljs-number">10</span>-<span class="hljs-number">11</span> Identify this frequency.
+<span class="hljs-number">10</span>-<span class="hljs-number">12</span> Visitors are present (be discrete).
+<span class="hljs-number">10</span>-<span class="hljs-number">13</span> Advise weather <span class="hljs-keyword">and</span> road conditions.
+<span class="hljs-number">10</span>-<span class="hljs-number">14</span> Citizen holding suspect.
+<span class="hljs-number">10</span>-<span class="hljs-number">15</span> Prisoner in custody.
+<span class="hljs-number">10</span>-<span class="hljs-number">16</span> Pick up prisoner.
+<span class="hljs-number">10</span>-<span class="hljs-number">17</span> Request for gasoline.
+<span class="hljs-number">10</span>-<span class="hljs-number">18</span> Equipment exchange.
+<span class="hljs-number">10</span>-<span class="hljs-number">19</span> Return/returning to the station.
+<span class="hljs-number">10</span>-<span class="hljs-number">20</span> Location?
+<span class="hljs-number">10</span>-<span class="hljs-number">21</span> Telephone:______
+<span class="hljs-number">10</span>-<span class="hljs-number">21</span>a Advise home that I will return at ______.
+<span class="hljs-number">10</span>-<span class="hljs-number">21</span>b Phone your home
+<span class="hljs-number">10</span>-<span class="hljs-number">21</span>r Phone radio dispatch
+<span class="hljs-number">10</span>-<span class="hljs-number">22</span> Disregard the last assignment.
+<span class="hljs-number">10</span>-<span class="hljs-number">22</span>c Leave area <span class="hljs-keyword">if</span> all secure.
+<span class="hljs-number">10</span>-<span class="hljs-number">23</span> Standby.
+<span class="hljs-number">10</span>-<span class="hljs-number">24</span> Request car-to-car transmission.
+<span class="hljs-number">10</span>-<span class="hljs-number">25</span> Do you have contact with _______?
+<span class="hljs-number">10</span>-<span class="hljs-number">26</span> Clear.
+<span class="hljs-number">10</span>-<span class="hljs-number">27</span> Driver&#x27;s license check.
+<span class="hljs-number">10</span>-<span class="hljs-number">28</span> Vehicle registration request.
+<span class="hljs-number">10</span>-<span class="hljs-number">29</span> Check wants/warrants.[vehicle] (PIN,SVS)
+<span class="hljs-number">10</span>-<span class="hljs-number">29</span>a Check wants/warrants [subject] (PIN)
+<span class="hljs-number">10</span>-<span class="hljs-number">29</span>c Check complete [subject]
+<span class="hljs-number">10</span>-<span class="hljs-number">29</span>f The subject is wanted for a felony.
+<span class="hljs-number">10</span>-<span class="hljs-number">29</span>h Caution - severe hazard potential.
+<span class="hljs-number">10</span>-<span class="hljs-number">29</span>r Check wants/record [subject PIN,CJIC)
+<span class="hljs-number">10</span>-<span class="hljs-number">29</span>m The subject is wanted for a misdemeanor.
+<span class="hljs-number">10</span>-<span class="hljs-number">29</span>v The vehicle wanted in connection W/crime.
+<span class="hljs-number">10</span>-<span class="hljs-number">30</span> Does <span class="hljs-keyword">not</span> conform to regulations.
+<span class="hljs-number">10</span>-<span class="hljs-number">32</span> Drowning.
+<span class="hljs-number">10</span>-<span class="hljs-number">33</span> Alarm sounding.
+<span class="hljs-number">10</span>-<span class="hljs-number">34</span> Assist at office.
+<span class="hljs-number">10</span>-<span class="hljs-number">35</span> Time check.
+<span class="hljs-number">10</span>-<span class="hljs-number">36</span> Confidential information.
+<span class="hljs-number">10</span>-<span class="hljs-number">37</span> Identify the operator.
+<span class="hljs-number">10</span>-<span class="hljs-number">39</span> Can ______ come to the radio?
+<span class="hljs-number">10</span>-<span class="hljs-number">40</span> Is ______ available for a telephone call?
+<span class="hljs-number">10</span>-<span class="hljs-number">42</span> Check on the welfare <span class="hljs-keyword">of</span>/at ______.
+<span class="hljs-number">10</span>-<span class="hljs-number">43</span> Call a doctor.
+<span class="hljs-number">10</span>-<span class="hljs-number">45</span> What is the condition <span class="hljs-keyword">of</span> the patient?
+<span class="hljs-number">10</span>-<span class="hljs-number">45</span>A Condition <span class="hljs-keyword">of</span> patient is good.
+<span class="hljs-number">10</span>-<span class="hljs-number">45</span>B Condition <span class="hljs-keyword">of</span> patient is serious.
+<span class="hljs-number">10</span>-<span class="hljs-number">45</span>C Condition <span class="hljs-keyword">of</span> patient is critical.
+<span class="hljs-number">10</span>-<span class="hljs-number">45</span>D Patient is deceased.
+<span class="hljs-number">10</span>-<span class="hljs-number">46</span> Sick person [ambulance enroute]
+<span class="hljs-number">10</span>-<span class="hljs-number">48</span> Ambulance transfer call
+<span class="hljs-number">10</span>-<span class="hljs-number">49</span> Proceed to/Enroute to ______.
+<span class="hljs-number">10</span>-<span class="hljs-number">50</span> under influence <span class="hljs-keyword">of</span> narcotics/Take a report.
+<span class="hljs-number">10</span>-<span class="hljs-number">51</span> Subject is drunk.
+<span class="hljs-number">10</span>-<span class="hljs-number">52</span> Resuscitator is needed.
+<span class="hljs-number">10</span>-<span class="hljs-number">53</span> Person down.
+<span class="hljs-number">10</span>-<span class="hljs-number">54</span> Possible dead body.
+<span class="hljs-number">10</span>-<span class="hljs-number">55</span> Coroner&#x27;s <span class="hljs-keyword">case</span>.
+<span class="hljs-number">10</span>-<span class="hljs-number">56</span> Suicide.
+<span class="hljs-number">10</span>-<span class="hljs-number">56</span>A Suicide attempt.
+<span class="hljs-number">10</span>-<span class="hljs-number">57</span> Firearm discharged.
+<span class="hljs-number">10</span>-<span class="hljs-number">58</span> Garbage complaint
+<span class="hljs-number">10</span>-<span class="hljs-number">59</span> Security check./Malicious mischief
+<span class="hljs-number">10</span>-<span class="hljs-number">60</span> Lock out.
+<span class="hljs-number">10</span>-<span class="hljs-number">61</span> Miscellaneous public service.
+<span class="hljs-number">10</span>-<span class="hljs-number">62</span> Meet a citizen.
+<span class="hljs-number">10</span>-<span class="hljs-number">62</span>A Take a report from a citizen.
+<span class="hljs-number">10</span>-<span class="hljs-number">62</span>B Civil standby.
+<span class="hljs-number">10</span>-<span class="hljs-number">63</span> Prepare to copy.
+<span class="hljs-number">10</span>-<span class="hljs-number">64</span> Found property.
+<span class="hljs-number">10</span>-<span class="hljs-number">65</span> Missing person
+<span class="hljs-number">10</span>-<span class="hljs-number">66</span> Suspicious person.
+<span class="hljs-number">10</span>-<span class="hljs-number">67</span> Person calling for help.
+<span class="hljs-number">10</span>-<span class="hljs-number">68</span> Call for police made via telephone.
+<span class="hljs-number">10</span>-<span class="hljs-number">70</span> Prowler.
+<span class="hljs-number">10</span>-<span class="hljs-number">71</span> Shooting.
+<span class="hljs-number">10</span>-<span class="hljs-number">72</span> Knifing.
+<span class="hljs-number">10</span>-<span class="hljs-number">73</span> How do you <span class="hljs-keyword">receive</span>?
+<span class="hljs-number">10</span>-<span class="hljs-number">79</span> Bomb threat.
+<span class="hljs-number">10</span>-<span class="hljs-number">80</span> Explosion.
+<span class="hljs-number">10</span>-<span class="hljs-number">86</span> Any traffic?
+<span class="hljs-number">10</span>-<span class="hljs-number">87</span> Meet the officer at ______.
+<span class="hljs-number">10</span>-<span class="hljs-number">88</span> Fill with the officer/Assume your post.
+<span class="hljs-number">10</span>-<span class="hljs-number">91</span> Animal.
+<span class="hljs-number">10</span>-<span class="hljs-number">91</span>a Stray.
+<span class="hljs-number">10</span>-<span class="hljs-number">91</span>b Noisy animal.
+<span class="hljs-number">10</span>-<span class="hljs-number">91</span>c Injured animal.
+<span class="hljs-number">10</span>-<span class="hljs-number">91</span>d Dead animal.
+<span class="hljs-number">10</span>-<span class="hljs-number">91</span>e Animal bite.
+<span class="hljs-number">10</span>-<span class="hljs-number">91</span>g Animal pickup.
+<span class="hljs-number">10</span>-<span class="hljs-number">91</span>h Stray horse
+<span class="hljs-number">10</span>-<span class="hljs-number">91</span>j Pickup/collect ______.
+<span class="hljs-number">10</span>-<span class="hljs-number">91</span>L Leash law violation.
+<span class="hljs-number">10</span>-<span class="hljs-number">91</span>V Vicious animal.
+<span class="hljs-number">10</span>-<span class="hljs-number">95</span> pedestrian/ Requesting an I.D./Techunit.
+<span class="hljs-number">10</span>-<span class="hljs-number">96</span> Out <span class="hljs-keyword">of</span> vehicle-ped. send backup
+<span class="hljs-number">10</span>-<span class="hljs-number">97</span> Arrived at the scene.
+<span class="hljs-number">10</span>-<span class="hljs-number">98</span> Available for assignment.
+<span class="hljs-number">10</span>-<span class="hljs-number">99</span> Open police garage door.
+<span class="hljs-number">10</span>-<span class="hljs-number">100</span> Civil disturbance - Mutual aid standby.
+<span class="hljs-number">10</span>-<span class="hljs-number">101</span> Civil disturbance - Mutual aid request.
+
+
+<span class="hljs-number">11</span>-<span class="hljs-number">00</span> Codes
+<span class="hljs-number">11</span>-<span class="hljs-number">10</span> Take a report.
+<span class="hljs-number">11</span>-<span class="hljs-number">24</span> Abandoned automobile.
+<span class="hljs-number">11</span>-<span class="hljs-number">25</span> Traffic hazard.
+<span class="hljs-number">11</span>-<span class="hljs-number">26</span> Abandoned bicycle.
+<span class="hljs-number">11</span>-<span class="hljs-number">27</span> <span class="hljs-number">10</span>-<span class="hljs-number">27</span> with the driver being held.
+<span class="hljs-number">11</span>-<span class="hljs-number">28</span> <span class="hljs-number">10</span>-<span class="hljs-number">28</span> with the driver being held.
+<span class="hljs-number">11</span>-<span class="hljs-number">40</span> Advise <span class="hljs-keyword">if</span> an ambulance is needed.
+<span class="hljs-number">11</span>-<span class="hljs-number">41</span> An ambulance is needed.
+<span class="hljs-number">11</span>-<span class="hljs-number">42</span> No ambulance is needed.
+<span class="hljs-number">11</span>-<span class="hljs-number">48</span> Furnish transportation.
+<span class="hljs-number">11</span>-<span class="hljs-number">51</span> Escort.
+<span class="hljs-number">11</span>-<span class="hljs-number">52</span> Funeral detail.
+<span class="hljs-number">11</span>-<span class="hljs-number">54</span> Suspicious vehicle.
+<span class="hljs-number">11</span>-<span class="hljs-number">55</span> Officer is being followed by automobile.
+<span class="hljs-number">11</span>-<span class="hljs-number">56</span> Officer is being followed by auto containing dangerous persons.
+<span class="hljs-number">11</span>-<span class="hljs-number">57</span> An unidentified auto appeared at the scene <span class="hljs-keyword">of</span> the assignment.
+<span class="hljs-number">11</span>-<span class="hljs-number">58</span> Radio traffic is being monitored. Phone all non-routine messages.
+<span class="hljs-number">11</span>-<span class="hljs-number">59</span> Give intensive attention to high hazard/business areas.
+<span class="hljs-number">11</span>-<span class="hljs-number">60</span> Attack in a high hazard area.
+<span class="hljs-number">11</span>-<span class="hljs-number">65</span> Signal light is out.
+<span class="hljs-number">11</span>-<span class="hljs-number">66</span> Defective traffic light.
+<span class="hljs-number">11</span>-<span class="hljs-number">71</span> Fire.
+<span class="hljs-number">11</span>-<span class="hljs-number">78</span> Aircraft accident.
+<span class="hljs-number">11</span>-<span class="hljs-number">79</span> Accident - ambulance has been sent.
+<span class="hljs-number">11</span>-<span class="hljs-number">80</span> Accident - major injuries.
+<span class="hljs-number">11</span>-<span class="hljs-number">81</span> Accident - minor injuries.
+<span class="hljs-number">11</span>-<span class="hljs-number">82</span> Accident - no injuries.
+<span class="hljs-number">11</span>-<span class="hljs-number">83</span> Accident - no details.
+<span class="hljs-number">11</span>-<span class="hljs-number">84</span> Direct traffic.
+<span class="hljs-number">11</span>-<span class="hljs-number">85</span> Tow truck required.
+<span class="hljs-number">11</span>-<span class="hljs-number">94</span> Pedestrian stop.
+<span class="hljs-number">11</span>-<span class="hljs-number">95</span> Routine traffic stop.
+<span class="hljs-number">11</span>-<span class="hljs-number">96</span> Checking a suspicious vehicle.
+<span class="hljs-number">11</span>-<span class="hljs-number">97</span> Time/security check on patrol vehicles.
+<span class="hljs-number">11</span>-<span class="hljs-number">98</span> Meet: _______
+<span class="hljs-number">11</span>-<span class="hljs-number">99</span> Officer needs help.
+
+<span class="hljs-number">900</span> Series Codes
+<span class="hljs-number">904</span> Fire.
+<span class="hljs-number">904</span>A Automobile fire.
+<span class="hljs-number">904</span>B Building fire.
+<span class="hljs-number">904</span>G Grass fire.
+<span class="hljs-number">909</span> Traffic problem; police needed.
+<span class="hljs-number">910</span> Can handle this detail.
+<span class="hljs-number">925</span> Suspicious vehicle.
+<span class="hljs-number">932</span> Turn on _______ mobile relay at _______.
+<span class="hljs-number">933</span> Turn off mobile relay.
+<span class="hljs-number">949</span> Burning inspection at _______.
+<span class="hljs-number">950</span> Control burn in progress/about to <span class="hljs-keyword">begin</span>/ended.
+<span class="hljs-number">951</span> Need fire investigator.
+<span class="hljs-number">952</span> Report on conditions.
+<span class="hljs-number">953</span> Investigate smoke.
+<span class="hljs-number">953</span>A Investigate gas.
+<span class="hljs-number">954</span> Off the air at the scene <span class="hljs-keyword">of</span> the fire.
+<span class="hljs-number">955</span> Fire is under control.
+<span class="hljs-number">956</span> Assignment <span class="hljs-keyword">not</span> finished.
+<span class="hljs-number">957</span> Delayed response <span class="hljs-keyword">of</span> __ minutes.
+<span class="hljs-number">980</span> Restrict calls to emergency only.
+<span class="hljs-number">981</span> Resume normal traffic.
+<span class="hljs-number">1000</span> Plane crash
+<span class="hljs-number">3000</span> Road block
+
+Other Codes
+Code <span class="hljs-number">1</span> Do so at your convenience.
+Code <span class="hljs-number">2</span> Urgent.
+Code <span class="hljs-number">3</span> Emergency/lights <span class="hljs-keyword">and</span> siren.
+Code <span class="hljs-number">4</span> No further assistance is needed.
+Code <span class="hljs-number">5</span> Stakeout.
+Code <span class="hljs-number">6</span> Responding from a long distance.
+Code <span class="hljs-number">7</span> Mealtime.
+Code <span class="hljs-number">8</span> Request cover/backup.
+Code <span class="hljs-number">9</span> Set up a roadblock.
+Code <span class="hljs-number">10</span> Bomb threat
+Code <span class="hljs-number">12</span> Notify news media
+Code <span class="hljs-number">20</span> Officer needs assistance
+Code <span class="hljs-number">22</span> Restricted radio traffic
+Code <span class="hljs-number">30</span> Officer needs HELP - EMERGENCY!
+Code <span class="hljs-number">33</span> Mobile emergency - clear this radio channel.
+Code <span class="hljs-number">43</span> TAC forces committed.
+AID Public Safety Assistance
+
+Phonetic Alphabet
+
+A Adam        N Nora
+B Boy           O Ocean
+C Charles      P Paul
+D David        Q Queen
+E Edward      R Robert
+F Frank         S Sam
+G George      T Tom
+H Henry        U Union
+I Ida               V Victor
+J John            W William
+K King           X X-ray
+L Lincoln      Y Yellow
+M Mary         Z Zebra
+
+
+
+
+
+
+MOST FREQUENTLY USED CALIFORNIA PENAL CODES
+<span class="hljs-number">32</span> Accessory to a felony
+<span class="hljs-number">67</span> Offer a bribe to executive officer
+<span class="hljs-number">69</span> Deter/resist executive officer (other than peace officer) by threat/force/violence
+<span class="hljs-number">71</span> Threaten injury to school officer or employee
+<span class="hljs-number">102</span> Take or destroy property in custody <span class="hljs-keyword">of</span> officer
+<span class="hljs-number">118</span> Perjury
+<span class="hljs-number">136.1</span>(a) Intimidation <span class="hljs-keyword">of</span> witness or victim from attending/testifying at any trial
+<span class="hljs-number">136.1</span>(b1) Intimidation <span class="hljs-keyword">of</span> witness or victim from reporting crime to police/other authorities
+<span class="hljs-number">136.1</span>(C1) Intimidation <span class="hljs-keyword">of</span> witness or victim by force/threat <span class="hljs-keyword">of</span> violence
+<span class="hljs-number">137</span>(a) Offer bribe to influence testimony
+<span class="hljs-number">146</span>a Impersonating a peace officer
+<span class="hljs-number">148</span> Interfering with an officer
+<span class="hljs-number">148.1</span> False report <span class="hljs-keyword">of</span> a bomb
+<span class="hljs-number">148.5</span> False report <span class="hljs-keyword">of</span> a crime
+<span class="hljs-number">150</span> Refuse to aid an officer
+<span class="hljs-number">151</span>(a1) Advocate killing/injuring officer
+<span class="hljs-number">187</span> Murder
+<span class="hljs-number">192.1</span> Voluntary manslaughter
+<span class="hljs-number">192.2</span> Involuntary manslaughter
+<span class="hljs-number">192.3</span> Vehicular manslaughter
+<span class="hljs-number">203</span> Mayhem
+<span class="hljs-number">207</span> Kidnap
+<span class="hljs-number">209</span>a Kidnaping for ransom/extortion
+<span class="hljs-number">209</span>b Kidnaping for robbery
+<span class="hljs-number">211</span> Robbery
+<span class="hljs-number">220</span> Assault with intent to mayhem/rape/sodomy/oral copulation
+<span class="hljs-number">236</span> False imprisonment
+<span class="hljs-number">240</span> *Assault
+<span class="hljs-number">240</span>-<span class="hljs-number">242</span> *Assault <span class="hljs-keyword">and</span> Battery
+<span class="hljs-number">241</span> Assault on peace officer/EMT/firefighter
+<span class="hljs-number">242</span> *Battery
+<span class="hljs-number">243</span>a Battery against a citizen
+<span class="hljs-number">243</span>b Battery against a peace officer
+<span class="hljs-number">244</span> Throwing acid with intent to disfigure or burn
+<span class="hljs-number">245</span> Assault with a deadly weapon
+<span class="hljs-number">245</span>b Assault with a deadly weapon against a peace officer
+<span class="hljs-number">246</span> Shooting at an inhabited dwelling or vehicle
+<span class="hljs-number">261</span> Rape
+<span class="hljs-number">261.5</span> Rape - under <span class="hljs-number">18</span> years <span class="hljs-keyword">of</span> age
+<span class="hljs-number">262</span> Rape <span class="hljs-keyword">of</span> spouse
+<span class="hljs-number">266</span>h Pimping
+<span class="hljs-number">266</span>i Pandering
+<span class="hljs-number">270</span> Child neglect/failing to pay the support payments
+<span class="hljs-number">271</span> Child abandonment - under <span class="hljs-number">14</span>
+<span class="hljs-number">272</span> Contributing to the delinquency <span class="hljs-keyword">of</span> a minor
+<span class="hljs-number">273.5</span>a Corporal injury to spouse/cohabitant
+<span class="hljs-number">273</span>d Corporal injury upon child
+<span class="hljs-number">278</span> Child abduction from parent or guardian
+<span class="hljs-number">285</span> Incest
+<span class="hljs-number">286</span> Sodomy
+<span class="hljs-number">288</span> Sex crimes against children
+<span class="hljs-number">288</span>a Oral copulation
+<span class="hljs-number">290</span> Sex registration
+<span class="hljs-number">311.2</span>a Possession <span class="hljs-keyword">of</span> obscene matter
+<span class="hljs-number">311.2</span>b Possessing obscene matter depicting a minor
+<span class="hljs-number">314</span> Indecent exposure
+<span class="hljs-number">330</span> Gambling
+<span class="hljs-number">373</span> Public nuisance misdemeanors (spitting in public
+places, etc.)
+<span class="hljs-number">374</span>b Garbage dumping
+<span class="hljs-number">402</span>b Abandoned refrigerator
+<span class="hljs-number">415</span> Disturbing the peace (be specific)
+<span class="hljs-number">417</span> Brandishing a weapon
+<span class="hljs-number">451</span> Arson
+<span class="hljs-number">459</span> Burglary
+<span class="hljs-number">470</span> Forgery
+<span class="hljs-number">476</span>a Insufficient funds (checks)
+<span class="hljs-number">484</span>e Theft <span class="hljs-keyword">of</span> a credit card
+<span class="hljs-number">484</span>f Forged credit card
+<span class="hljs-number">484</span>g Illegal use <span class="hljs-keyword">of</span> a credit card
+<span class="hljs-number">487</span> Grand Theft ($<span class="hljs-number">400</span>+)
+<span class="hljs-number">488</span> Petty theft (&lt;$<span class="hljs-number">400</span>)
+<span class="hljs-number">496</span> Receiving stolen property
+<span class="hljs-number">499</span>b Joyriding
+<span class="hljs-number">503</span> Embezzlement
+<span class="hljs-number">537</span> Nonpayment <span class="hljs-keyword">of</span> a bill (Restaurants, etc.)
+<span class="hljs-number">537</span>e Article with serial number removed
+<span class="hljs-number">555</span> Posted trespass
+<span class="hljs-number">594</span> Vandalism
+<span class="hljs-number">597</span> Killing or abusing animals
+<span class="hljs-number">602</span>L Trespass
+<span class="hljs-number">603</span> Trespass with damage
+<span class="hljs-number">647</span>b Prostitution
+<span class="hljs-number">647</span>f Drunk in public
+<span class="hljs-number">647</span>g Disorderly conduct - loitering on private property at night
+<span class="hljs-number">647</span>h Disorderly conduct - peeking into an inhabited building
+<span class="hljs-number">647</span>a Annoy/molest child
+<span class="hljs-number">653</span>m Harassment by phone (obscene call)
+<span class="hljs-number">4532</span> Escape (also <span class="hljs-number">32</span> PC)
+<span class="hljs-number">12020</span> Possession <span class="hljs-keyword">of</span> a deadly weapon
+<span class="hljs-number">12025</span> Possession <span class="hljs-keyword">of</span> a concealed firearm
+<span class="hljs-number">12031</span> Possession <span class="hljs-keyword">of</span> a loaded firearm
+
+MOST FREQUENTLY USED CALIFORNIA VEHICLE CODES
+<span class="hljs-number">10851</span> Auto theft
+<span class="hljs-number">10852</span> Malicious mischief to a vehicle
+<span class="hljs-number">22500</span>e Vehicle blocking a driveway
+<span class="hljs-number">23109</span> Exhibition <span class="hljs-keyword">of</span> speed
+<span class="hljs-number">23110</span> Throwing articles at a vehicle
+<span class="hljs-number">4601</span> Suspended or revoked license
+<span class="hljs-number">20001</span> Hit <span class="hljs-keyword">and</span> run - injury or death
+<span class="hljs-number">20002</span> Hit <span class="hljs-keyword">and</span> run - property damage
+<span class="hljs-number">21111</span> Throwing article
+<span class="hljs-number">22348</span> Maximum speed law - <span class="hljs-number">55</span> MPH
+<span class="hljs-number">23112</span> Throwing garbage on highway
+<span class="hljs-number">22350</span> Basic speed law - unsafe speed
+<span class="hljs-number">23152</span> Drunk driving
+
+MOST FREQUENTLY USED CALIFORNIA HEALTH AND SAFETY CODES
+(Relating to heroin, cocaine, peyote, mescaline, <span class="hljs-keyword">and</span> THC)
+
+<span class="hljs-number">11350</span> Possession
+<span class="hljs-number">11351</span> Possession for sales
+<span class="hljs-number">11352</span> Sale/transportation
+
+
+(Relating to marijuana)
+
+<span class="hljs-number">11357</span>a Possession <span class="hljs-keyword">of</span> hashish
+<span class="hljs-number">11357</span>b Possession <span class="hljs-keyword">of</span> less than <span class="hljs-number">1</span> ounce
+<span class="hljs-number">11357</span>c Possession <span class="hljs-keyword">of</span> more than <span class="hljs-number">1</span> ounce
+<span class="hljs-number">11358</span> Cultivation
+<span class="hljs-number">11359</span> Possession for sales
+<span class="hljs-number">11360</span>a Sale/transportation
+
+(Relating to barbiturates, amphetamines <span class="hljs-keyword">and</span> LSD)
+
+<span class="hljs-number">11377</span> Possession
+<span class="hljs-number">11378</span> Possession for sale
+
+MISCELLANEOUS HEALTH AND SAFETY CODES
+<span class="hljs-number">5150</span> Mental/emotional
+<span class="hljs-number">5170</span> Unable to care for self
+<span class="hljs-number">11364</span> Paraphernalia
+<span class="hljs-number">11368</span> Forged prescription
+<span class="hljs-number">11550</span> Under influence <span class="hljs-keyword">of</span> a controlled substance
+<span class="hljs-number">12677</span> Fireworks
+</code></pre>
+<h1 id="fullsources">Full Sources</h1>
+<p>http://www.bugoutbagbuilder.com/learning-tutorials/baofeng-uv-5r-basic-setup-emergency-frequencies</p>
+<p>https://www.fcc.gov/wireless/bureau-divisions/mobility-division/family-radio-service-frs</p>
+<p>https://www.fcc.gov/wireless/bureau-divisions/mobility-division/multi-use-radio-service-murs</p>
+<p>https://en.wikipedia.org/wiki/Multi-Use<em>Radio</em>Service</p>
+<p>https://www.fcc.gov/general-mobile-radio-service-gmrs</p>
+<p>https://en.wikipedia.org/wiki/General<em>Mobile</em>Radio_Service</p>
+<p>https://en.wikipedia.org/wiki/NOAA<em>Weather</em>Radio</p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

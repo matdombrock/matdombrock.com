@@ -1,0 +1,492 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Moving With A Matrix",
+  "description":"This guide will attempt to explain how we can move (translate) an object (set or shape) in a two dimensional matrix which is a key concept of graphics programming",
+  "tags":"#programming #js #guide #hacking #electronics"
+}
+;</script>
+<h1 id="movingwithamatrix">Moving With A Matrix</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This guide will attempt to explain how we can move (translate) an object (set or shape) in a two dimensional matrix which is a key concept of graphics programming.</p>
+<p><strong>NOTE:</strong> <em>All of the code in this guide is in a JavaScript syntax but the concepts should apply to any language you want to write in. JavaScript was chosen because it is commonly understood and makes working with arrays and matrices fairly easy. However, I have made an attempt to keep the example code as verbose as possible so it will make some sense to people who do not know JavaScript.</em></p>
+<p>Say we have an 8x4 2D binary matrix:</p>
+<pre><code class="hljs"><span class="hljs-number">00000000</span>
+<span class="hljs-number">00000000</span>
+<span class="hljs-number">00000000</span>
+<span class="hljs-number">00000000</span>
+</code></pre>
+<p>To bring it into less abstract terms, imagine this as a 2D matrix of LED bulbs. Basically a very low resolution display.</p>
+<h2 id="origins">Origins</h2>
+<p>It might be tempting to call the bottom left entity "1,1" or "0,0" and call the top right entity "7,3" or "8,4". After all this is the way that we learn coordinates in school. Usually our origin is at the bottom-left. The X axis goes right and the Y axis goes up.</p>
+<p>This will technically work in computing but it's not the way things are typically done due to the long and complicated history of early displays. Some would argue that this method (origin at the top-left) makes more sense than than having the origin at the bottom-left. This after all is the way that we read in English; top-left to bottom-right. This is also typically how we store, read, and parse data in computing. It also allows us to treat the first entity of our matrix as the origin which is pretty neat. </p>
+<p>This can be hard to wrap your head around if you are used to the way that graphing works in traditional mathematics. To put it simply though, all we are really doing is inverting our Y axis. </p>
+<p>The obvious down side to this is that in computing we typically use a lot of math. Even more so in computer graphics. So for instance when drawing something using sin, cos or tan you need to invert your y-axis parameter or you will have an inverted result. This of course won't break any of your math but you need to be a little more careful because of it.</p>
+<p>Anyway, the purpose of this guide is not to debate this topic (though that might be a good article to write at some point). So moving forward, let's assume that our origin is at the top-left and let's call that origin "0,0" since we are working with computing and programmers like counting from zero (<a href="http://lua-users.org/wiki/CountingFromOne">unless you <3 Lua</a>).</p>
+<p>So let's call the first matrix entity "0,0" and the last "7,3".</p>
+<pre><code class="hljs"> X-------
+Y<span class="hljs-number">00000000</span>
+|<span class="hljs-number">00000000</span>
+|<span class="hljs-number">00000000</span>
+|<span class="hljs-number">00000000</span>
+</code></pre>
+<h2 id="objects">Objects</h2>
+<p>Now that we've agreed on our origins and axes we can work on defining an "object". An "object" in our case is just going to be a collection (specifically a 2D array) of X,Y coordinates.</p>
+<p>Our object might look something like this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">object = [
+    [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>],
+    [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>],
+    [<span class="hljs-number">2</span>,<span class="hljs-number">0</span>]
+]
+</code></pre>
+<p>We can "draw" to our binary matrix by changing the values from 0 to 1. If this were an LED matrix display we could imagine that 0 means the lights are off and 1 means the lights are on.</p>
+<p>Drawn onto our matrix this would something like this:</p>
+<pre><code class="hljs"><span class="hljs-number">11100000</span>
+<span class="hljs-number">00000000</span>
+<span class="hljs-number">00000000</span>
+<span class="hljs-number">00000000</span>
+</code></pre>
+<p>Let's try something a little more complex:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">object = [
+    [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>],
+    [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>],
+    [<span class="hljs-number">2</span>,<span class="hljs-number">0</span>],
+    [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>],
+    [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>],
+    [<span class="hljs-number">2</span>,<span class="hljs-number">1</span>],
+    [<span class="hljs-number">0</span>,<span class="hljs-number">2</span>],
+    [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],
+    [<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]
+]
+</code></pre>
+<p>Now we have drawn a simple 3*3 square at our origin. It might not look like a square because of the font being used but rest assured it is.</p>
+<pre><code class="hljs"><span class="hljs-number">11100000</span>
+<span class="hljs-number">11100000</span>
+<span class="hljs-number">11100000</span>
+<span class="hljs-number">00000000</span>
+</code></pre>
+<p>If this is hard to conceptualize, try thinking of the object we defined like this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">object = [
+    [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">0</span>],
+    [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">1</span>],
+    [<span class="hljs-number">0</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]
+]
+</code></pre>
+<h2 id="movingobjects">Moving Objects</h2>
+<p>When moving or "translating" (as they call it in geometry) and object or "shape/set" (as they call it in geometry) in a 2D matrix there are 4 basic directions that you can move. Up, down, left and right. Technically you could argue that it's possible to move in 8 directions, because you can also move diagonally but since that is really just doing two translations so I don't think that counts.</p>
+<p>Consider how each entity in our object is a pair of X,Y coordinates. You can think of each of these entities as a "bit" or "part" or "pixel" or "chunk" or "atom" of the object (or whatever makes sense to you). In this specific case they are in fact representing bits, but this concept remains the same no matter what they represent. To keep this guide open ended I will refer to them as "chunks".</p>
+<h3 id="creatingrules">Creating Rules</h3>
+<p>In order to move an object within our matrix, we need to move each "chunk" by some given amount  in some given direction. Since all we are doing right now is translating the object, this is actually really easy because we're not worried about changes in rotation or scale at this point. What that means is that each "chunk" of the object will be moving the same distance in the same direction.</p>
+<p>So let's make some rules about what it actually means to move something in a matrix:</p>
+<pre><code class="hljs"><span class="hljs-attribute">Up</span>: y+<span class="hljs-number">1</span>
+<span class="hljs-attribute">Down</span>: y-<span class="hljs-number">1</span>
+<span class="hljs-attribute">Left</span>: x-<span class="hljs-number">1</span>
+<span class="hljs-attribute">Right</span>: x+<span class="hljs-number">1</span>
+</code></pre>
+<p>Wait a second! Have we already forgotten that we have to flip our Y axis when we do math? It looks like we have (or maybe that was just to make a point). We have to remember that <a href="https://www.youtube.com/watch?v=6KqL4Uh2nHo"><strong>up is now down and down is now up</strong></a>. </p>
+<p>So what I actually meant is:</p>
+<pre><code class="hljs"><span class="hljs-attribute">Up</span>: y-<span class="hljs-number">1</span>
+<span class="hljs-attribute">Down</span>: y+<span class="hljs-number">1</span>
+<span class="hljs-attribute">Left</span>: x-<span class="hljs-number">1</span>
+<span class="hljs-attribute">Right</span>: x+<span class="hljs-number">1</span>
+</code></pre>
+<p>To demonstrate what I wrote before about diagonals not being real translations consider this:</p>
+<pre><code class="hljs"><span class="hljs-built_in">Up</span><span class="hljs-operator">-</span><span class="hljs-built_in">Right</span><span class="hljs-operator">:</span> <span class="hljs-variable">y</span><span class="hljs-operator">-</span><span class="hljs-number">1</span> <span class="hljs-operator">+</span> <span class="hljs-variable">x</span><span class="hljs-operator">+</span><span class="hljs-number">1</span> <span class="hljs-variable">or</span> <span class="hljs-built_in">Up</span> <span class="hljs-operator">+</span> <span class="hljs-built_in">Right</span> 
+<span class="hljs-built_in">Down</span><span class="hljs-operator">-</span><span class="hljs-built_in">Right</span><span class="hljs-operator">:</span> <span class="hljs-variable">y</span><span class="hljs-operator">+</span><span class="hljs-number">1</span> <span class="hljs-operator">+</span> <span class="hljs-variable">x</span><span class="hljs-operator">+</span><span class="hljs-number">1</span> <span class="hljs-variable">or</span> <span class="hljs-built_in">Down</span> <span class="hljs-operator">+</span> <span class="hljs-built_in">Right</span>
+<span class="hljs-built_in">Up</span><span class="hljs-operator">-</span><span class="hljs-built_in">Left</span><span class="hljs-operator">:</span> <span class="hljs-variable">y</span><span class="hljs-operator">-</span><span class="hljs-number">1</span> <span class="hljs-operator">+</span> <span class="hljs-variable">x</span><span class="hljs-operator">-</span><span class="hljs-number">1</span> <span class="hljs-variable">or</span> <span class="hljs-built_in">Up</span> <span class="hljs-operator">+</span> <span class="hljs-built_in">Left</span>
+<span class="hljs-built_in">Down</span><span class="hljs-operator">-</span><span class="hljs-built_in">Left</span><span class="hljs-operator">:</span> <span class="hljs-variable">y</span><span class="hljs-operator">+</span><span class="hljs-number">1</span> <span class="hljs-operator">+</span> <span class="hljs-number">1</span><span class="hljs-operator">-</span><span class="hljs-variable">x</span> <span class="hljs-variable">or</span> <span class="hljs-built_in">Down</span> <span class="hljs-operator">+</span> <span class="hljs-built_in">Left</span>
+</code></pre>
+<p>You can also think of these rules as functions:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">up</span>(<span class="hljs-params">x,y</span>)</span>{
+    <span class="hljs-keyword">return</span> [x,y-<span class="hljs-number">1</span>]
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">down</span>(<span class="hljs-params">x,y</span>)</span>{
+    <span class="hljs-keyword">return</span> [x,y+<span class="hljs-number">1</span>]
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">left</span>(<span class="hljs-params">x,y</span>)</span>{
+    <span class="hljs-keyword">return</span> [x-<span class="hljs-number">1</span>,y]
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">right</span>(<span class="hljs-params">x,y</span>)</span>{
+    <span class="hljs-keyword">return</span> [x+<span class="hljs-number">1</span>,y]
+}
+</code></pre>
+<p>We could also write these functions to take our object entities (coordinate pairs) as a single parameter:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">down</span>(<span class="hljs-params">coords</span>)</span>{
+    <span class="hljs-keyword">return</span> [coords[<span class="hljs-number">0</span>],coords[<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>]
+}
+</code></pre>
+<h3 id="usingrules">Using Rules</h3>
+<p>So how do we actually make use these rules we created? This is where programming comes into play.</p>
+<p>Like I was saying, to translate and object in a matrix, we just need to move all of it's "chunks" in the same direction by the same distance. So to move an object we simply apply our rule for the given direction to all of the entities (coordinate pairs) in our object.</p>
+<p>Consider the following code:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-comment">// This is JavaScript and you can run it</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">down</span>(<span class="hljs-params">coords</span>)</span>{
+    <span class="hljs-keyword">return</span> [coords[<span class="hljs-number">0</span>],coords[<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>]
+}
+<span class="hljs-keyword">var</span> object = [
+    [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">0</span>],
+    [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">1</span>],
+    [<span class="hljs-number">0</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]
+]
+
+<span class="hljs-comment">// move the object</span>
+<span class="hljs-keyword">var</span> length = object.length
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; length; i++){
+    object[i] = down(object[i])
+}
+</code></pre>
+<p>We could also make a function to move an entire object at once:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">moveObjectDown</span>(<span class="hljs-params">object</span>)</span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; object.length; i++){
+        object[i] = down(object[i])
+    }
+    <span class="hljs-keyword">return</span> object
+}
+</code></pre>
+<p>We could print the object onto the matrix with the following code:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printMatrix</span>(<span class="hljs-params">length, height, object</span>)</span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> y = <span class="hljs-number">0</span>; y &lt; height; y++){
+        <span class="hljs-keyword">var</span> out = <span class="hljs-string">&quot;&quot;</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> x = <span class="hljs-number">0</span>; x &lt; length; x++){
+            <span class="hljs-keyword">var</span> isOn = <span class="hljs-literal">false</span>
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; object.length; i++){
+                <span class="hljs-keyword">if</span>(object[i][<span class="hljs-number">0</span>]==x &amp;&amp; object[i][<span class="hljs-number">1</span>]==y){
+                    isOn = <span class="hljs-literal">true</span>
+                }
+            }
+            <span class="hljs-keyword">if</span>(isOn){
+                out += <span class="hljs-string">&quot;1&quot;</span>
+            }<span class="hljs-keyword">else</span>{
+                out += <span class="hljs-string">&quot;0&quot;</span>
+            }
+        }
+        <span class="hljs-built_in">console</span>.log(y+<span class="hljs-string">&quot;: &quot;</span>+out)
+    }
+}
+printMatrix(<span class="hljs-number">8</span>,<span class="hljs-number">4</span>,object)
+</code></pre>
+<h2 id="codeexample">Code Example</h2>
+<p>Putting this all together we could try the code:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-comment">// This is JavaScript and you can run it</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printMatrix</span>(<span class="hljs-params">length, height, object</span>)</span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> y = <span class="hljs-number">0</span>; y &lt; height; y++){
+        <span class="hljs-keyword">var</span> out = <span class="hljs-string">&quot;&quot;</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> x = <span class="hljs-number">0</span>; x &lt; length; x++){
+            <span class="hljs-keyword">var</span> isOn = <span class="hljs-literal">false</span>
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; object.length; i++){
+                <span class="hljs-keyword">if</span>(object[i][<span class="hljs-number">0</span>]==x &amp;&amp; object[i][<span class="hljs-number">1</span>]==y){
+                    isOn = <span class="hljs-literal">true</span>
+                }
+            }
+            <span class="hljs-keyword">if</span>(isOn){
+                out += <span class="hljs-string">&quot;1&quot;</span>
+            }<span class="hljs-keyword">else</span>{
+                out += <span class="hljs-string">&quot;0&quot;</span>
+            }
+        }
+        <span class="hljs-built_in">console</span>.log(y+<span class="hljs-string">&quot;: &quot;</span>+out)
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">moveObjectDown</span>(<span class="hljs-params">object</span>)</span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; object.length; i++){
+        object[i] = down(object[i])
+    }
+    <span class="hljs-keyword">return</span> object
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">down</span>(<span class="hljs-params">coords</span>)</span>{
+    <span class="hljs-keyword">return</span> [coords[<span class="hljs-number">0</span>],coords[<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>]
+}
+<span class="hljs-keyword">var</span> object = [
+    [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">0</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">0</span>],
+    [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">1</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">1</span>],
+    [<span class="hljs-number">0</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]
+]
+<span class="hljs-comment">// show the default matrix</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;starting matrix&quot;</span>)
+printMatrix(<span class="hljs-number">8</span>,<span class="hljs-number">4</span>,object)
+
+<span class="hljs-comment">// move the object down</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;move the object down&quot;</span>)
+object = moveObjectDown(object)
+printMatrix(<span class="hljs-number">8</span>,<span class="hljs-number">4</span>,object)
+
+<span class="hljs-comment">/// move the object down again</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;move the object down again&quot;</span>)
+object = moveObjectDown(object)
+printMatrix(<span class="hljs-number">8</span>,<span class="hljs-number">4</span>,object)
+</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>We have now translated an object in a 2D matrix. You can easily apply what we did above to move the object in any direction and by any amount you want. Based on this, how do you think you would rotate or scale an object? How can you translate a 3D object in a 3D matrix? These are all questions for another guide.</p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

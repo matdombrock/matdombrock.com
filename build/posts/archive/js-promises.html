@@ -1,0 +1,440 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"JS Promises Explained",
+  "description":"A guide on JS promises.",
+  "tags":"#programming #js #guide"
+}
+;</script>
+<h1 id="jspromisesexplained">JS Promises Explained</h1>
+<div class="archive-msg">ARCHIVED: This is for historical purposes only!</div>
+<h2 id="aquickexample">A Quick Example</h2>
+<p>Before I get started I will show a quick example of an implementation of promises for reference.</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createPromise</span>(<span class="hljs-params">input</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve,reject</span>)</span>{
+        <span class="hljs-comment">//do something</span>
+        resolve(input);
+    })
+}
+<span class="hljs-keyword">let</span> testPromise = createPromise(<span class="hljs-number">1</span>);
+testPromise.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(data);
+});
+</code></pre>
+<h2 id="introduction">Introduction</h2>
+<p>A lot of the power of JavaScript comes from the fact that it's an asynchronous language. This means that we don't have to wait for one operation to finish before moving on to another. Some languages do this with threading, but sine JS is a single-threaded language, we use callbacks or promises. </p>
+<p>If you are already familiar with the concept of a callback then a the idea of a promise should be pretty easy to grasp. A promise works in much the same way as a callback but allows us to write cleaner code that is is easier to read and debug. </p>
+<p>A phrase often used in programming is "Callback Hell". Simply put this is the state of having too many callbacks nested inside of each other. One calling the other and each pushing your next block of code further to the right. </p>
+<h2 id="callbackhell">Callback Hell?</h2>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">thing</span>(<span class="hljs-params">num,data,callback</span>)</span>{
+    data += <span class="hljs-string">&quot; Thing &quot;</span>+num+<span class="hljs-string">&quot; &quot;</span>;
+    callback(data);
+}
+<span class="hljs-keyword">let</span> num = <span class="hljs-number">1</span>;<span class="hljs-comment">//each function will add one thing to our string</span>
+thing(num,<span class="hljs-string">&quot;Data: &quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    num+=<span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(data);
+    thing(num,data,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+        num+=<span class="hljs-number">1</span>;
+        <span class="hljs-built_in">console</span>.log(data);
+        thing(num,data,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+            num+=<span class="hljs-number">1</span>;
+            <span class="hljs-built_in">console</span>.log(data);
+            <span class="hljs-comment">//enter callback hell</span>
+            thing(num,data,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+                num+=<span class="hljs-number">1</span>;
+                <span class="hljs-built_in">console</span>.log(data);
+                thing(num,data,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+                    <span class="hljs-built_in">console</span>.log(data);
+                });
+            });
+        });
+    });
+});
+</code></pre>
+<p>Expected Output:</p>
+<pre><code class="hljs"><span class="hljs-attribute">Data</span>:  Thing <span class="hljs-number">1</span>,
+<span class="hljs-attribute">Data</span>:  Thing <span class="hljs-number">1</span>, Thing <span class="hljs-number">2</span>,
+<span class="hljs-attribute">Data</span>:  Thing <span class="hljs-number">1</span>, Thing <span class="hljs-number">2</span>, Thing <span class="hljs-number">3</span>,
+<span class="hljs-attribute">Data</span>:  Thing <span class="hljs-number">1</span>, Thing <span class="hljs-number">2</span>, Thing <span class="hljs-number">3</span>, Thing <span class="hljs-number">4</span>,
+<span class="hljs-attribute">Data</span>:  Thing <span class="hljs-number">1</span>, Thing <span class="hljs-number">2</span>, Thing <span class="hljs-number">3</span>, Thing <span class="hljs-number">4</span>, Thing <span class="hljs-number">5</span>,
+</code></pre>
+<p>Of course this is an overly simplified example that doesn't really do anything that requires callbacks, but hopefully the point has been illustrated. </p>
+<h2 id="sohowdopromiseshelp">So How Do Promises Help?</h2>
+<p>Here is the same logic but using promises instead of callbacks.</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">thing</span>(<span class="hljs-params">num,data</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve,reject</span>)</span>{
+        data += <span class="hljs-string">&quot; Thing &quot;</span>+num+<span class="hljs-string">&quot; &quot;</span>;
+        resolve(data);
+    });
+}
+<span class="hljs-keyword">let</span> num = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">let</span> result = thing(num,<span class="hljs-string">&quot;Data: &quot;</span>);
+result.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    num+=<span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(data);
+    <span class="hljs-keyword">return</span> thing(num,data);
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    num+=<span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(data);
+    <span class="hljs-keyword">return</span> thing(num,data)
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    num+=<span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(data);
+    <span class="hljs-keyword">return</span> thing(num,data)
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    num+=<span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(data);
+    <span class="hljs-keyword">return</span> thing(num,data)
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(data);
+});
+</code></pre>
+<p>As you can see this code isn't much shorter but it is much easier to read and involves less scrolling to the left.</p>
+<h2 id="howdoiactuallyusethesethings">How Do I Actually Use These Things?</h2>
+<p>Here is a bare-bones example of how to implement a promise. First we create a new promise, then we resolve it.</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createPromise</span>(<span class="hljs-params">input</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve,reject</span>)</span>{
+        <span class="hljs-comment">//duplicate input</span>
+        input += input;
+        resolve(input);
+    })
+}
+
+<span class="hljs-keyword">let</span> testPromise = createPromise(<span class="hljs-number">1</span>);
+
+testPromise.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(data);
+});
+</code></pre>
+<p>The expected output would be:</p>
+<pre><code class="hljs">2
+</code></pre>
+<p><strong>Here is the same logic using callbacks for reference:</strong></p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createCallback</span>(<span class="hljs-params">input,callback</span>)</span>{
+    <span class="hljs-comment">//duplicate input</span>
+    input+=input;
+    callback(input);
+}
+
+createCallback(<span class="hljs-number">1</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(data);
+})
+</code></pre>
+<p>The expected output would also be:</p>
+<pre><code class="hljs">2
+</code></pre>
+<h2 id="whatabouttherealworld">What About The Real World?</h2>
+<p>In real life, none of the examples so far have actually done something asynchronous. Like I said above, this is the real power of promises. So let's go ahead and setup an actual real life example of using promises. </p>
+<p>For this example we are going to read some data from an external JSON file and then iterate through it listing the names in the file.</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-comment">//NodeJS</span>
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;fs&#x27;</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">readData</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve,reject</span>)</span>{
+        fs.readFile(<span class="hljs-string">&#x27;data.json&#x27;</span>, <span class="hljs-string">&#x27;utf8&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, contents</span>) </span>{
+            contents = <span class="hljs-built_in">JSON</span>.parse(contents);
+            resolve(contents);
+        });
+    })
+}
+
+<span class="hljs-keyword">let</span> read = readData();
+read.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    <span class="hljs-keyword">for</span>(index <span class="hljs-keyword">in</span> data){
+        <span class="hljs-built_in">console</span>.log(data[index].name);
+    }
+});
+</code></pre>
+<h2 id="noteasyncawait">[NOTE] Async/Await</h2>
+<p>We can also make use of the new <code>await</code> functionality. This allows us to use promises in a little more friendly manner. </p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">var</span> test = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">data</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve,reject</span>)</span>{
+        <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> resolve(data), <span class="hljs-number">1000</span>)
+    });
+}
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test2</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">var</span> t = <span class="hljs-keyword">await</span> test(<span class="hljs-string">&quot;test&quot;</span>);
+    <span class="hljs-keyword">return</span> t;
+}
+test2().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(data);
+});
+<span class="hljs-comment">// Outputs &quot;test&quot; after 1 second.</span>
+</code></pre>
+<h2 id="furtherreading">Further Reading</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">MDN Web Docs</a>.</p>
+<p><a href="https://developers.google.com/web/fundamentals/primers/promises">Google Developers</a>.</p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

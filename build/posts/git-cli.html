@@ -1,0 +1,360 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Using Git from the Command Line Interface",
+  "description":"Git is a powerful tool that is used to track software versions and help teams collaborate on large projects. Learn how to use it.",
+  "tags":"#programming #git #guide"
+}
+;</script>
+<h1 id="usinggitfromthecommandlineinterface">Using Git from the Command Line Interface</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Git is a powerful tool that is used to track software versions and help teams collaborate on large projects. GitHub is an awesome website where people can share, show off and collaborate on open-source software.</p>
+<p>Version control tools like git can be extremely useful. However, to the beginning or intermediate programmer, a tool like git can seem pretty daunting and the available tutorials all too often offer a total information overload. This text aims to get you started using GitHub from the command line in as few steps as possible.</p>
+<p>In this tutorial we will be creating a new project (known as a repository) and uploading it to GitHub.
+Here is a cheat-sheet of the commands we will use in this tutorial:</p>
+<pre class="bash language-bash"><code class="hljs bash language-bash">git config --global user.name <span class="hljs-string">&quot;Your Name Here&quot;</span>
+
+git config --global user.email <span class="hljs-string">&quot;your_email@youremail.com&quot;</span>
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;# EDIT ME&quot;</span> &gt;&gt; README.md
+
+git init
+
+git add .
+
+git commit -m <span class="hljs-string">&quot;first commit&quot;</span>
+
+git remote add origin https://github.com/XXX/ZZZ.git
+
+git push -u origin master
+</code></pre>
+<h2 id="setup">Setup</h2>
+<p>First let's set up your GitHub on your local machine (at this time you should have already visited GitHub.com to setup and register your account).If you have not already installed git on your machine do:</p>
+<pre><code class="hljs">sudo apt <span class="hljs-keyword">install</span> git
+</code></pre>
+<p>(This line assumes that you are using aptitude as your package manager and Linux as your OS. If this is not the case see <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Installing Git</a>.)</p>
+<p>You can check that git is installed by running the command:</p>
+<pre><code class="hljs"><span class="hljs-attribute">git</span>
+</code></pre>
+<p>You should see a large amount of text explaining the usage of the git command. You do not need to read this at this time. If you don’t see this message or get a message that git is not installed, try the install process again.</p>
+<p>Now lets configure your installation.</p>
+<pre><code class="hljs">git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.name</span> <span class="hljs-string">&quot;Your Name Here&quot;</span>
+</code></pre>
+<p>This should be the user name that you registered with on GitHub.com.</p>
+<p>We also need to register your email on the local machine so do:</p>
+<pre><code class="hljs">git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> user<span class="hljs-variable">.email</span> <span class="hljs-string">&quot;your_email@youremail.com&quot;</span>
+</code></pre>
+<p>Thats it. We have your local machine setup and we can get started.</p>
+<h2 id="createareadmefile">Create a README File</h2>
+<p>Now that we are connected, the thing we need to do is create a new directory for our project and enter it. So do:</p>
+<pre><code class="hljs">mkdir <span class="hljs-keyword">new</span><span class="hljs-type">Project</span> &amp;&amp; cd <span class="hljs-keyword">new</span><span class="hljs-type">Project</span>
+</code></pre>
+<p>We have a new directory in which to store our project, so lets go ahead and create out first file to go in it. Right now I will demonstrate making a 'README.md' file. While you will need to make a 'README.md' file at some point, you can make whatever file you would like at this point it does not have to be a 'README.md' file. (Side Note: the <code>.md</code> file type signifies MARKDOWN, a lightweight text formating syntax commonly used for writing documentation).</p>
+<p>To create our 'README.md' file, do:</p>
+<pre><code class="hljs">echo <span class="hljs-string">&quot;# EDIT ME&quot;</span> &gt;&gt; <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">README</span>.</span></span>md
+</code></pre>
+<h2 id="initializetherepositoryandaddchanges">Initialize The Repository And Add Changes</h2>
+<p>Now that we are working with more than just an empty directory, we can initialize the repository with:</p>
+<pre><code class="hljs">git <span class="hljs-keyword">init</span>
+</code></pre>
+<p>This command will add the basic files required for this directory to be recoginized as a git project.</p>
+<p>Now that the directory is initialized as a git repo, we need to add all of its files into our "master list" of files that are part of our project(repository). These are the files that will be synced up to the server when we publish our new repository.</p>
+<p>To add everything in our current directory to the "Master List" do:</p>
+<pre><code class="hljs">git <span class="hljs-builtin-name">add</span> .
+</code></pre>
+<p>Here you could specify a particular file to add (in place of the dot) but in most cases it best to stick with the dot with indicates that we want to add <em>all</em> files.</p>
+<h2 id="committhechanges">Commit The Changes</h2>
+<p>When we push new changes to a project (know as a commit) or add a project to GitHub for the first time, we need to write a short (or in some cases quite detailed) explanation of what we have done.
+To add a memo to our "commit" do:</p>
+<pre><code class="hljs"><span class="hljs-attribute">git</span> commit -m <span class="hljs-string">&quot;first commit&quot;</span>
+</code></pre>
+<p>Here the text inside the quotations can be whatever you would like it to be.</p>
+<h2 id="givetheprojectsomewheretolive">Give The Project Somewhere To Live</h2>
+<p>Now that we have git setup and connected, a directory initialized as a git project, a file inside the directory and a memo on our first "commit", it's time to push our changes live to GitHub.</p>
+<p>But first we need to tell this project where it is going to live. If you have not done so already, head over to GitHub.com and sign into your account. You should be a greeted by a page with 2 large buttons on it. Click the button that says "Start a Project".</p>
+<p>Choose a name for this new project and make sure to leave the box saying "Initialize this repository with a README" unchecked if you already created a 'README.md' file.</p>
+<p>Click on the green "Create Repository" button at the bottom of the page. On The next page you will be presented with the git URL for your new repository. You will need this in the next step, so write it down or copy paste it.</p>
+<h2 id="telltheprojectwhereitlives">Tell The Project Where It Lives</h2>
+<p>To tell your repository where it will "live" on GitHub do:</p>
+<pre><code class="hljs">git remote add origin https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/XXX/</span>ZZZ.git
+</code></pre>
+<p>Where 'XXX' is the probably your username and and 'ZZZ' is the name of your repo.</p>
+<h2 id="pushtheprojecthome">Push The Project Home</h2>
+<p>Finally, our project knows where it is going and we can send it on its way. To add your new project to GitHub use the command:</p>
+<pre><code class="hljs">git push -u origin <span class="hljs-keyword">master</span>
+<span class="hljs-title"></span></code></pre>
+<p>(Note: You will probably be asked to verify your GitHub credentials at this point) After following all of these steps, you should be able to see this new project under your profile at GitHub.com.
+Remember, GitHub is an awesome site, but it is not the only way to use git!</p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

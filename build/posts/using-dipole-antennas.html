@@ -1,0 +1,350 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Using Dipole Antennas",
+  "description":"A guide by RTL-SDR.",
+  "tags":"#radio #link #guide #archive"
+}
+;</script>
+<h1 id="usingournewdipoleantennakit">USING OUR NEW DIPOLE ANTENNA KIT</h1>
+<p>SOURCE: https://www.rtl-sdr.com/using-our-new-dipole-antenna-kit/</p>
+<p>Over on <a href="https://www.rtl-sdr.com/store">our store</a> we've recently released our new receive only dipole antenna kit which now replaces the older magnetic whip style antennas from the previous kit. This was done for a few reasons including 1) We believe that the dipole kit is much more versatile and will enable beginners to get better reception straight away, 2) magnets of any type are no longer welcome on most airmail parcel carriers (though they still get through for now). While the magnetic whip still works perfectly fine, the dipole kit should make it easier to get the antenna outside or in a better position away from noisy computers/electronics, and it also allows for a simple v-dipole configuration for satellite reception.</p>
+<p>The units are currently in stock at our Chinese warehouse either bundled with an RTL-SDR or as an individual antenna set. </p>
+<p><strong><a href="https://www.rtl-sdr.com/store">www.rtl-sdr.com/store</a></strong></p>
+<p>This post is a guide on how to use the dipole antenna set in various configurations. First we'll show and explain about what's included in the set:</p>
+<ul>
+<li><strong>1x dipole antenna base with 60cm RG174 cable and SMA Male connector.</strong> This is the dipole base where the telescopic antennas connect to. The short run of RG174 is decoupled from the base elements with a ferrite choke. This helps to prevent the feed line from interfering with the dipole radiation pattern. On the inside of the base the two dipole element sides are connected with a 100 kOhm resistor to help bleed off any static. The dipole has a 1/4 inch female screw on the bottom, which allows you to use standard camera mount products for mounting.</li>
+<li><strong>1x 3 meter RG174 coax cable extension.</strong> This coax cable extension allows you to mount the antennas in a place that gets better reception. E.g. outside on a window, or higher up.</li>
+<li><strong>2x 23cm to 1 m telescopic antennas.</strong> The telescopic dipoles are detachable from the dipole base via a M5 thread which allows for greater portability and the ability to swap them out. These long telescopic antennas cover VHF to UHF.</li>
+<li><strong>2x 5cm to 13cm telescopic antennas.</strong> These smaller antennas cover UHF to 1090 MHz ADS-B, and even still work decently up to L-band 1.5 GHz frequencies.</li>
+<li><strong>1x flexible tripod mount with 1/4" male screw.</strong> This piece allows you to mount the dipole on a variety of different locations. E.g. a pole, tree branch, desk, door, window sill. The legs of the tripod are bendy and rubberized so can wrap securely around many objects.</li>
+<li><strong>1x suction cup mount with 1/4" male screw.</strong> With this mount you can mount the dipole on the outside of a window, on a wall, car roof/window, or on any other smooth surface. To use first clean the surface with window cleaner or isopropyl alcohol. Then place the suction cup on the cleaned surface and close the lever to activate the suction.</li>
+</ul>
+<p><a href="https://www.rtl-sdr.com/wp-content/uploads/2017/09/dipole_components.jpg"><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/dipole_components-500x500.jpg" alt="What's included in the new Dipole kit" /></a>What's included in the new Dipole kit</p>
+<h2 id="dipoleorientation">Dipole Orientation</h2>
+<p>Signals are normally transmitted with either horizontal, vertical or right hand/left hand circular polarization (RHCP/LHCP). This is essentially the 'orientation' of a signal, and an antenna with the same polarization should be used too for best performance. A dipole can be used in either vertical or horizontal polarization, just by orienting it either vertically or horizontally.</p>
+<p>If you mismatch vertical and horizontal polarization or RHCP and LHCP you'll get an instant 20dB loss. If you mismatch vertical/RHCP, vertical/LHCP, horizontal/RHCP, horizontal/LHCP you'll only get a 3dB loss.</p>
+<p>For vertical polarization you will want to have the element connected to the center coax conductor pointing UP. You can confirm which element is connected to the center conductor by temporarily removing the black lid on the dipole base (it can be easily pried off with a nail or flat head screwdriver).</p>
+<p>There are also ways to optimize the radiation pattern with dipoles. For example for LEO VHF satellites you can use a V-dipole configuration. You can also make a somewhat directional antenna by using a bent dipole configuration. Some more examples of dipole configurations can be found on [KK4OBI's page on bent dipoles](http://www.qsl.net/kk4obi/Center-fed L-dipoles Vertical.html).</p>
+<p><a href="https://www.rtl-sdr.com/wp-content/uploads/2017/09/Bent-Dipole-Animation.gif"><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/Bent-Dipole-Animation.gif" alt="img" /></a></p>
+<h2 id="terrestrialsignalreception">Terrestrial Signal Reception</h2>
+<p>Most signals broadcast terrestrially (on Earth) are vertically polarized.</p>
+<p>To use the dipole for vertically polarized signals, all that you need to do is orient the elements vertically (up and down).</p>
+<p>When used in the vertical orientation, the element connected to the center conductor should be pointing UP. You can check which element is connected to the center conductor by removing the top cap on the dipole base. This will let you look inside at the connections.</p>
+<h2 id="satellitereception">Satellite Reception</h2>
+<p>The dipole can be used in a V-Dipole configuration for polar orbiting satellite reception. See <a href="https://lna4all.blogspot.com/2017/02/diy-137-mhz-wx-sat-v-dipole-antenna.html">Adam 9A4QV's post</a> where he wrote about how he discovered that it was possible to use dipoles in this configuration for excellent satellite reception. The idea is to use the dipole in horizontal polarization. This gives 3dB loss on the RHCP satellite signals, but also nicely gives 20dB loss on terrestrial signals which could be overloading your RTL-SDR.</p>
+<p>For 137 MHz satellites like NOAA and Meteor M2 extend the larger antenna elements out to about 53.4 cm each (about 2.5 sections). Angle the dipole so it is horizontal and in a 'Vee' shape, at about 120 degrees. Place the dipole in the North-Source direction.</p>
+<p>With an appropriate L-band LNA like the <a href="https://amzn.to/2nnEHtk">Outernet LNA</a> the dipole can also somewhat work to receive L-band satellites. Using the smallest antenna collapsed, use a V-dipole configuration and point it towards the L-band satellite. Ideally use a reflector too. In the image below we used a simple cookie tin as a reflector. A hole was drilled into the center and the mount used to clamp in the antenna. This together with the Outernet LNA was enough to receive AERO and STD-C.</p>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/l-band_veedipole.jpg" alt="L-band v-dipole with reflector tin" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/dipole_lbandreflect_1.jpg" alt="Receiving Inmarsat signals with the Outernet LNA" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/l-band_veedipole-500x375.jpg" alt="L-band v-dipole with reflector tin" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/dipole_lbandreflect_1-500x266.jpg" alt="Receiving Inmarsat signals with the Outernet LNA" /></p>
+<h2 id="choosingtheantennaelementlength">Choosing the Antenna Element Length</h2>
+<p>Like with the whip you can use an online calculator to calculate the optimal length for your frequency of interest. We recommend this <a href="http://www.csgnetwork.com/antennaedcalc.html">dipole calculator</a>. The exact length does not matter too much, but try to get the lengths as close to what the calculator says as you can. With the dipole you want both elements to be the same length.</p>
+<p>In reality extending the antenna to almost any random length will work just fine for most strong signals. But if you're really trying to optimize those weak signals you'll want to fine tune the lengths.</p>
+<p>Basically the longer the antenna, the lower it's resonant frequency. The shorter the antenna, the higher the resonant frequency. You want to be close to the resonant frequency. Remember that there is about 2cm of metal inside the antenna itself which needs to be added on. Below is a cheat sheet for various lengths and frequencies. Note that the length refers to the length of one side of the dipole only (e.g. the length that you need to extend each element out to).</p>
+<ul>
+<li>Large Antenna, 5 Sections, 100cm + 2cm is resonant @ ~70 MHz</li>
+<li>Large Antenna, 4 Sections, 80cm + 2cm is resonant @ ~87MHz</li>
+<li>Large Antenna, 3 Sections, 60cm + 2cm is resonant @ ~115 MHz</li>
+<li>Large Antenna, 2 Sections, 42cm + 2cm is resonant @ ~162 MHz</li>
+<li>Large Antenna, 1 Section, 23cm + 2cm is resonant @ ~ 285 MHz</li>
+<li>Small Antenna, 4 Sections, 14cm + 2cm is resonant @ ~445 MHz</li>
+<li>Small Antenna, 3 Sections, 11cm + 2cm is resonant @ ~550 MHz</li>
+<li>Small Antenna, 2 Sections, 8cm + 2cm is resonant @ ~720MHz</li>
+<li>Small Antenna, 1 Section, 5cm + 2cm is resonant @ ~1030 MHz.</li>
+</ul>
+<p>See the SWR plots at the end for a more accurate reading of the resonance points. But in most cases no matter what you extend the length to the SWR should be below 5 at most frequencies which results in 2.5 dB loss or less. More accurate info on VSWR loss graphs can be found in this <a href="https://www.arrl.org/files/file/Technology/tis/info/pdf/q1106037.pdf">document from the ARRL "Understanding SWR by Example"</a> (pdf).</p>
+<h2 id="usingthemounts">Using the Mounts</h2>
+<p>The suction cup mount allows you to easily place the antenna on a window, or any smooth surface. To use it first clean the surface thoroughly with isopropyl alcohol or glass cleaner. Then apply the suction cup and close the lever to lock it in place. The lever requires some force to push down, and this ensures a strong grip. You can then angle the antenna in the orientation that you need using the ball socket. Once in place close the ring to lock the ball socket in place.</p>
+<p>The flexible tripod mount is useful to mounting the dipole to almost everything else. Including tables, doors, poles, trees etc. The legs of the tripod have a flexible metal wire inside and rubber sheath so they can be bent into a position to grip almost anything.</p>
+<p><a href="https://www.rtl-sdr.com/wp-content/uploads/2017/09/dipole_mounts.jpg"><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/dipole_mounts.jpg" alt="Some examples of how to use the mounts." /></a>Some examples of how to use the mounts.</p>
+<p>Note that the mounts and RG174 extension allow you to more easily use the dipole antennas outside or in a better indoors position (e.g. on a Window). <strong>But please note that like our older magnetic whip we do not recommend permanently mounting this antenna outdoors.</strong> This antenna is designed to be a portable antenna that you put up and take down at the end of the day - not for permanent outdoor mounting. It is not protected against water, not grounded so cannot handle a lightning strike and could be damaged with dirt and grime build up. For permanent outdoor mounting you could conceivably fill the inside and hinges of the dipole with silicon putty or maybe even hot glue and ground the antenna yourself, but we have not tested this. The stainless steel antennas won't rust, but dirt and grime could gum up the collapsing mechanism.</p>
+<h2 id="tighteningthehinge">Tightening the hinge</h2>
+<p>Once you've got the orientation of the dipoles the way you want, you might want to tighten the hinge so the elements don't move so easily anymore. To do this simply take a small screwdriver and tighten the screw on the hinge.</p>
+<h2 id="samplevswrplots">Sample VSWR Plots</h2>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/Small_Ant_Collapsed.jpg" alt="Small Antenna Collapsed" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/Small_Ant_Extended.jpg" alt="Small Antenna Extended" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/plugins/ultimate-responsive-image-slider/assets/css/images/blank.gif" alt="Large Antenna Collapsed" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/plugins/ultimate-responsive-image-slider/assets/css/images/blank.gif" alt="Large Antenna Extended" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/RG174_Cable_Loss.jpg" alt="RG174 Cable Loss" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/Small_Ant_Collapsed-500x400.jpg" alt="Small Antenna Collapsed" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/Small_Ant_Extended-500x400.jpg" alt="Small Antenna Extended" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/Large_Ant_Collapsed-500x400.jpg" alt="Large Antenna Collapsed" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/Large_Ant_Extended-500x400.jpg" alt="Large Antenna Extended" /></p>
+<p><img src="https://www.rtl-sdr.com/wp-content/uploads/2017/09/RG174_Cable_Loss-500x400.jpg" alt="RG174 Cable Loss" /></p>
+<h2 id="othernotes">Other Notes</h2>
+<p><strong>Note that this is NOT an antenna designed for TXing</strong>. It is an RX antenna only. So please do not TX with it unless you really know what you are doing as you could damage your TX radio. You'll probably need to remove the 100kOhm static bleed resistor to TX anyway.</p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

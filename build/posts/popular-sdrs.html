@@ -1,0 +1,330 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Comparison of Popular SDRs",
+  "description":"Getting started with software defined radio.",
+  "tags":"#radio #guide"
+}
+;</script>
+<h1 id="comparisonofpopularsdrs">Comparison of Popular SDRs</h1>
+<p>I've been a radio nerd for a while but only recently discovered the wonders of SDR (Software Defined Radio). I was a bit overwhelmed with all of the options at first, so to help others get started easily I've created a short guide for choosing the right SDR. </p>
+<p><em>Note: This page does NOT contain any affiliate links! Links to purchase these SDRs are provided for convenience only.</em></p>
+<p>For info on SDR programs/tools see <a href="sdr-tools.html">SDR Tools</a>.</p>
+<h2 id="understandingthespecs">Understanding the Specs</h2>
+<ul>
+<li>Frequency Range: These values describe the range that this SDR can pick up. Larger ranges are pretty much always better but if you are interested in specific bands then you need to choose an SDR that meets your needs. </li>
+<li>Max Sample Rate:  This value describes the amount of data that the SDR can receive at once. This is also sometimes called the "bandwidth" of the SDR. You can also think of this as the range that the SDR is able to pickup at one time. Like "Frequency Range", bigger is usually better. However, note that not all SDRs can preform well at their max sample rate. </li>
+<li>Antenna Connector: While most SDRs have a male SMA connector this is not a rule. You need to make sure that you have the correct antenna (or adapter) for the SDR you choose. More info <a href="https://www.jpole-antenna.com/2014/04/04/amateur-radio-antenna-connectors/">here</a>.</li>
+</ul>
+<h2 id="upconvertingwithhamitup">Upconverting With "Ham It Up"</h2>
+<p><a href="https://www.nooelec.com/store/ham-it-up-plus.html">Buy "Ham It Up Plus" from Nooelec</a></p>
+<p><a href="https://www.nooelec.com/store/sdr/sdr-addons/ham-it-up-304/ham-it-up-nano.html">Buy "Ham It Up Nano" from Nooelec</a></p>
+<p>Something to think about when considering the frequency range of an SDR is that nearly every SDR on the market is incapable of picking up HF signals like some HAM and AM stations. Systems that do allow for HF out of the box like the RTL-SDR Blog do so by means of suboptimal direct sampling. </p>
+<p>For instance, if you want to listen to AM radio you are going to be dealing with signals in the kilohertz range. Most SDRs are not able to pick that up out of the box at all. </p>
+<p>The "Ham It Up" upconverter by Nooelec is the solution. It takes frequencies that are too low register on your SDR and converts them up into a range that your SDR can handle. </p>
+<p><strong>Using Ham It Up:</strong></p>
+<ul>
+<li>Connect your antenna to the RF input of the "Ham It Up"</li>
+<li>Connect your SDR to the IF output of the "Ham It Up"</li>
+<li>Plug your USB power source into the USB jack</li>
+<li>Switch the toggle switch on the "Ham It Up" to the "upconvert" position</li>
+<li>This takes low frequency signals and upconverts them by 125MHz</li>
+<li>Start your SDR software</li>
+<li>Tune to 125MHz + the frequency you want to pick up</li>
+<li>So, for 820AM (820KHz) you would tune to 125.820MHz</li>
+<li>Switch the toggle switch on the "Ham It Up" to the "bypass" position to resume normal operation</li>
+</ul>
+<p><em>Note: You can also set a frequency offset of -125MHz in your SDR software if you would like to.</em></p>
+<h2 id="nooelecnesdrmini2">Nooelec NESDR Mini 2+</h2>
+<p><a href="https://www.nooelec.com/store/sdr/sdr-receivers/nesdr-mini-2-plus.html">Buy from Nooelec</a></p>
+<p>Frequency Range: 25MHz - 1750MHz</p>
+<p>Max Sample Rate: 3.2MHz</p>
+<p>Antenna Connector: MCX</p>
+<h2 id="nooelecnesdrsmartxtr">NooElec NESDR Smart XTR</h2>
+<p><a href="https://www.nooelec.com/store/nesdr-smart-xtr-sdr.html">Buy from Nooelec</a></p>
+<p>Frequency Range: 65MHz - 2300MHz</p>
+<p>Max Sample Rate: 3.2MHz</p>
+<p>Antenna Connector: SMA Male</p>
+<h2 id="rtlsdrblog">RTL-SDR Blog</h2>
+<p><a href="https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/">Buy from RTL-SDR Blog</a></p>
+<p>Frequency Range: 500KHz - 1.7GHz</p>
+<p>Max Sample Rate: 3.2MHz (2.4 MHz stable)</p>
+<p>Antenna Connector: SMA Male</p>
+<h2 id="hackrfone">HackRF One</h2>
+<p><a href="https://greatscottgadgets.com/hackrf/one/">Buy from Great Scott Gadgets</a></p>
+<p>Frequency Range: 1MHz - 6GHz</p>
+<p>Max Sample Rate: 20Mhz</p>
+<p>Antenna Connector: SMA Male</p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

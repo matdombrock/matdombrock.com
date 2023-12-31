@@ -1,0 +1,439 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Using require() on the Front-end",
+  "description":"How to use require in front-end javascript.",
+  "tags":"#programming #js #guide"
+}
+;</script>
+<h1 id="usingrequireonthefrontend">Using require() on the Front-end</h1>
+<h2 id="introduction">Introduction</h2>
+<div class="archive-msg">ARCHIVED: This is for historical purposes only!</div>
+<p><strong>Note: This writeup assumes that you have existing knowledge on NodeJS and the way that modules work in NodeJS (<code>require()</code>, <code>module.exports</code> ect.). To learn more about this checkout the <a href="https://nodejs.org/api/modules.html">NodeJS Docs</a>.</strong> </p>
+<p>Honestly, I don't do a ton of front-end work these days (at least not professionally). However, something that has always really bothered me about writing front-end JS is the way the sharing code between files works. </p>
+<p>Whenever your front-end code is even slightly complex, you end up with something like this: </p>
+<pre><code class="hljs"><span class="hljs-comment">&lt;!--HTML--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span> =<span class="hljs-string">&quot;js/script1.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span> =<span class="hljs-string">&quot;js/script2.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span> =<span class="hljs-string">&quot;js/script3.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span> =<span class="hljs-string">&quot;js/script4.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h1 id="howithinkitshouldbe">How (I think) it should be</h1>
+<p>Managing script dependencies in HTML has always seemed really wrong to me. I greatly prefer the way that dependencies work in NodeJS. Take this for example:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-comment">// JS</span>
+<span class="hljs-keyword">const</span> script1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./script1&#x27;</span>);
+<span class="hljs-keyword">const</span> script2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./script2&#x27;</span>);
+<span class="hljs-keyword">const</span> script3 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./script3&#x27;</span>);
+<span class="hljs-keyword">const</span> script4 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./script4&#x27;</span>);
+</code></pre>
+<h1 id="usingrequireonthefrontend-1">Using require() on the Front-end</h1>
+<p>The best solution I've found for using <code>require()</code> on the front-end is with <a href="http://browserify.org/">Browserify</a>. Browserify is software written NodeJS that ads "NodeJS-like" dependency management to the front-end. </p>
+<p>In order to use this solution, you will need to have NodeJS and NPM install for your development environment. </p>
+<h1 id="aboutbrowserify">About Browserify</h1>
+<p>Browserify is a tool that will bundle together your JavaScript dependencies into one file so that you don't have to add a million <code>&lt;script&gt;</code> tags to your HTML. </p>
+<p>Each time you make a change to one of your script files, you run the <code>browserify</code> command to 'build' / 'bundle' your JS into one file.    </p>
+<h1 id="installing">Installing</h1>
+<p>To install Browserify globally run:</p>
+<pre class="bash language-bash"><code class="hljs bash language-bash">npm install -g browserify
+</code></pre>
+<p>You can test that it is installed and working by running the <code>browserify</code> command. You should get some output that looks something like this:</p>
+<pre class="bash language-bash"><code class="hljs bash language-bash">&gt; browserify
+Usage: browserify [entry files] {OPTIONS}
+[...]
+</code></pre>
+<h1 id="setupyourfiles">Setup your files</h1>
+<p>Imagine that we have a directory tree like this:</p>
+<pre><code class="hljs">html/
+<span class="hljs-comment">--js/</span>
+<span class="hljs-comment">----index.js</span>
+<span class="hljs-comment">----requireMe.js</span>
+<span class="hljs-comment">--index.html</span>
+</code></pre>
+<p><strong>index.js</strong></p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> requireMe = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./requireMe&#x27;</span>);
+<span class="hljs-keyword">const</span> result = requireMe.func(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>);
+<span class="hljs-built_in">console</span>.log(result)
+<span class="hljs-comment">// 4</span>
+<span class="hljs-built_in">console</span>.log(requireMe.content);
+<span class="hljs-comment">// Here is some content</span>
+</code></pre>
+<p><strong>requireMe.js</strong></p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> content = <span class="hljs-string">&#x27;Here is some content!&#x27;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func</span>(<span class="hljs-params">a,b</span>)</span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ignoreMe</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;I feel ignored.&#x27;</span>);
+}
+<span class="hljs-built_in">module</span>.exports = {
+  content,
+  func
+};
+</code></pre>
+<p><strong>index.html</strong></p>
+<pre><code class="hljs"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span> =<span class="hljs-string">&quot;js/bundle.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h1 id="buildingbundling">Building / Bundling</h1>
+<p>The actual usage of the <code>browserify</code> command looks something like this:</p>
+<pre class="bash language-bash"><code class="hljs bash language-bash">browserify js/index.js -o js/bundle.js
+</code></pre>
+<p>This is telling <code>browserify</code> that we want to use <code>index.js</code> as the entry point and build / bundle that file (<code>index.js</code>) and all of it's dependencies into a new file called <code>bundle.js</code>.</p>
+<p>After running the above command you should have a directory tree that looks like this:</p>
+<pre><code class="hljs">html/
+<span class="hljs-comment">--js/</span>
+<span class="hljs-comment">----index.js</span>
+<span class="hljs-comment">----requireMe.js</span>
+<span class="hljs-comment">----bundle.js</span>
+<span class="hljs-comment">--index.html</span>
+</code></pre>
+<p>Notice the new <code>bundle.js</code> file. This is the file we setup to require from the HTML.</p>
+<p>This new file will include all of the code from <code>index.js</code> and <code>requireMe.js</code>. </p>
+<h1 id="examiningtheoutput">Examining the output</h1>
+<p><strong>bundle.js</strong></p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript">(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">e,n,t</span>)</span>{<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">o</span>(<span class="hljs-params">i,f</span>)</span>{<span class="hljs-keyword">if</span>(!n[i]){<span class="hljs-keyword">if</span>(!e[i]){<span class="hljs-keyword">var</span> c=<span class="hljs-string">&quot;function&quot;</span>==<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">require</span>&amp;&amp;<span class="hljs-built_in">require</span>;<span class="hljs-keyword">if</span>(!f&amp;&amp;c)<span class="hljs-keyword">return</span> c(i,!<span class="hljs-number">0</span>);<span class="hljs-keyword">if</span>(u)<span class="hljs-keyword">return</span> u(i,!<span class="hljs-number">0</span>);<span class="hljs-keyword">var</span> a=<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&quot;Cannot find module &#x27;&quot;</span>+i+<span class="hljs-string">&quot;&#x27;&quot;</span>);<span class="hljs-keyword">throw</span> a.code=<span class="hljs-string">&quot;MODULE_NOT_FOUND&quot;</span>,a}<span class="hljs-keyword">var</span> p=n[i]={<span class="hljs-attr">exports</span>:{}};e[i][<span class="hljs-number">0</span>].call(p.exports,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">r</span>)</span>{<span class="hljs-keyword">var</span> n=e[i][<span class="hljs-number">1</span>][r];<span class="hljs-keyword">return</span> o(n||r)},p,p.exports,r,e,n,t)}<span class="hljs-keyword">return</span> n[i].exports}<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> u=<span class="hljs-string">&quot;function&quot;</span>==<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">require</span>&amp;&amp;<span class="hljs-built_in">require</span>,i=<span class="hljs-number">0</span>;i&lt;t.length;i++)o(t[i]);<span class="hljs-keyword">return</span> o}<span class="hljs-keyword">return</span> r})()({<span class="hljs-number">1</span>:[<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"><span class="hljs-built_in">require</span>,<span class="hljs-built_in">module</span>,<span class="hljs-built_in">exports</span></span>)</span>{
+<span class="hljs-keyword">const</span> requireMe = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./requireMe&#x27;</span>);
+<span class="hljs-keyword">const</span> result = requireMe.func(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>);
+<span class="hljs-built_in">console</span>.log(result)
+<span class="hljs-comment">// 4</span>
+<span class="hljs-built_in">console</span>.log(requireMe.content);
+<span class="hljs-comment">// Here is some content</span>
+},{<span class="hljs-string">&quot;./requireMe&quot;</span>:<span class="hljs-number">2</span>}],<span class="hljs-number">2</span>:[<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"><span class="hljs-built_in">require</span>,<span class="hljs-built_in">module</span>,<span class="hljs-built_in">exports</span></span>)</span>{
+<span class="hljs-keyword">const</span> content = <span class="hljs-string">&#x27;Here is some content!&#x27;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func</span>(<span class="hljs-params">a,b</span>)</span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ignoreMe</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;I feel ignored.&#x27;</span>);
+}
+<span class="hljs-built_in">module</span>.exports = {
+  content,
+  func
+};
+},{}]},{},[<span class="hljs-number">1</span>]);
+</code></pre>
+<p>I'm not going to go too deep into this because most of this is Browserify 'boilerplate' that isn't important for our purposes. However, you can see that after the Browserify code, our original code is included. </p>
+<p><strong>Note:</strong> <em>Even though our <code>requireMe</code> module only exports <code>content</code> and <code>func</code> objects, the <code>ignoreMe</code> function is also included in <code>bundle.js</code>. Everything that is in a required file is included in <code>bundle.js</code>.</em></p>
+<h1 id="goingalittlefurther">Going a little further</h1>
+<p>We can keep things a little more organized by storing our source scripts in their own directory:</p>
+<pre><code class="hljs">html/
+<span class="hljs-comment">--js/</span>
+<span class="hljs-comment">----source/</span>
+<span class="hljs-comment">------index.js</span>
+<span class="hljs-comment">------requireMe.js</span>
+<span class="hljs-comment">----bundle.js</span>
+<span class="hljs-comment">--index.html</span>
+</code></pre>
+<p>Now the code we are actually working on is in the directory <code>/html/js/source/</code>. </p>
+<p>So we can run the <code>browserify</code> command like this:</p>
+<pre class="bash language-bash"><code class="hljs bash language-bash">browserify js/<span class="hljs-built_in">source</span>/index.js -o js/bundle.js
+</code></pre>
+<p>Since typing out that command can get a little tiring, I thought about writing a shell script to make it a little quicker. Then I remembered that the project I'm currency working on is being developed in a windows environment. So to keep things extra portable, I wrote a Node script that will handle the build processes. This should work on any OS. </p>
+<p><strong>build.js</strong></p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> { exec } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;child_process&quot;</span>);
+exec(<span class="hljs-string">&#x27;browserify js/source/index.js -o js/bundle.js&#x27;</span>);
+</code></pre>
+<hr />
+<p><strong>UPDATE</strong></p>
+<p>The <code>build.js</code> code above does not actually handle errors at all. If you want to make sure you know when something goes wrong try this:</p>
+<p><strong>build.js</strong></p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> { exec } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;child_process&quot;</span>);
+
+exec(<span class="hljs-string">&#x27;browserify js/source/index.js -o js/bundle.js&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">error, stdout, stderr</span>) =&gt;</span> {
+  <span class="hljs-keyword">if</span> (error){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`error: <span class="hljs-subst">${error.message}</span>`</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+  <span class="hljs-keyword">if</span> (stderr){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`stderr: <span class="hljs-subst">${stderr}</span>`</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+  <span class="hljs-keyword">if</span>(stdout){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`stdout: <span class="hljs-subst">${stdout}</span>`</span>);
+  }
+  <span class="hljs-keyword">else</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;Build OK!&#x27;</span>)
+  }
+});
+</code></pre></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

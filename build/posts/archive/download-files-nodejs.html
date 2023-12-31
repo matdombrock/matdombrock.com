@@ -1,0 +1,479 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Downloading Files with NodeJS",
+  "description":"NodeJs gives us native access to the local drives. Learn how to download files.",
+  "tags":"#programming #js #guide"
+}
+;</script>
+<h1 id="downloadingfileswithnodejs">Downloading Files with NodeJS</h1>
+<div class="archive-msg">ARCHIVED: This is for historical purposes only!</div>
+<p>NodeJs gives us native access to the local drives. The code below is an example of how to create a custom module that will download a file via promises. No external libraries are required for this example.</p>
+<h2 id="setupourmodules">Setup Our Modules</h2>
+<p>Create a new file called 'download.js'.</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> https = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;https&#x27;</span>);
+<span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;http&#x27;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;fs&#x27;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;path&#x27;</span>);
+</code></pre>
+<p>The 'http' and 'https' modules are required to make our connection to the site we want to download from.</p>
+<p>The 'fs' module allows us to access the local file system.</p>
+<p>The 'path' module allows us to split the URL into useful information.</p>
+<h2 id="setupthedownloadfunction">Setup The Download Function</h2>
+<p>Below the previous code enter the following:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">download</span>(<span class="hljs-params">options</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve,reject</span>)</span>{
+
+    }
+}
+</code></pre>
+<p>Here we setup the new 'download' function. We also gave it a parameter named 'options' which represents and object that we will use to submit the options for our download (more on that later).</p>
+<p>Additionally, we told this function to return a new promise. If you are not sure exactly how promises work, don't worry, it's not critical to making this work.</p>
+<h2 id="setupthedata">Setup The Data</h2>
+<p>Let's edit the 'download' function to look like this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">download</span>(<span class="hljs-params">options</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve,reject</span>)</span>{
+        <span class="hljs-keyword">let</span> spec_url = <span class="hljs-keyword">new</span> URL(options.input_url);
+        <span class="hljs-keyword">let</span> file_name = path.basename(options.input_url);
+        <span class="hljs-keyword">let</span> file = fs.createWriteStream(options.save_location+file_name);
+
+        <span class="hljs-keyword">let</span> return_data = {
+            <span class="hljs-string">&quot;options&quot;</span>:options,
+            <span class="hljs-string">&quot;file_name&quot;</span>:file_name,
+            <span class="hljs-string">&quot;save_location&quot;</span>:options.save_location,
+            <span class="hljs-string">&quot;success&quot;</span>:<span class="hljs-literal">false</span>
+        };
+    }
+}
+</code></pre>
+<p>The 'spec_url' variable will store our "special" URL. The one that can be parsed by our <code>path</code> module. We will use this to determine our protocol. </p>
+<p>The 'file_name' variable will store the name of our file including its file extension. </p>
+<p>The 'file' variable will store a reference to the actual file will we write.</p>
+<p>The 'return_data' object will store the data that we will return when the function completes.</p>
+<h2 id="determineourprotocol">Determine Our Protocol</h2>
+<p>You might have noticed that we needed to import both the 'http' and 'https' modules. When we want to download a file we need to know if we are going to be accessing it via HTTP or HTTPS so that we can use the right protocol. It would be possible to do this simply by supplying another parameter to the function or adding this to the options object. However we can avoid this (any any potential errors it may cause) by using our special URL we setup earlier.</p>
+<p>Go ahead and edit the 'download' function to match this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">download</span>(<span class="hljs-params">options</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve,reject</span>)</span>{
+        <span class="hljs-keyword">let</span> spec_url = <span class="hljs-keyword">new</span> URL(options.input_url);
+        <span class="hljs-keyword">let</span> file_name = path.basename(options.input_url);
+        <span class="hljs-keyword">let</span> file = fs.createWriteStream(options.save_location+file_name);
+
+        <span class="hljs-keyword">let</span> return_data = {
+            <span class="hljs-string">&quot;options&quot;</span>:options,
+            <span class="hljs-string">&quot;file_name&quot;</span>:file_name,
+            <span class="hljs-string">&quot;save_location&quot;</span>:options.save_location,
+            <span class="hljs-string">&quot;success&quot;</span>:<span class="hljs-literal">false</span>
+        };
+
+        <span class="hljs-keyword">if</span>(spec_url.protocol == <span class="hljs-string">&quot;https:&quot;</span>){
+            <span class="hljs-keyword">var</span> protocol = https;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (spec_url.protocol == <span class="hljs-string">&quot;http:&quot;</span>){
+            <span class="hljs-keyword">var</span> protocol = http;
+        }
+        <span class="hljs-keyword">else</span>{
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&quot;INVALID PROTOCOL&quot;</span>);
+            resolve(return_data);
+        }
+
+        protocol.get(spec_url, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+            response.pipe(file);
+            return_data.success = <span class="hljs-literal">true</span>;
+            resolve(return_data);
+        }).on(<span class="hljs-string">&#x27;error&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+            <span class="hljs-comment">//console.error(e);</span>
+            resolve(return_data);
+        });
+    })
+}
+</code></pre>
+<p>First, you can see we setup some super simple logic to check if the protocol is HTTP or HTTPS. If we can determine the protocol we setup a new 'protocol' variable and assign the correct (corresponding) module to it. If we can not determine what protocol we are using, this means we did not supply a valid URL. Here we still resolve the promise, but the 'return_data' will still have a value of 'false' in the 'success' field.</p>
+<p>Once we know the correct protocol, we can go ahead and actually download the file, set the 'success' field to 'true' and resolve our promise with the return data.</p>
+<p>We also setup some simple error handling in case something goes wrong. </p>
+<h2 id="finaldownloadjscode">Final Download.js Code</h2>
+<p>The final code for the 'download.js' file should look like this:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-comment">//NodeJS</span>
+<span class="hljs-keyword">const</span> https = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;https&#x27;</span>);
+<span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;http&#x27;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;fs&#x27;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;path&#x27;</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">download</span>(<span class="hljs-params">options</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">resolve,reject</span>)</span>{
+        <span class="hljs-keyword">let</span> spec_url = <span class="hljs-keyword">new</span> URL(options.input_url);
+        <span class="hljs-keyword">let</span> file_name = path.basename(options.input_url);
+        <span class="hljs-keyword">let</span> file = fs.createWriteStream(options.save_location+file_name);
+
+        <span class="hljs-keyword">let</span> return_data = {
+            <span class="hljs-string">&quot;options&quot;</span>:options,
+            <span class="hljs-string">&quot;file_name&quot;</span>:file_name,
+            <span class="hljs-string">&quot;save_location&quot;</span>:options.save_location,
+            <span class="hljs-string">&quot;success&quot;</span>:<span class="hljs-literal">false</span>
+        };
+
+        <span class="hljs-keyword">if</span>(spec_url.protocol == <span class="hljs-string">&quot;https:&quot;</span>){
+            <span class="hljs-keyword">var</span> protocol = https;
+        }
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (spec_url.protocol == <span class="hljs-string">&quot;http:&quot;</span>){
+            <span class="hljs-keyword">var</span> protocol = http;
+        }
+        <span class="hljs-keyword">else</span>{
+            <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&quot;INVALID PROTOCOL&quot;</span>);
+            resolve(return_data);
+        }
+
+        protocol.get(spec_url, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+            response.pipe(file);
+            return_data.success = <span class="hljs-literal">true</span>;
+            resolve(return_data);
+        }).on(<span class="hljs-string">&#x27;error&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+            <span class="hljs-comment">//console.error(e);</span>
+            resolve(return_data);
+        });
+    })
+}
+
+<span class="hljs-built_in">exports</span>.get = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">options</span>)</span>{
+    <span class="hljs-keyword">return</span> download(options);
+};
+</code></pre>
+<p>Notice that we added an export (at the very bottom) for this function so that we can use it as a custom module.</p>
+<h2 id="usingourmodule">Using Our Module</h2>
+<p>Let's setup a test script so that we can see how our download module actually works. </p>
+<p>First we need to make a new directory to store our downloads. Do this now:</p>
+<pre class="bash language-bash"><code class="hljs bash language-bash"><span class="hljs-comment">#bash</span>
+mkdir downloads
+</code></pre>
+<p>If you are using Windows just make a new folder called 'downloads' in our current directory.</p>
+<p>Then make a new file called 'test.js' and give it the following content:</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> DL = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./download.js&#x27;</span>);
+<span class="hljs-keyword">let</span> test = DL.get({
+    <span class="hljs-string">&quot;input_url&quot;</span>:<span class="hljs-string">&quot;https://i.imgur.com/crtV5VDg.jpg&quot;</span>,
+    <span class="hljs-string">&quot;save_location&quot;</span>:<span class="hljs-string">&quot;downloads/&quot;</span>
+});
+test.then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">return_data</span>)</span>{
+    <span class="hljs-keyword">if</span>(return_data.success){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Downloaded &quot;</span>+return_data.file_name);
+    }
+    <span class="hljs-keyword">else</span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Could Not Download &quot;</span>+return_data.file_name);
+    }
+});
+</code></pre>
+<p>This slightly more complex example will read a text file full of URLs and try to download each of the pages listed in this file.</p>
+<pre class="javascript language-javascript"><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> DL = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;./download.js&#x27;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;fs&#x27;</span>);
+
+<span class="hljs-keyword">var</span> list = [];
+<span class="hljs-keyword">var</span> download_loc =<span class="hljs-string">&quot;downloads/&quot;</span>;
+<span class="hljs-keyword">var</span> tests = [];
+
+fs.readFile(<span class="hljs-string">&#x27;./urls.txt&#x27;</span>, <span class="hljs-string">&quot;utf8&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">read</span>(<span class="hljs-params">err, data</span>) </span>{
+    <span class="hljs-keyword">if</span> (err) {
+        <span class="hljs-keyword">throw</span> err;
+    }
+    processFile(data);
+});
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processFile</span>(<span class="hljs-params">data</span>) </span>{
+    list = data.split(<span class="hljs-string">&quot;\n&quot;</span>);
+    Run(list);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Run</span>(<span class="hljs-params">list</span>)</span>{
+    <span class="hljs-keyword">for</span>(item <span class="hljs-keyword">in</span> list){
+        tests.push(DL.get({<span class="hljs-string">&quot;input_url&quot;</span>:list[item],<span class="hljs-string">&quot;save_location&quot;</span>:download_loc}));
+    }
+    <span class="hljs-keyword">for</span>(test <span class="hljs-keyword">in</span> tests){
+        tests[test].then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">return_data</span>)</span>{
+            <span class="hljs-keyword">if</span>(return_data.success==<span class="hljs-literal">true</span>){
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;DOWNLOADED: &quot;</span>+return_data.options.input_url);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;///&quot;</span>);
+            }
+            <span class="hljs-keyword">else</span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;ERROR: &quot;</span>+return_data.options.input_url);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;///&quot;</span>);
+            }
+        }).catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{
+            <span class="hljs-built_in">console</span>.log(error);
+        });
+    };
+}
+</code></pre>
+<p>You can find some URLS to use as your 'urls.txt' file <a href="https://gist.github.com/demersdesigns/4442cd84c1cc6c5ccda9b19eac1ba52b">on GitHub</a>.</p>
+<hr />
+<p>Thanks for reading!</p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

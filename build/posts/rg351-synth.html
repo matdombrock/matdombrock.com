@@ -1,0 +1,338 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Using An RG351 As A cSound Synth",
+  "description":"These things can run linux, so naturally I made one into a cSound synth.",
+  "tags":"#hacking #audio"
+}
+;</script>
+<h1 id="usinganrg351asacsoundsynth">Using An RG351 As A cSound Synth</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XpfNiham95k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 id="whatisanrg531andwhyisthisinteresting">What Is an RG531 And Why Is This Interesting?</h2>
+<p>The RG351 is a "retro handheld" device manufactured by a company called Anbernic. These devices are used by retro game enthusiasts to emulate classic game consoles. </p>
+<p>Behind the scenes, these devices are running the Linux kernel which means they are super hackable. </p>
+<p>The thing that makes the RG351 stand out in this line of devices is that this is the first one to include an AArch64 (64bit ARM) chip. </p>
+<h2 id="arkos">ArkOs</h2>
+<p>While the stock firmware on the RG351 is fun to play with, in order to unlock the full potential of the device you need to install a custom OS called ArkOs. This gives us full access to both 32 and 64 user space in what is essentially a stripped down Ubuntu install. </p>
+<h2 id="doingthething">Doing The Thing</h2>
+<p>Because we are essentially running Ubuntu at this point, we don't even have to compile cSound ourselves. </p>
+<p>It's as easy as running</p>
+<pre class="bash language-bash"><code class="hljs bash language-bash">apt install csound
+</code></pre>
+<p>Note: In order to run this command you will need to setup wifi and enable remote connections in the ArkOs options menu. Then you will need to login to the device through SSH. See the ArkOs wiki for info on how to do this. </p>
+<p>Now you just need to write or copy a cSound synth onto the device. </p>
+<p>The easiest way to do this is probably with <code>nano</code>. This should be installed by default, so you can run:</p>
+<pre class="bash language-bash"><code class="hljs bash language-bash">nano synth.csd
+</code></pre>
+<p>If you want something to get you started you can copy and paste this example synth based on the cSound docs. </p>
+<pre class="cpp language-cpp"><code class="hljs cpp language-cpp">&lt;CsoundSynthesizer&gt;
+&lt;CsOptions&gt;
+; Select audio/midi flags here according to platform
+-odac    ;;;realtime audio out
+&lt;/CsOptions&gt;
+&lt;CsInstruments&gt;
+ksmps = 32
+nchnls = 2
+0dbfs  = 1
+
+instr 1
+
+iflg = p4
+asig oscils .7, 220, 0, iflg
+     outs asig, asig
+
+endin
+&lt;/CsInstruments&gt;
+&lt;CsScore&gt;
+
+i 1 0 2 0
+i 1 3 2 2    ;double precision
+e
+&lt;/CsScore&gt;
+&lt;/CsoundSynthesizer&gt;
+</code></pre>
+<p>Save the file and exit Nano.</p>
+<p>You should now be able to use the csound command to launch your synth. </p>
+<pre class="bash language-bash"><code class="hljs bash language-bash">csound synth.csd
+</code></pre>
+<p>Note:</p>
+<p>This is a "realtime" synth so you will need to plug a midi controller into the USB OTG port on top of the RG351 in order for this to make any noise. In my tests, I found that in order for the RG351 to detect the midi controller it needed to be plugged in when the device was turned on.  </p>
+<h2 id="moreinfo">More Info</h2>
+<p><a href="https://retrogamecorps.com/rg351/">Info on RG351</a>
+<a href="https://github.com/christianhaitian/arkos">ArkOs</a>
+<a href="https://github.com/christianhaitian/arkos/wiki">ArkOs Wiki</a>
+<a href="https://csound.com/">cSound</a>
+<a href="https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/">Using Nano</a></p></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>

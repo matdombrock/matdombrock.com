@@ -1,0 +1,504 @@
+<head>
+  <title>Mat Dombrock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+</head>
+<div class="header">
+  <h1><a href="/"><img src="/favicon.ico" width="25px" >Mathieu Dombrock</a></h1>
+  
+</div>
+<small id="tagline" class="tagline" onclick="loadTagline()" style="cursor:pointer;">"Baseless claims & crimes against computing."</small>
+<hr>
+<div class="nav">
+  <a href="/">home</a> |
+  <a href="/about.html">about</a> |
+  <a href="/search.html">search</a> |
+  <a href="https://github.com/matdombrock" target="_blank">github</a> |
+  <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
+  <input type="text" placeholder="local search" id="nav-search" style="float:right;">
+</div>
+<hr>
+
+<script>
+  document.getElementById('nav-search').addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+          search()
+      }
+  });
+
+  function search(){
+    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+  }
+  const quotes = [
+    "Baseless claims & crimes against computing.",
+    "Something should go here...",
+    "This is a website.",
+    "Did you see how fast this page loaded?",
+    "Down with the OOP!",
+    "I for one, welcome our new robot overlords.",
+    "Is this thing on?",
+    "Does anyone read this?",
+    "Drink more water.",
+    "This site, but it's John Coltrane's 'Giant Steps'.",
+    "You are the "+Math.random()*10e6+"th visitor!",
+    "SMASH that like button!",
+    "Web 4.0",
+    "Now available in color!",
+    "Now available on 5G!",
+    "Now available in VR!",
+    "Did you notice these change every time?",
+    "This site contains a secret game().",
+    "Version Number: "+Math.random()*10+"."+Math.random()*10,
+    "Click me!",
+    "What is this? 1997?",
+    "Thanks for visiting.",
+    "Yet another tech blog.",
+    "Yet another Warcraft 3 Map.",
+    //
+    "EX-TER-MIN-ATE! EX-TER-MIN-ATE!",
+    "We also have a rogue robot policy.",
+    "Give me an analysis, Joey.",
+    "You didn't tell me you could fly!",
+    "What's that ROBOT doing here?",
+    
+  ];
+  function loadTagline(){
+    document.getElementById('tagline').innerHTML = '"'+quotes[Math.floor(Math.random() * quotes.length)]+'"';
+  }
+  loadTagline();
+  function game(input){
+    console.log("This is a game (true me)");
+    console.log("You said: "+input);
+    if(input === 1337){
+      console.log('win');
+    }else{
+      alert('fail');
+      window.location.replace("https://youtu.be/dQw4w9WgXcQ");
+    }
+  }
+
+</script><style>/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style><style>/*rgb(228, 172, 106);*/
+:root{
+  --bg:rgb(42, 42, 42);
+  --main:rgb(254, 100, 216);
+  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --highlight:rgb(252, 179, 211);
+  --text:rgb(224, 220, 214);
+}
+body{
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0 auto;
+}
+body::selection { color: var(--highlight) }
+a{
+  color:var(--highlight);
+  transition:all 0.2s;
+  font-family: 'Courier New', monospace;
+}
+a:hover{
+  color:var(--highlight);
+}
+blockquote{
+  border-left:3px solid var(--secondary);
+  padding-left:1rem;
+  color:var(--secondary);
+}
+img{
+  max-width:100%;
+}
+small{
+  color:var(--secondary);
+}
+h1{
+  color:var(--text);
+}
+h1 a{
+  text-decoration: none;
+  color:var(--text);
+}
+h1,h2,h3,h4{
+  color:var(--secondary);
+  font-family: 'Courier New', monospace;
+}
+/* hr{
+  border-color: var(--text);
+  outline-color: var(--text);
+} */
+.header{
+  background-image: url('/img/md-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height:300px;
+  padding:1rem;
+}
+.tagline{
+  padding:1rem;
+  display: block;
+  text-align: right;
+}
+.archive-msg{
+  background:red;
+  color:var(--text);
+  padding:1rem;
+}
+.nav{
+  padding:1rem;
+}
+.nav a{
+  text-decoration: none;
+}
+.ss-content{
+  max-width:1000px;
+  margin-left:10vw;
+  padding:1rem;
+}
+@media only screen and (max-width: 1200px) {
+  .ss-content{
+    margin-left:0;
+  }
+}
+.footer{
+  padding:1rem;
+}
+/* GH Repo card override*/
+.repo-card a{
+  color:var(--highlight)!important;
+}
+</style><div class="ss-content"><script>const ssmeta=
+{
+  "title":"Emoji Math",
+  "description":"Basic Algebra with Emojis",
+  "tags":"#math #guide"
+}
+;</script>
+<h1 id="emojimath">Emoji Math</h1>
+<h1 id="whatisalgebra">♾️What is Algebra?</h1>
+<ul>
+<li>🅱️ Algebra is a branch of mathematics that involves the use of letters (variables) and symbols  to represent and manipulate numbers and quantities.</li>
+<li>💔 The word "algebra" comes from the Arabic word "al-jabr," which means "the reunion of broken parts."</li>
+<li>📜 The origins of algebra can be traced back to ancient civilizations such as the Egyptians  and the Babylonians, who used algebraic techniques to solve practical problems.</li>
+<li>🎅 The Greek mathematician Diophantus is often considered the "father of algebra," as he introduced the use of symbols to represent unknown numbers.</li>
+<li>⚖️ The Arabic mathematician Muhammad ibn Musa al-Khwarizmi introduced the concept of using letters to represent unknown quantities in his book "The Compendious Book on Calculation by Completion and Balancing."</li>
+<li>🚀 Today, algebra is an important part of mathematics and is used in a wide variety of fields. </li>
+</ul>
+<h2 id="itsreal">👽 ITS REAL !</h2>
+<p>There are many real-world problems that kids can solve using algebra that they might find interesting. Here are a few examples:</p>
+<ol>
+<li><p>🛍️ Finding the price of items on sale: If you know the original price of an item and the discount percentage, you can use algebra to find the sale price. For example, if an item is originally $40 and is on sale for 25% off, you can use the equation "<code>sale price = original price - discount</code>" to find the sale price: <code>sale price = $40 - 0.25($40) = $30</code>.</p></li>
+<li><p>🚘 Determining the distance traveled: If you know the speed of a car and the time it takes to travel a certain distance, you can use algebra to find the distance traveled. For example, if a car is traveling at a speed of 60 mph and takes 2 hours to travel a certain distance, you can use the equation "<code>distance = speed * time</code>" to find the distance: <code>distance = 60 mph * 2 hours = 120 miles</code>.</p></li>
+<li><p>📱Calculating the cost of phone plans: If you know the cost per minute of a phone plan and the number of minutes used, you can use algebra to find the total cost. For example, if a phone plan charges $0.25 per minute and you use the phone for 100 minutes, you can use the equation "<code>total cost = cost per minute * number of minutes</code>" to find the total cost: <code>total cost = $0.25/minute * 100 minutes = $25</code>.</p></li>
+<li><p>🌳 Determining the height of a tree: If you know where to find a tree and you know the length of its shadow, and you also know the height of a nearby object and the length of its shadow, you can use algebra to find the height of the tree. For example, if a tree has a shadow that is 30 feet long and a nearby object has a shadow that is 10 feet long, and the nearby object is 4 feet tall, you can use the equation "<code>tree height/shadow length = object height/shadow length</code>" to find the height of the tree: <code>tree height = (4 feet * 30 feet) / 10 feet = 12 feet</code>.</p></li>
+</ol>
+<h2 id="rulesofalgebratheboringpart">📏 Rules of Algebra (The Boring Part)</h2>
+<p>The basic rules of algebra are a set of principles that govern the manipulation of algebraic expressions. These rules allow us to simplify and rearrange equations and formulas in order to solve for unknown values or to understand the relationships between different quantities.</p>
+<p>Here are some of the basic rules of algebra:</p>
+<ol>
+<li><p><strong>The Order of Operation</strong>s: This rule states that certain operations (such as addition and multiplication) should be performed before others (such as subtraction and division). The acronym "PEMDAS" can help you remember the order of operations: Parentheses, Exponents, Multiplication and Division (from left to right), and Addition and Subtraction (from left to right).</p></li>
+<li><p><strong>The Distributive Property</strong>: This rule states that when you multiply a number or variable by a group of numbers or variables, you can distribute the multiplication to each term within the group. For example, <code>5(👽 + 2) = 5👽 + 10</code>.</p></li>
+<li><p><strong>The Associative Property</strong>: This rule states that you can group numbers or variables in different ways when performing operations. For example, `(🎁 + 2) + 3 = 🎁 + (2 + 3).</p></li>
+<li><p><strong>The Commutative Property</strong>: This rule states that you can swap the order of numbers or variables when performing certain operations. For example, <code>👽 + 🎁= 🎁 + 👽</code>.</p></li>
+<li><p><strong>The Additive Identity</strong>: This rule states that adding 0 to any number or variable does not change its value. For example, <code>🌍 + 0 = 🌍</code>.</p></li>
+<li><p><strong>The Multiplicative Identity</strong>: This rule states that multiplying any number or variable by 1 does not change its value. For example, <code>🛸 * 1 = 🛸</code>.</p></li>
+</ol>
+<p>These are just a few of the basic rules of algebra. There are many others, but these are some of the most important ones to know.</p>
+<h2 id="variables">😕🎁😎 Variables</h2>
+<p>In math and science, a variable is a symbol that represents a value that can change. For example, in the equation "<code>x + 2 = 4</code>", the variable is "x."</p>
+<p>In this equation, we don't know the value of "x," so we can say that "x" is a variable. We can also say that "x" is a placeholder for a number.</p>
+<p>You can think of variables as boxes that hold values. The value in the box can change, so we use a variable to represent it. This is useful because it allows us to represent unknown or changing values in equations and formulas, and then solve for them.</p>
+<p>For example, if we want to find out how much money someone has in their bank account, we might use the equation "<code>B = D + I</code>",  where "B" represents the balance in the bank account, "D" represents any deposits made, and "I" represents any interest earned. In this equation, "B," "D," and "I" are all variables because their values can change.</p>
+<p>So, to sum up, variables are symbols that represent values that can change, and they are used to represent unknown or changing values in equations and formulas.</p>
+<h2 id="constants">🪨😇🪨 Constants</h2>
+<p>In math and science, a constant is a value that does not change.</p>
+<p>For example, in the equation "<code>x + 2 = 4</code>", the constant is "2." The value of "2" does not change, so we call it a constant.</p>
+<p>Constants are often used in equations and formulas to represent values that do not change. For example, in the formula for the area of a circle, the constant "pi" (approximately 3.14) is used to represent the ratio of the circumference of a circle to its diameter. This value does not change, so we use the constant "pi" to represent it (we could also use a 🥧 emoji).</p>
+<p>In general, constants are used to represent values that are fixed or known, while variables are used to represent values that can change or are unknown.</p>
+<p>So, to sum up, constants are values that do not change, and they are often used in equations and formulas to represent fixed or known values.</p>
+<h1 id="emojimath-1">🧮👩‍🏫 Emoji Math</h1>
+<p>In real life, we use variables to represent real things. Like the cost of some item, or the speed of a rocket🚀. But when we are just practicing the math, we just use random letters. Which can get boring fast.</p>
+<p>Instead of letters, lets use emojis 😊!</p>
+<pre><code class="hljs"><span class="hljs-attr">☹️+🕹️</span>=<span class="hljs-string">🙂
+</span></code></pre>
+<p>Well not quite like that…</p>
+<p>More like this:</p>
+<pre><code class="hljs"><span class="hljs-attr">🌞 </span>=<span class="hljs-string"> 2
+🌙 = 10
+🌞+🌙 = 12
+🌞🌙 = 20
+🌞🌙🌙 = 🌈
+🌈 - 5 = ✨
+</span></code></pre>
+<p><em>What are the values of 🌈 & ✨?</em></p>
+<h1 id="reviewbutwithemojis">🎒🚌 Review (But with Emojis)</h1>
+<h2 id="aliens">👽 ALIENS</h2>
+<h2 id="11133">👽 - 11 = 13 -3👽</h2>
+<p>To solve this equation, you need to get the variable (👽) on one side of the equal sign and all the constants on the other side.</p>
+<p>Here's how you can do that:</p>
+<ol>
+<li>Add 3👽 to both sides of the equation: <code>👽 - 11 + 3👽 = 13 - 3👽 + 3👽</code></li>
+<li>Combine like terms on each side: <code>4👽 - 11 = 13</code></li>
+<li>Add 11 to both sides: <code>4👽 - 11 + 11 = 13 + 11</code></li>
+<li>Combine like terms on the left side: <code>4👽 = 24</code></li>
+<li>Divide both sides by 4: <code>(4👽)/4 = 24/4</code></li>
+<li>Simplify the left side: <code>👽 = 6</code></li>
+</ol>
+<p>So, the solution to the equation is <code>👽 = 6.</code></p>
+<hr />
+<h2 id="screamingguy">😱 SCREAMING GUY</h2>
+<h2 id="425">-4 + 2😱 = -😱 + 5</h2>
+<p>To solve this equation, you need to get the variable (😱) on one side of the equal sign and all the constants on the other side. Here's how you can do that:</p>
+<ol>
+<li>Add 😱 to both sides of the equation: <code>-4 + 2😱 + 😱 = -😱 + 5 +😱</code></li>
+<li>Combine like terms on each side: <code>2😱 - 4 = 5</code></li>
+<li>Add 4 to both sides: <code>2😱 - 4 + 4 = 5 + 4</code></li>
+<li>Combine like terms on the left side: <code>2😱 = 9</code></li>
+<li>Divide both sides by 2: <code>(2😱)/2 = 9/2</code></li>
+<li>Simplify the left side: <code>😱 = 4.5</code></li>
+</ol>
+<p>So, the solution to the equation is <code>😱 = 4.5.</code></p>
+<hr />
+<h2 id="aliensagain">🛸 ALIENS AGAIN!</h2>
+<h2 id="425-1">-4 + 2🛸 = -🌍 + 5</h2>
+<p>To solve this equation, you need to get the variable (🛸) on one side of the equal sign and all the constants on the other side. Here's how you can do that:</p>
+<ol>
+<li>Add y to both sides of the equation: <code>-4 + 2🛸 + 🌍 = -🌍 + 5 + 🌍</code></li>
+<li>Combine like terms on each side: <code>2🛸 - 4 + 🌍 = 5</code></li>
+<li>Add 4 to both sides: <code>2🛸 - 4 + 4 + 🌍 = 5 + 4</code></li>
+<li>Combine like terms on the left side: <code>2🛸 + 🌍 = 9</code></li>
+</ol>
+<p>At this point, the equation is in standard form, with the variable (🛸) on one side and all the constants on the other side. The solution is <code>🛸 = (9 - 🌍)/2.</code></p>
+<p>So, to find the solution, you need to substitute the value of 🌍 into the equation and then simplify. For example, if <code>🌍 = 3</code>, then the equation becomes:</p>
+<p><code>2🛸 + 3 = 9</code></p>
+<p>Substituting 3 for 🌍 and simplifying gives:</p>
+<p><code>2🛸 = 6 🛸 = 3</code></p>
+<p>So, the solution in this case is <code>🛸 = 3.</code></p>
+<p>I hope this helps! Let me know if you have any questions.</p>
+<hr />
+<h2 id="weatherbutmaybestillaliens">⛅️ WEATHER (BUT MAYBE STILL ALIENS)</h2>
+<h2 id="4251">-4 + 2⛅️ = -🌕 + 5⛅️ - 1</h2>
+<p>To solve this equation, you need to get the variable (⛅️) on one side of the equal sign and all the constants on the other side. Here's how you can do that:</p>
+<ol>
+<li>Subtract 5⛅️ from both sides of the equation: <code>-4 + 2⛅️ - 5⛅️ = -🌕 + 5⛅️ - 1 - 5⛅️</code></li>
+<li>Combine like terms on each side: <code>-3⛅️ - 4 = -🌕 - 1</code></li>
+<li>Add 4 to both sides: <code>-3⛅️ - 4 + 4 = -🌕 - 1 + 4</code></li>
+<li>Combine like terms on the left side: <code>-3⛅️= 3 - 🌕</code></li>
+<li>Divide both sides by -3: <code>(-3⛅️)/(-3) = (3 - 🌕)/(-3)</code></li>
+<li>Simplify the left side: <code>⛅️ = -(3 - 🌕)/3</code></li>
+</ol>
+<p>At this point, the equation is in standard form, with the variable (⛅️) on one side and all the constants on the other side. The solution is <code>⛅️ = -(3 - 🌕)/3</code>.</p>
+<p>So, to find the solution, you need to substitute the value of 🌕 into the equation and then simplify. For example, if <code>🌕 = 3</code>, then the equation becomes:</p>
+<p><code>⛅️ = -(3 - 3)/3 ⛅️ = -(0)/3 ⛅️ = 0</code></p>
+<p>So, the solution in this case is <code>⛅️ = 👽 = 0</code>.</p>
+<h1 id="letsmakeitinteresting">💸🤑💸 Let's Make It Interesting!</h1>
+<h2 id="saleprices">🛒 Sale Prices</h2>
+<p>We can use the following formula to figure out the price of an item on sale.</p>
+<p><code>sale_price = original_price - discount</code></p>
+<p>So for example, if the <code>original_price</code> is $20 and this <code>discount</code> is $5, the <code>sale_price</code> is $15. </p>
+<p>We could use percentages here for the discount. But to keep things simple we will use a dollar value instead. </p>
+<h3 id="">🍎)</h3>
+<pre><code class="hljs"><span class="hljs-attr">original_price</span> = <span class="hljs-variable">$20</span>
+<span class="hljs-attr">discount</span> = <span class="hljs-variable">$10</span>
+<span class="hljs-attr">sale_price</span> = ?
+</code></pre>
+<h3 id="-1">🍊)</h3>
+<pre><code class="hljs"><span class="hljs-attr">original_price</span> = <span class="hljs-variable">$100</span>
+<span class="hljs-attr">discount</span> = <span class="hljs-variable">$55</span>.<span class="hljs-number">50</span>
+<span class="hljs-attr">sale_price</span> = ?
+</code></pre>
+<h3 id="-2">🍏)</h3>
+<pre><code class="hljs"><span class="hljs-attr">original_price</span> = ?
+<span class="hljs-attr">discount</span> = <span class="hljs-variable">$50</span>
+<span class="hljs-attr">sale_price</span> = <span class="hljs-variable">$25</span>
+</code></pre>
+<h3 id="-3">🍌)</h3>
+<pre><code class="hljs"><span class="hljs-attr">original_price</span> = <span class="hljs-variable">$30</span>
+<span class="hljs-attr">discount</span> = ?
+<span class="hljs-attr">sale_price</span> = <span class="hljs-variable">$25</span>
+</code></pre>
+<h2 id="phoneplans">📵 Phone Plans</h2>
+<p>We can use the following formula to figure out the price of an item on sale.</p>
+<p><code>total_cost = cost_per_min * number_of_min</code></p>
+<p>So for example, if the <code>cost_per_min</code> is $0.50 and this <code>number_of_min</code> is 100, the <code>total_cost</code> is $50. </p>
+<h3 id="-4">🍎)</h3>
+<pre><code class="hljs"><span class="hljs-attr">cost_per_min</span> = <span class="hljs-variable">$1</span>
+<span class="hljs-attr">number_of_min</span> = <span class="hljs-number">30</span>
+<span class="hljs-attr">total_cost</span> = ?
+</code></pre>
+<h3 id="-5">🍊)</h3>
+<pre><code class="hljs"><span class="hljs-attr">cost_per_min</span> = <span class="hljs-variable">$0</span>.<span class="hljs-number">25</span>
+<span class="hljs-attr">number_of_min</span> = <span class="hljs-number">3000</span>
+<span class="hljs-attr">total_cost</span> = ?
+</code></pre>
+<h3 id="-6">🍏)</h3>
+<pre><code class="hljs"><span class="hljs-attr">cost_per_min</span> = <span class="hljs-variable">$1</span>
+<span class="hljs-attr">number_of_min</span> = ?
+<span class="hljs-attr">total_cost</span> = <span class="hljs-variable">$30</span>
+</code></pre>
+<h3 id="-7">🍌)</h3>
+<pre><code class="hljs"><span class="hljs-attr">cost_per_min</span> = <span class="hljs-variable">$0</span>.<span class="hljs-number">25</span>
+<span class="hljs-attr">number_of_min</span> = ?
+<span class="hljs-attr">total_cost</span> = <span class="hljs-variable">$300</span>
+</code></pre>
+<p><em>How could we write this formula with emojis?</em></p>
+<h2 id="trees">🌴 Trees</h2>
+<p>We can use the following formula to figure out the height of a tree.</p>
+<p><code>tree_height = tree_height/tree_shadow = object_height/object_shadow</code></p>
+<blockquote>
+  <p>For example, if a tree has a shadow that is 30 feet long and a nearby object has a shadow that is 10 feet long, and the nearby object is 4 feet tall, you can use the equation "tree height/shadow length = object height/shadow length" to find the height of the tree: tree height = (4 feet * 30 feet) / 10 feet = 12 feet.</p>
+</blockquote>
+<h3 id="-8">🍎)</h3>
+<pre><code class="hljs"><span class="hljs-attr">tree_shadow</span> = <span class="hljs-number">20</span>ft
+<span class="hljs-attr">object_height</span> = <span class="hljs-number">3</span>ft
+<span class="hljs-attr">object_shadow</span> = <span class="hljs-number">3</span>ft
+<span class="hljs-attr">tree_height</span> = ?
+</code></pre>
+<h3 id="-9">🍊)</h3>
+<pre><code class="hljs"><span class="hljs-attr">tree_shadow</span> = <span class="hljs-number">20</span>ft
+<span class="hljs-attr">object_height</span> = <span class="hljs-number">6</span>ft
+<span class="hljs-attr">object_shadow</span> = <span class="hljs-number">3</span>ft
+<span class="hljs-attr">tree_height</span> = ?
+</code></pre>
+<h3 id="-10">🍏)</h3>
+<pre><code class="hljs"><span class="hljs-attr">tree_shadow</span> = <span class="hljs-number">35</span>ft
+<span class="hljs-attr">object_height</span> = <span class="hljs-number">2</span>ft
+<span class="hljs-attr">object_shadow</span> = <span class="hljs-number">4</span>ft
+<span class="hljs-attr">tree_height</span> = ?
+</code></pre>
+<h3 id="-11">🍌)</h3>
+<pre><code class="hljs"><span class="hljs-attr">tree_shadow</span> = <span class="hljs-number">12</span>ft
+<span class="hljs-attr">object_height</span> = <span class="hljs-number">6</span>ft
+<span class="hljs-attr">object_shadow</span> = <span class="hljs-number">8</span>ft
+<span class="hljs-attr">tree_height</span> = ?
+</code></pre>
+<h1 id="cuttingedge">🗡️ Cutting Edge</h1>
+<p>Algebra is a fundamental branch of mathematics that is used in a wide variety of fields and applications. Some examples of more cutting-edge things that can be done with algebra include:</p>
+<ol>
+<li><p>🖥️Machine learning: Algebraic techniques are often used in machine learning algorithms to perform tasks such as feature selection, data classification, and regression analysis.</p></li>
+<li><p>🔒Cryptography: Algebraic concepts such as modular arithmetic and finite fields are used in cryptography to design and analyze secure communication systems.</p></li>
+<li><p>⚛️Quantum computing: Algebraic techniques are used in quantum computing to represent and manipulate quantum states, as well as to design and analyze quantum algorithms.</p></li>
+<li><p>📊Data analytics: Algebraic techniques are used in data analytics to perform tasks such as data cleaning, data transformation, and data visualization.</p></li>
+<li><p>🎲Computer graphics: Algebraic techniques are used in computer graphics to perform tasks such as 3D modeling, rendering, and animation.</p></li>
+</ol>
+<p><em>What other kinds of problems could we solve with algebra?</em></p>
+<h1 id="moreemojimath">🛸More Emoji Math</h1>
+<p>Just for fun 😕</p>
+<h3 id="11">👽= 1 = 1</h3>
+<h3 id="2">🚘= 2👽 =❓</h3>
+<h3 id="2-1">📱= 2🚘 =❓</h3>
+<h3 id="2-2">🌳= 2📱 =❓</h3>
+<h3 id="2-3">🎁= 2🌳 =❓</h3>
+<h3 id="-12">😎= 🎁🚘 =❓</h3>
+<h3 id="-13">😕= 🎁-🚘 =❓</h3>
+<h3 id="100">🪨= 100👽 =❓</h3>
+<h3 id="-14">😱= 🪨👽 =❓</h3>
+<h3 id="-15">🌍= 😱😱  =❓</h3>
+<h3 id="1000">🛸= 1000🚘 =❓</h3>
+<h3 id="3">🤑= 🌳/3 =❓</h3>
+<h3 id="-16">💸= 🤑/🌳 =❓</h3></div><br><br><br>
+<hr>
+<div class="footer">
+  <div>
+    &copy; Mathieu Dombrock 2023 | <a href="mailto:dombrock.mathieu@gmail.com">dombrock.mathieu@gmail.com</a> | 
+    <a href="https://github.com/matdombrock" target="_blank">Github</a> | 
+    <a href="https://github.com/matdombrock/SteelSky" target="_blank">SteelSky</a> |
+    <small id="visits"></small>
+  </div>
+  <div>
+    <small style="text-align:right;">
+    </small>
+  </div>
+
+  <script>
+    let visits = localStorage.getItem('visits');
+    if(visits === undefined){
+      visits = 0;
+    }
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerHTML = "This browser has been here " + visits + " times";
+  </script>
+</div>
