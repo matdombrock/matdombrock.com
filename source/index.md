@@ -23,7 +23,7 @@ Hello and welcome to my website! My name is Mathieu Dombrock, and I've been deve
 
 <hr>
 
-## Top Projects
+## Top Open Source Projects
 <!--https://anmolgautam.com/repo-card/-->
 <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
 
