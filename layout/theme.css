@@ -48,7 +48,7 @@ h1,h2,h3,h4{
   outline-color: var(--text);
 } */
 .header{
-  background-image: url('/img/md-banner2.jpg');
+  background-image: url('/img/md-banner3.jpg');
   background-size: cover;
   background-position: center;
   min-height:300px;
