@@ -2,7 +2,9 @@
 {
   "title":"Should Your IDE Have Spellcheck?",
   "description":"My thoughts on spellcheck in your IDE.",
-  "tags":"#programming #thoughts"
+  "tags":"#programming #thoughts",
+  "type":"post",
+  "date":"2019-02-01"
 }
 </steelsky>
 # Should Your IDE Have Spellcheck?

@@ -1,7 +1,9 @@
 <steelsky>
 {
   "title":"Can chatGPT Write Software?",
-  "description":"An exploration of chatGPT's software writing ability."
+  "description":"An exploration of chatGPT's software writing ability.",
+  "type":"post",
+  "date":"2023-05-01"
 }
 </steelsky>
 

@@ -2,7 +2,9 @@
 {
   "title":"SDR Tools",
   "description":"The rule and regulations of good user experience.",
-  "tags":"#radio #link"
+  "tags":"#radio #link",
+  "type":"post",
+  "date":"2021-08-01"
 }
 </steelsky>
 # SDR Tools

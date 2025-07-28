@@ -2,7 +2,9 @@
 {
   "title":"Using Git from the Command Line Interface",
   "description":"Git is a powerful tool that is used to track software versions and help teams collaborate on large projects. Learn how to use it.",
-  "tags":"#programming #git #guide"
+  "tags":"#programming #git #guide",
+  "type":"post",
+  "date":"2022-09-01"
 }
 </steelsky>
 # Using Git from the Command Line Interface

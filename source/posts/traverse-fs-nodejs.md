@@ -2,7 +2,9 @@
 {
   "title":"Traverse A Filesystem With Node",
   "description":"How to traverse through a local file system with NodeJS.",
-  "tags":"#programming #js"
+  "tags":"#programming #js",
+  "type":"post",
+  "date":"2019-02-01"
 }
 </steelsky>
 # Traverse A Filesystem With Node

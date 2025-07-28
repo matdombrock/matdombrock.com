@@ -2,7 +2,9 @@
 {
   "title":"NodeJS read CLI input asynchronously.",
   "description":"Read CLI input without callback hell.",
-  "tags":"#js #programming #example"
+  "tags":"#js #programming #example",
+  "type":"post",
+  "date":"2020-08-01"
 }
 </steelsky>
 

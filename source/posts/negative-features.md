@@ -2,7 +2,9 @@
 {
   "title":"Negative Features",
   "description":"Thoughts.",
-  "tags":"#programming #thoughts"
+  "tags":"#programming #thoughts",
+  "type":"post",
+  "date":"2023-1-01"
 }
 </steelsky>
 

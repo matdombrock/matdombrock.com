@@ -2,7 +2,9 @@
 {
   "title":"Github 3D Files",
   "description":"Tracking and rendering 3D files on Github.",
-  "tags":"#programming #3d"
+  "tags":"#programming #3d",
+  "type":"post",
+  "date":"2022-07-01"
 }
 </steelsky>
 # Embedding 3D files from Github

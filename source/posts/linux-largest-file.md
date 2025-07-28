@@ -2,7 +2,9 @@
 {
   "title":"Listing The Largest Files On A Linux System",
   "description":"How to deal with full drives on linux.",
-  "tags":"#linux #programming"
+  "tags":"#linux #programming",
+  "type":"post",
+  "date":"2023-11-01"
 }
 </steelsky>
 # Listing The Largest Files On A Linux System

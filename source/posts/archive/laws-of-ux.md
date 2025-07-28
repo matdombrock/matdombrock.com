@@ -2,7 +2,9 @@
 {
   "title":"Laws of UX",
   "description":"The rule and regulations of good user experience.",
-  "tags":"#thoughts #programming"
+  "tags":"#thoughts #programming",
+  "type":"post",
+  "date":"2022-09-01"
 }
 </steelsky>
 # LAWS OF UX

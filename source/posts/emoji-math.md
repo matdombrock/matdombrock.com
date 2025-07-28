@@ -2,7 +2,9 @@
 {
   "title":"Emoji Math",
   "description":"Basic Algebra with Emojis",
-  "tags":"#math #guide"
+  "tags":"#math #guide",
+  "type":"post",
+  "date":"2023-05-01"
 }
 </steelsky>
 

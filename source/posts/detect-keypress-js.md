@@ -2,7 +2,9 @@
 {
   "title":"Detecting A Key Press In JavaScript",
   "description":"Detecting and accepting keyboard input on your web app or site or game is something that can greatly improve the experience of your users.",
-  "tags":"#programming #js"
+  "tags":"#programming #js",
+  "type":"post",
+  "date":"2018-09-01"
 }
 </steelsky>
 # Detecting A Key Press In JavaScript

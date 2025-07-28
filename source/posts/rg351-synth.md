@@ -2,7 +2,9 @@
 {
   "title":"Using An RG351 As A cSound Synth",
   "description":"These things can run linux, so naturally I made one into a cSound synth.",
-  "tags":"#hacking #audio"
+  "tags":"#hacking #audio",
+  "type":"post",
+  "date":"2021-08-01"
 }
 </steelsky>
 # Using An RG351 As A cSound Synth

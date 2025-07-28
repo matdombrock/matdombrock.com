@@ -2,7 +2,9 @@
 {
   "title":"Downloading Files with NodeJS",
   "description":"NodeJs gives us native access to the local drives. Learn how to download files.",
-  "tags":"#programming #js #guide"
+  "tags":"#programming #js #guide",
+  "type":"post",
+  "date":"2019-12-01"
 }
 </steelsky>
 # Downloading Files with NodeJS

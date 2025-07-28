@@ -2,7 +2,9 @@
 {
   "title":"Comparison of Popular SDRs",
   "description":"Getting started with software defined radio.",
-  "tags":"#radio #guide"
+  "tags":"#radio #guide",
+  "type":"post",
+  "date":"2020-06-01"
 }
 </steelsky>
 # Comparison of Popular SDRs

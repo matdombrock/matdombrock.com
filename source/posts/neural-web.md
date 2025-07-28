@@ -2,7 +2,9 @@
 {
   "title":"Neural Web",
   "description":"Exploring Neural Nets In The Browser",
-  "tags":"#ai #web"
+  "tags":"#ai #web",
+  "type":"post",
+  "date":"2023-01-01"
 }
 </steelsky>
 

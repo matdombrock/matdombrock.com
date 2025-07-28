@@ -2,7 +2,9 @@
 {
   "title":"HC-SR04 Ultrasonic Distance Sensor With Arduino",
   "description":"How ultrasonic distance works",
-  "tags":"#arduino #electronics #sensor"
+  "tags":"#arduino #electronics #sensor",
+  "type":"post",
+  "date":"2021-03-01"
 }
 </steelsky>
 # HC-SR04 Ultrasonic Distance Sensor With Arduino

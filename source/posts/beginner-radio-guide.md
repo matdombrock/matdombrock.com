@@ -2,7 +2,9 @@
 {
   "title":"Beginner Radio Guide",
   "description":"A beginner radio guide, specifically for the Baofeng UV-5R.",
-  "tags":"#radio"
+  "tags":"#radio",
+  "type":"post",
+  "date":"2029-03-01"
 }
 </steelsky>
 

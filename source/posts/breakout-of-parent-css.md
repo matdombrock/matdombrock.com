@@ -2,7 +2,9 @@
 {
   "title":"Breaking Out of Parent Element with CSS",
   "description":"How to get out of a parent element with CSS.",
-  "tags":"#programming #css #front-end"
+  "tags":"#programming #css #front-end",
+  "type":"post",
+  "date":"2019-07-01"
 }
 </steelsky>
 # Breaking Out of Parent Element with CSS

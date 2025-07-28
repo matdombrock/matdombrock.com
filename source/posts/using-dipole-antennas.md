@@ -2,7 +2,9 @@
 {
   "title":"Using Dipole Antennas",
   "description":"A guide by RTL-SDR.",
-  "tags":"#radio #link #guide #archive"
+  "tags":"#radio #link #guide #archive",
+  "type":"post",
+  "date":"2021-06-01"
 }
 </steelsky>
 # USING OUR NEW DIPOLE ANTENNA KIT

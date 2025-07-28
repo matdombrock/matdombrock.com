@@ -2,7 +2,9 @@
 {
     "title":"Mermaids?",
     "description":"My thoughts on spellcheck in your IDE.",
-    "tags":"#programming #thoughts"
+    "tags":"#programming #thoughts",
+    "type":"post",
+    "date":"2023-04-01"
 }
 </steelsky>
 

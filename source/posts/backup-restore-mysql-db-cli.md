@@ -2,7 +2,9 @@
 {
   "title":"Backing Up & Restoring a MySQL Database from the Command Line",
   "description":"A quick guide on using the MySQL CLI to manage your database backups.",
-  "tags":"#programming #mysql"
+  "tags":"#programming #mysql",
+  "type":"post",
+  "date":"2019-02-01"
 }
 </steelsky>
 # Backing Up & Restoring a MySQL Database from the Command Line

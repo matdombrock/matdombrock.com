@@ -2,7 +2,9 @@
 {
   "title":"An argument for statically typed languages",
   "description":"Why I think data types matter.",
-  "tags":"#programming #javascript #thoughts"
+  "tags":"#programming #javascript #thoughts",
+  "type":"post",
+  "date":"2023-02-01"
 }
 </steelsky>
 

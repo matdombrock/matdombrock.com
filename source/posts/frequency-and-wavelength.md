@@ -2,7 +2,9 @@
 {
   "title":"Frequency & Wavelength",
   "description":"A short guide on dealing with frequency and wavelength.",
-  "tags":"#radio #waves #electronics #hacking"
+  "tags":"#radio #waves #electronics #hacking",
+  "type":"post",
+  "date":"2021-04-01"
 }
 </steelsky>
 # Frequency & Wavelength

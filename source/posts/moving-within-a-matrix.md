@@ -2,7 +2,9 @@
 {
   "title":"Moving With A Matrix",
   "description":"This guide will attempt to explain how we can move (translate) an object (set or shape) in a two dimensional matrix which is a key concept of graphics programming",
-  "tags":"#programming #js #guide #hacking #electronics"
+  "tags":"#programming #js #guide #hacking #electronics",
+  "type":"post",
+  "date":"2022-12-01"
 }
 </steelsky>
 # Moving With A Matrix
