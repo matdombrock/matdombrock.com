@@ -624,7 +624,7 @@ This JavaScript code represents the general logic involved in this approach. It 
 // For simplicity we will use global variables here
 // However, functions will take these as parameters when possible
 const sampleRate = 4;// Hz
-const adsr = [1.0, 2.0, 0.5, 3.0];
+const adsr = [1.0, 2.0, 0.5, 3.0]; // Time in seconds
 // The `wavetables` value should update only when sustain changes
 const wavetables = generateADSRWavetables(adsr[2]); // Send the sustain value
 let isNoteOn = false;// `isNoteOn` Set to either true or false depending on env state
