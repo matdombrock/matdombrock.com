@@ -345,6 +345,13 @@ button {
 
 The idea here is to use a single, uniform, static wavetable to represent an ADSR envelope. The speed at which we move through the table is determined by the time we want each stage to last.
 
+### Simple Version
+- Generate a wavetable where every stage has an X length of 1/4. 
+- Calculate the `speed` at which to move through each stage of this wavetable based on the sample rate and stage time.
+- Move through the table at this varying `speed` to determine our current `position` in the table. 
+- Find the envelope value at our current `position`. 
+
+### Less Simple Version
 - Precompute a single, normalized ADSR wavetable that represents the shape of the envelope (attack, decay, sustain, release) at a fixed resolution.
 - When a note is triggered, determine the desired durations for each ADSR phase (attack, decay, sustain, release) in samples or milliseconds.
 - For each phase (attack, decay, sustain, release):
@@ -358,7 +365,7 @@ The idea here is to use a single, uniform, static wavetable to represent an ADSR
 - Continue this process until all stages are complete and the envelope reaches zero.
 - This approach allows you to use a single, static wavetable for all envelopes, adjusting only the speed to fit any desired ADSR timing.
 
-Notes:
+### Notes
 - Example code here is written in JavaScript.
 - Samples are based off the code powering this page but changed for simplicity and illustrative purposes.
 
@@ -477,7 +484,7 @@ This value is calculated with the following formula:
 speed = (1 / (time * 4)) / sampleRate;
 ```
 
-Notes:
+### Notes
 - Where `time` is the amount of time in seconds we want this stage to last. 
 - We multiply the `time` by `4` because each stage only takes up `1/4` of the entire super-table.
 - We divide by the `sampleRate` to adjust for the number of samples per second.
@@ -587,8 +594,31 @@ function getADSRValueAt(wavetables, position) {
 }
 ```
 
-## Implementation
+## Final Notes
 
+- **Using a single wavetable:** In my opinion, storing the envelope wavetable (super-table) in 4 parts is a better way to illustrate what is really happening here. That being said, a single wavetable is more efficient and easier to manage, especially for real-time or embedded applications. The only tradeoff is you need to track the index ranges for each stage, but this is straightforward.
+
+- **Table Resolution:** Higher resolution (more samples) gives smoother curves but uses more memory and may be slower. Choose a resolution that balances quality and performance for your use case.
+
+- **Interpolation:** Linear interpolation is usually sufficient, but higher-order interpolation (e.g., cubic) can further smooth transitions if needed.
+
+- **Parameter Changes:** If ADSR parameters (especially sustain) change during playback, you may need to regenerate the wavetable or handle crossfading between tables.
+
+- **Stage Boundaries:** Take care when advancing between stages to avoid discontinuities or glitches, especially if using a single table.
+
+- **Sample Rate Independence:** The approach is sample-rate independent as long as you calculate speed based on the current sample rate.
+
+- **Memory Usage:** For embedded or real-time systems, consider the memory footprint of your wavetable(s).
+
+- **Envelope Re-triggering:** Decide how to handle rapid note retriggers (e.g., should the envelope restart, or continue from its current value?).
+
+- **Release from Non-Sustain:** If note-off occurs before reaching sustain, ensure the release phase starts from the current value, not always from the sustain level.
+
+- **Anti-Aliasing:** For very fast envelopes, consider anti-aliasing if the output is used for audio-rate modulation.
+
+## Implementation Examples
+
+### Simple JavaScript Implementation
 This JavaScript code represents the general logic involved in this approach. It can be run in a JS console. 
 ```js
 // For simplicity we will use global variables here
@@ -698,7 +728,7 @@ setInterval(() => {
 }, 1000 / sampleRate); // 1000 = 1 second
 ```
 
-## Implementation in C
+### Simple C Implementation
 Below is a re-implementation of the JS code in the C programming language.
 ```c
 #include <stdio.h>
