@@ -438,6 +438,12 @@ function generateADSRWavetables(sustainVal) {
   return { attack, decay, sustain, release };
 }
 ```
+
+**Notes:**
+- **Using a single wavetable:** In my opinion, storing the envelope wavetable (super-table) in 4 parts is a better way to illustrate what is really happening here. That being said, a single wavetable is more efficient and easier to manage, especially for real-time or embedded applications. The only tradeoff is you need to track the index ranges for each stage, but this is straightforward.
+
+- **Table Resolution:** Higher resolution (more samples) gives smoother curves but uses more memory and may be slower. Choose a resolution that balances quality and performance for your use case.
+
 ## Calculating the Stage
 
 We can represent the current position in the super-table with a `position` value between `0..1`. 
@@ -575,6 +581,9 @@ function iterateEnv(adsr, position, isNoteOn) {
 }
 ```
 
+**Note:**
+- **Sample Rate Independence:** The approach is sample-rate independent as long as you calculate speed based on the current sample rate.
+
 ## Calculating the Current Value
 Given a `wavetables` super-table and our current `position` in the super-table we can calculate our current envelope output value as follows: 
 ```js
@@ -598,24 +607,17 @@ function getADSRValueAt(wavetables, position) {
 }
 ```
 
-## Final Thoughts
-
-- **Using a single wavetable:** In my opinion, storing the envelope wavetable (super-table) in 4 parts is a better way to illustrate what is really happening here. That being said, a single wavetable is more efficient and easier to manage, especially for real-time or embedded applications. The only tradeoff is you need to track the index ranges for each stage, but this is straightforward.
-
-- **Table Resolution:** Higher resolution (more samples) gives smoother curves but uses more memory and may be slower. Choose a resolution that balances quality and performance for your use case.
-
+**Note:**
 - **Interpolation:** Linear interpolation is usually sufficient, but higher-order interpolation (e.g., cubic) can further smooth transitions if needed.
 
-- **Parameter Changes:** If ADSR parameters (especially sustain) change during playback, you may need to regenerate the wavetable or handle crossfading between tables.
+
+## Final Thoughts
 
 - **Stage Boundaries:** Take care when advancing between stages to avoid discontinuities or glitches, especially if using a single table.
-
-- **Sample Rate Independence:** The approach is sample-rate independent as long as you calculate speed based on the current sample rate.
 
 - **Memory Usage:** For embedded or real-time systems, consider the memory footprint of your wavetable(s).
 
 - **Envelope Re-triggering:** Decide how to handle rapid note retriggers (e.g., should the envelope restart, or continue from its current value?).
-
 - **Release from Non-Sustain:** If note-off occurs before reaching sustain, ensure the release phase starts from the current value, not always from the sustain level.
 
 - **Anti-Aliasing:** For very fast envelopes, consider anti-aliasing if the output is used for audio-rate modulation.
