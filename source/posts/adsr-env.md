@@ -365,9 +365,15 @@ The idea here is to use a single, uniform, static wavetable to represent an ADSR
 - Continue this process until all stages are complete and the envelope reaches zero.
 - This approach allows you to use a single, static wavetable for all envelopes, adjusting only the speed to fit any desired ADSR timing.
 
-### Notes
+### Why this approach makes sense
+- **Efficiency:** Using a precomputed wavetable (or "super-table") for the envelope shape allows for fast, sample-accurate envelope generation with minimal CPU usage.
+- **Flexibility:** By varying the speed at which you traverse each segment, you can easily accommodate arbitrary ADSR times without regenerating the table (except for sustain level changes).
+- **Commonality:** This is a well-established and widely used approach in both software and hardware synthesizers. Many synth engines (including those in DAWs and hardware synths) use either wavetable-based or mathematical function-based envelopes with similar logic.
+- **Alternatives:** Some implementations use direct mathematical formulas (e.g., exponential or linear equations) instead of lookup tables, especially when CPU resources are plentiful or when parameter modulation is frequent. However, the wavetable approach is often preferred for its speed and predictability, especially in embedded or real-time systems.
+
+### Notes on Example Code
 - Example code here is written in JavaScript.
-- Samples are based off the code powering this page but changed for simplicity and illustrative purposes.
+- Examples are based off the code powering this page but changed for simplicity and illustrative purposes.
 
 ## The ADSR Envelope Wavetable
 First we generate an ADSR Envelope wavetable. This is really a set of 4 wavetables, one for each stage of the envelope. I'll refer to the entire set as the super-table.
@@ -483,8 +489,6 @@ This value is calculated with the following formula:
 ```js
 speed = (1 / (time * 4)) / sampleRate;
 ```
-
-### Notes
 - Where `time` is the amount of time in seconds we want this stage to last. 
 - We multiply the `time` by `4` because each stage only takes up `1/4` of the entire super-table.
 - We divide by the `sampleRate` to adjust for the number of samples per second.
@@ -594,7 +598,7 @@ function getADSRValueAt(wavetables, position) {
 }
 ```
 
-## Final Notes
+## Final Thoughts
 
 - **Using a single wavetable:** In my opinion, storing the envelope wavetable (super-table) in 4 parts is a better way to illustrate what is really happening here. That being said, a single wavetable is more efficient and easier to manage, especially for real-time or embedded applications. The only tradeoff is you need to track the index ranges for each stage, but this is straightforward.
 
