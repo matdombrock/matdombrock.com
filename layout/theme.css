@@ -2,12 +2,13 @@
 :root{
   --bg:rgb(2, 2, 2);
   --main:rgb(254, 100, 216);
-  --secondary:rgb(147, 220, 240);/*rgb(255, 131, 104);*/
+  --secondary:rgb(97, 255, 202);
   --highlight:rgb(252, 179, 211);
   --text:rgb(224, 220, 214);
 }
 body{
   font-family: Arial, sans-serif;
+  font-size: 16px;
   background:var(--bg);
   color:var(--text);
   margin:0 auto;
