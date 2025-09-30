@@ -8,6 +8,9 @@
 }
 </steelsky>
 
+## ADSR Envelope
+This post discusses my thoughts on implementing an ADSR envelope for real-time DSP applications.
+
 ## Interactive Demo
 
 <center>
@@ -339,9 +342,6 @@ button {
 }
 
 </style>
-
-## ADSR Envelope
-This post discusses my thoughts on implementing an ADSR envelope for real-time DSP applications.
 
 ## General Idea
 
