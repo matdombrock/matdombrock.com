@@ -785,9 +785,9 @@ void generateADSRWavetables(Wavetables *wt, float sustainVal) {
     }
 }
 
-// Note: It would be better/faster to not use strings
-// They are used here to keep things as close to the JS example as possible
 float getADSRValueAt(Wavetables *wt, float position) {
+    // Note: It would be better/faster to not use strings
+    // They are used here to keep things as close to the JS example as possible
     const char *stages[] = {"attack", "decay", "sustain", "release"};
     float sectionLength = 1.0f / STAGES;
     int stageIndex = (int)fminf(floorf(position / sectionLength), STAGES - 1);
