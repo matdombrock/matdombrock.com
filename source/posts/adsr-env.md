@@ -340,6 +340,8 @@ button {
 
 </style>
 
+## ADSR Envelope
+This post discusses my thoughts on implementing an ADSR envelope for real-time DSP applications.
 
 ## General Idea
 
