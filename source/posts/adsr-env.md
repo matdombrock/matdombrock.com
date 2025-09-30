@@ -701,8 +701,6 @@ function generateADSRWavetables(sustainVal) {
   return { attack, decay, sustain, release };
 }
 // Get the ADSR env value at the position
-// Note: It would be better/faster to not use strings
-// They are used here to keep things as close to the JS example as possible
 function getADSRValueAt(wavetables, position) {
   // position: 0..1
   const stages = ['attack', 'decay', 'sustain', 'release'];
@@ -787,6 +785,8 @@ void generateADSRWavetables(Wavetables *wt, float sustainVal) {
     }
 }
 
+// Note: It would be better/faster to not use strings
+// They are used here to keep things as close to the JS example as possible
 float getADSRValueAt(Wavetables *wt, float position) {
     const char *stages[] = {"attack", "decay", "sustain", "release"};
     float sectionLength = 1.0f / STAGES;
