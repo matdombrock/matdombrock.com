@@ -255,8 +255,8 @@ view.updateReadOut = function(section) {
   out += `Note: ${state.isNoteOn ? "on" : "off"}\n`;
   out += `Section: ${section}\n`;
   out += `Position: ${state.position.toFixed(2)}\n`;
-  out += `Speed: ${(state.speed * state.sampleRate).toFixed(4)} (Normalized to sampleRate=1Hz)\n`;
   out += `Value: ${state.getADSRValueAt().toFixed(2)}`
+  out += `Speed: ${(state.speed * state.sampleRate).toFixed(4)} (Normalized to sampleRate=1Hz)\n`;
   view.readOutDiv.innerText = out;
 }
 
