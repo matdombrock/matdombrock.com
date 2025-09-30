@@ -8,7 +8,7 @@
 }
 </steelsky>
 
-## ADSR Envelope
+# ADSR Envelope
 This post discusses my thoughts on implementing an ADSR envelope for real-time DSP applications.
 
 ## Interactive Demo
@@ -155,7 +155,7 @@ state.updateADSR = function(slider) {
 
 // View
 const view = {
-  width: 720,
+  width: Math.min(window.innerWidth * 0.8, 720),
   height: 360,
   sectionColors: {
     attack: "#00ff00",
@@ -312,24 +312,28 @@ setInterval(mainLoop, 1000 / state.sampleRate);
 #mainCanvas {
   border: 1px solid #fff;
   padding: 10px;
+  width: 100%;
+  max-width: 720px;
+  box-sizing: border-box;
 }
-#readOut {
-  width: 720px;
+#readOut,
+#controls,
+#about {
+  width: 100%;
+  max-width: 720px;
   text-align: left;
-}
-#controls {
-  width: 720px;
-  text-align: left;
+  box-sizing: border-box;
 }
 #about {
-  width: 720px;
-  text-align: left;
   margin-top: 50px;
 }
 body {
   background-color: #000;
   color: #fff;
   font-family: monospace;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 button {
   margin: 5px;
@@ -339,6 +343,17 @@ button {
   color: #fff;
   border: 1px solid #555;
   cursor: pointer;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 800px) {
+  #mainCanvas,
+  #readOut,
+  #controls,
+  #about {
+    max-width: 100vw;
+    font-size: 14px;
+  }
 }
 
 </style>

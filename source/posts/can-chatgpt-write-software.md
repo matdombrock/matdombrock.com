@@ -33,7 +33,7 @@ If you ask chatGTP itself you might get a response like this:
 
 > GPT (Generative Pre-training Transformer) is a type of language model that can generate human-like text based on a given prompt. It is not a programming language and does not have the ability to write software. However, it can potentially be used to generate code based on a set of prompts and examples. It could, for example, suggest lines of code to complete a task based on examples of similar tasks that it has been trained on. However, it would still be up to a human programmer to understand and properly implement the code suggestions.
 
-# Can it Understand & Explain Code?
+## Can it Understand & Explain Code?
 
 *Note: There is a lot of debate surrounding the meaning and nature of "understanding" something in the context of machine learning. This is a largely philosophical issue and it will not be discussed here. For the purposes of this post, we will be assuming a very superficial meaning of the word to keep the conversion moving.*
 
@@ -51,7 +51,7 @@ An illuminating question:
 
 ---
 
-## What's Going On Here? (Bitwise Operations)
+### What's Going On Here? (Bitwise Operations)
 
 ```c
 mask  = ~((a % b) | (~a & c))
@@ -91,7 +91,7 @@ When asking if both of these expressions are equivalent, you see that the chatGP
 
 > Without knowing the values of the variables `a`, `b`, and `c`, it is not possible to determine the specific results of these expressions. However, they are not mathematically equivalent and will generally produce different results for different input values.
 
-## How About The Fibonacci Sequence?
+### How About The Fibonacci Sequence?
 
 I've run a few of my own tests. Feeding simple code into chatGTP and prompting it to explain the logic. 
 
@@ -207,7 +207,7 @@ console.log(fib(n));
 
 *Note: I am honestly not overly familiar with the bigInt JS library so I can't confirm that this code would work but I assumed that it would.*
 
-## Getting it to Mess Up Again
+### Getting it to Mess Up Again
 
 So far so good. But I had another idea of how we might confuse it. We've been talking about both C code and JS code at this point. While chatGPT does understand that JS code does not have int and float types and does not differentiate between the two, I think we might be able to confuse it by asking for the output of `n=3.14` considering the original JS code. 
 
@@ -244,7 +244,7 @@ console.log(fib(n));
 
 We can see that all that chatGPT did here was add a check to ensure that the input was an integer value and throw an error if it was not. In reality the original code absolutely does take a non-integer value as input without throwing any errors whatsoever. The results might be unexpected and unintended behavior but no error message is throw. That being said, I will admit the code which check for an integer input is possibly a little better for use in a "production" environment. 
 
-## Can We Correct chatGPT When It's Wrong?
+### Can We Correct chatGPT When It's Wrong?
 
 I told chatGPT "Javascript has no integer type. The original javascript code would not throw an error if we used a float as input.". This is how it responded:
 
@@ -272,7 +272,7 @@ That's correct this would be the actual output if `n=2.5`. However, there was a 
 
 This clearly is a better answer, but it took some programming and domain knowledge to uncover. 
 
-# What About Generating Code From Scratch?
+## What About Generating Code From Scratch?
 
 So we've seen that chatGPT can do a reasonably good job at understanding and explaining code. As long as the human operator is something of a domain expert themselves and can "call BS" when chatGPT is giving output that is incorrect. 
 
@@ -280,7 +280,7 @@ What people seem to really be wondering about though, is if chatGPT and tools li
 
 *Note: Similar to the meaning of "understanding" the meanings of the words "original" and from "scratch" are also to be taken in the most superficial way possible.*
 
-## A Simple Test
+### A Simple Test
 
 Let's try a really simple test and ask chatGTP just to write a "Hello World" program in C. This was the output:
 
@@ -342,7 +342,7 @@ Interesting that it admits that the switch was not intentional. It doesn't seem 
 
 > C++ is a programming language that is an extension of C, with additional features and capabilities. While C++ code can often be compiled using a C compiler, C++ code may not always be compatible with C due to these additional features.
 
-## A Less Simple Test (FizzBuzz)
+### A Less Simple Test (FizzBuzz)
 
 For a slightly less simple test, I gave chatGPT a common programming puzzle called "FizzBuzz" the problem text was taken straight from LeetCode:
 
@@ -499,7 +499,7 @@ function fizzBuzz(n) {
 
 As you may have noticed, there is still absolutely a case where "fizzbuzz" is printed here. I think that chatGPT is struggling to understand my prompt since it would in fact lead to an incomplete solution. 
 
-## An Even Less Simple Test (Fourier Series Waves in JS)
+### An Even Less Simple Test (Fourier Series Waves in JS)
 
 For this test, I want to see how chatGPT can handle working with a specialized domain like DSP (Digital Signal Processing) in a programming language that is not commonly used in that domain. This should hel decrease the chances that chatGPT is has code similar to the expected output in it's training data. 
 
@@ -580,7 +580,7 @@ Much better! This isn't exactly like the the correction I made myself, but it wo
 
 ---
 
-# Building Something For Real
+## Building Something For Real
 
 As a kind of "final test" here I wanted to try getting chatGTP to generate a unique software tool "on its own". My role here was basically a project manager that did a small amount of programming work to glue the pieces together. At least 95% of the code that was generated was the direct result of a chatGPT prompt. 
 
@@ -588,10 +588,10 @@ The following text is the chat log between myself and chatGPT which led to the c
 
 [https://github.com/matdombrock/gptShare](https://github.com/matdombrock/gptShare)
 
-## USER
+### USER
 Write a NodeJS command line tool that creates a server which allows a remote user to upload a file directly to the local disk. The remote user must verify with a password. The app should provide a simple web UI for the remote user. The app should allow the local user to specify the location which the file will be downloaded to with a command line argument. The default download directory should be the current working directory. 
 
-## ASSISTANT
+### ASSISTANT
 To create a NodeJS command line tool that creates a server which allows a remote user to upload a file directly to the local disk, you can use the following steps:
 
 1. First, create a new NodeJS project by running the following command:
@@ -683,10 +683,10 @@ $ node server.js
 5. Open a web browser and go to `http://localhost:3000` to access the web UI. You can then enter the password and select a file to upload. The file will be uploaded to the current working directory (or the directory specified in the `DEFAULT_UPLOAD_DIR` constant).
 
 
-## USER
+### USER
 Add a download endpoint which allows the local user to share an arbitrary file or directory. Create a simple web interface for the file download. 
 
-## ASSISTANT
+### ASSISTANT
 To add a download endpoint to the NodeJS server, you can use the following steps:
 
 1. In the `server.js` file, add the following code to create a new route for downloading a file:
@@ -747,10 +747,10 @@ app.get('/', (req, res) => {
 With this code, the web UI will now display a list of files that are available for download. The user can click on a file name to download it.
 
 
-## USER
+### USER
 Write a package.json file for this app that allows it to be installed as a global package with NPM and allows the end-user to run the command with the command `gptShare`
 
-## ASSISTANT
+### ASSISTANT
 To create a `package.json` file that allows the app to be installed as a global package and allows the end-user to run the command with the `gptShare` command, you can add the following to the `package.json` file:
 
 ```json
@@ -788,10 +788,10 @@ $ gptShare
 
 The server will start and you can access the web UI at `http://localhost:3000`.
 
-## USER
+### USER
 Can you add code that allows the `DEFAULT_UPLOAD_DIR` and `UPLOAD_PASSWORD` constants to be set with command line arguments?
 
-## ASSISTANT
+### ASSISTANT
 To allow the `DEFAULT_UPLOAD_DIR` and `UPLOAD_PASSWORD` constants to be set with command line arguments, you can use the `yargs` library to parse the command line arguments.
 
 First, install the `yargs` library by running the following command:
@@ -887,10 +887,10 @@ app.get('/', (req, res) => {
       <form action="/upload" method="post" enctype="multipart/form-data">
        
 ```
-## USER
+### USER
 Change this to allow the user to specify the port with a command line argument as well. Do not rewrite all of the code. Just what is needed to show how this part would work. 
 
-## ASSISTANT
+### ASSISTANT
 To allow the user to specify the port with a command line argument, you can use the `yargs` library to parse the command line arguments.
 
 First, update the code that parses the command line arguments to include a `port` option:
@@ -931,10 +931,10 @@ With these changes, the user can specify the port on which the server will liste
 $ gptShare --port 8080
 ```
 
-## USER
+### USER
 Can you update the package.json file to include the new module? 
 
-## ASSISTANT
+### ASSISTANT
 To update the `package.json` file to include the `yargs` library as a dependency, you can add the following line to the `dependencies` section:
 
 ```json
@@ -961,10 +961,10 @@ This will allow the user to specify the `upload-dir`, `password`, and `port` com
 $ UPLOAD_DIR=./uploads PASSWORD=secret PORT=8080 npm start
 ```
 
-## USER
+### USER
 Can you rewrite the download endpoint so that it also requires the password? 
 
-## ASSISTANT
+### ASSISTANT
 To rewrite the download endpoint so that it also requires the password, you can update the `/download/:filename` route to check the password before sending the file to the user.
 
 Here is an example of how the updated route might look:
@@ -1003,26 +1003,26 @@ With this updated route, the user will need to provide the correct password as a
 http://localhost:3000/download/file.txt?password=secret
 ```
 
-## USER
+### USER
 I'm going to change the name of the `DEFAULT_UPLOAD_DIR` variable to `DEFAULT_DIR`. I'm also going to change the name the `UPLOAD_PASSWORD` variable to `PASSWORD`. 
 
 Don't output any new code. Just remember this moving forward. 
 
-## ASSISTANT
+### ASSISTANT
 Understood. I will remember to use the updated names for the `DEFAULT_DIR` and `PASSWORD` variables moving forward.
 
 
-## USER
+### USER
 I'm also going to change the name of the 'upload-dir' argument to be 'dir'. Do not output any new code yet. Just remember this. 
 
-## ASSISTANT
+### ASSISTANT
 Understood. I will remember to use the updated name for the `dir` command line argument moving forward.
 
 
-## USER
+### USER
 Can you rewrite the UI portion of this app so that the password input box is automatically appended to the download links?
 
-## ASSISTANT
+### ASSISTANT
 To rewrite the UI portion of the app so that the password input box is automatically appended to the download links, you can update the `/` route to include the password input in the HTML and use JavaScript to automatically append the password to the download links when the form is submitted:
 
 ```javascript
@@ -1047,10 +1047,10 @@ app.get('/', (req, res) => {
         <input type="file" name="file
 ```
 
-## USER
+### USER
 continue
 
-## ASSISTANT
+### ASSISTANT
 ```js
 " required>
         <button type="submit">Upload</button>
@@ -1089,7 +1089,7 @@ continue
 
 With this updated code, the password input box will be automatically appended to the download links when the form is submitted. The user will only need to enter the password once and all of the download links will be updated with the correct password.
 
-## USER
+### USER
 You forgot to escape some of that html. 
 
 I am also getting this error:
@@ -1098,7 +1098,7 @@ I am also getting this error:
 
 ReferenceError: password is not defined
 
-## ASSISTANT
+### ASSISTANT
 You are correct, I apologize for the oversight. Here is the corrected code with the HTML escaped properly:
 
 ```javascript
@@ -1128,10 +1128,10 @@ app.get('/', (req, res) => {
         <input type
 ```
 
-## USER
+### USER
 continue
 
-## ASSISTANT
+### ASSISTANT
 ```js
 "password" name="password" placeholder="Password" required>
       </form>
@@ -1165,10 +1165,10 @@ continue
 
 I apologize for the error in the previous code. The `password` variable was not defined because I did not correctly escape the template literal. The updated code should not produce the `ReferenceError` that you were seeing.
 
-## USER
+### USER
 Does clicking a link actually trigger the form event?
 
-## ASSISTANT
+### ASSISTANT
 No, clicking a link will not trigger the form submit event. In the code that I provided, the form submit event is being used to update the download links with the password, but the form is never actually being submitted.
 
 To make the password input work with the download links, you could modify the code to handle the click event on the download links instead of the submit event on the form. Here is an example of how that could be done:
@@ -1218,7 +1218,7 @@ app.get('/', (req, res) => {
           event.target.href += \`?password=\
 ```
 
-## USER
+### USER
 Rewrite that part after:
 ```
 <ul>${fileList}</ul>
@@ -1226,7 +1226,7 @@ Rewrite that part after:
 ```
 Make sure you complete the whole `<script>` tag
 
-## ASSISTANT
+### ASSISTANT
 Certainly. Here is the updated code that handles the click event on the download links:
 
 ```javascript
@@ -1253,10 +1253,10 @@ Certainly. Here is the updated code that handles the click event on the download
 
 This code will listen for click events on the download links and append the password to the link when a download link is clicked.
 
-## USER
+### USER
 Can you update the UI code to only use one password input box? Only write out the code that is necessary to show this. 
 
-## ASSISTANT
+### ASSISTANT
 To update the UI code to only use a single password input box, you can remove the password input from the upload form and update the download form to submit the password as a query parameter when a download link is clicked:
 
 ```javascript
@@ -1303,10 +1303,10 @@ app.get('/', (req, res) => {
           // Append
 ```
 
-## USER
+### USER
 Never mind I will keep the separate password inputs 
 
-## ASSISTANT
+### ASSISTANT
 Understood. If you would like to keep the separate password inputs, you can simply remove the code that handles the click event on the download links and use the original code that appends the password to the download links when the form is submitted. Here is the original code for reference:
 
 ```javascript
@@ -1336,10 +1336,10 @@ app.get('/', (req, res) => {
         <input type="password"
 ```
 
-## USER
+### USER
 Can you update the UI code so that if a 'password' query parameter is present the password will be filled in automatically?
 
-## ASSISTANT
+### ASSISTANT
 Certainly. To update the UI code so that the password input is automatically filled in when a `password` query parameter is present, you can use the `URLSearchParams` API to parse the query string and fill in the password input. Here is an example of how this could be done:
 
 ```javascript
@@ -1389,10 +1389,10 @@ app.get('/', (req, res) => {
 
 This code uses the `URLSearchParams` API to parse the query string and check for the presence of a `password` parameter. If the `password` parameter is present, it will be used to fill in the password input.
 
-## USER
+### USER
 Rewrite that so that the query parameter fills in both password forms. 
 
-## ASSISTANT
+### ASSISTANT
 Certainly. Here is the updated code that fills in both password inputs when a `password` query parameter is present:
 
 ```javascript
@@ -1427,27 +1427,27 @@ app.get('/', (req, res) => {
         const uploadPasswordInput = document.querySelector('form[action="/upload"] input[name="password
 ```
 
-## USER
+### USER
 Ignore the last command
 
-## ASSISTANT
+### ASSISTANT
 Certainly. Is there anything else that I can help with?
 
-## USER
+### USER
 Ignore everything about loading the command from the query parameters. 
 
-## ASSISTANT
+### ASSISTANT
 Certainly, I will ignore the previous commands about loading the password from the query parameters. Is there anything else that I can help with?
 
-## USER
+### USER
 Write a README.md for this app. Include basic usage instructions. Also write about how this app was written mostly by chatGPT. 
 
 *Note: The response from chatGPT was incorrectly formatted and cannot be displayed here correctly.*
 
-## USER
+### USER
 Can you put that into a code block to preserve the markdown formatting?
 
-## ASSISTANT
+### ASSISTANT
 Certainly. Here is the README with the usage instructions in a code block:
 
 *Note: I've manually escaped the internal code blocks to prevent issues with my rendering system.*
@@ -1498,10 +1498,10 @@ To access the web UI, open a web browser and navigate to `http://localhost:3000`
 gptShare was written mostly by chatGPT, a chatbot trained by OpenAI. chatGPT was able to assist in writing the code and provide guidance on how to structure the app, but human programmers were responsible for implementing the code
 ```
 
-## USER
+### USER
 Write more about how chatGPT helped write this software. Explain how you decided on which libraries to use. 
 
-## ASSISTANT
+### ASSISTANT
 Certainly. Here is more information on how chatGPT helped write this software:
 
 During the development of gptShare, chatGPT was able to provide guidance on the overall structure and design of the app. It suggested using the `express` library for the server and web UI, and the `fs` library for reading and writing files. It also suggested using the `multer` library for handling file uploads.
@@ -1510,26 +1510,26 @@ chatGPT was able to provide examples of how to use these libraries and explain t
 
 Overall, chatGPT was a valuable resource in the development of gptShare and was able to provide helpful insights and recommendations throughout the process.
 
-## USER
+### USER
 Write a disclaimer about how this is was written by chatGPT. Explain that it is just example code and not meant to be used in any sort of real life situation. 
 
-## ASSISTANT
+### ASSISTANT
 It's important to note that gptShare was written mostly by chatGPT, a chatbot trained by OpenAI. While chatGPT was able to provide guidance and examples on how to write the code, human programmers were responsible for implementing and testing the code.
 
 gptShare is intended to be an example of how chatGPT can assist in software development and should not be used in any real-life situations. It is not production-ready and may contain bugs or vulnerabilities. Use at your own risk.
 
-## USER
+### USER
 Write another short disclaimer stating that the entirety of the documentation was written by chatGPT and was only compiled and formatted by a human. 
 
-## ASSISTANT
+### ASSISTANT
 It's important to note that the entirety of the documentation for gptShare was written by chatGPT, a chatbot trained by OpenAI. While chatGPT was able to provide accurate and helpful information, it is a machine learning model and may make errors or omissions.
 
 The documentation was compiled and formatted by a human, but the content was generated by chatGPT. Please keep this in mind when using the documentation.
 
-## USER
+### USER
 Can you create a .gitignore file for this project? 
 
-## ASSISTANT
+### ASSISTANT
 Certainly. Here is a `.gitignore` file for this project that ignores common files that should not be committed to version control:
 
 ```
@@ -1544,11 +1544,11 @@ You can add additional files or directories to this `.gitignore` file as needed 
 
 ---
 
-# The Takeaway
+## The Takeaway
 
 I don't think that this goes to show that chatGPT does not or can not understand the complexities of software development. The point is more that in it's current state, chatGPT can not be trusted to give accurate output. It takes a human operator with a solid understanding of the subject matter in question in order to verify the results that we get from chatGPT. 
 
-## Big Issues
+### Big Issues
 - **Made up libraries** - This isn't something that was demonstrated in this post but it's an issue I have encountered several times asking chatGTP to generate code for me. Occasionally chatGPT will output code that imports a plausible sounding library or module that simply does't exist. 
 - **Syntax Swapping** - Occasionally chatGPT will get confused about 2 similar programming languages like C and C++ and unintentionally start outputting code in a langrage that is not the one you expected. 
 - **No Degrees Of Confidence** - This is a general issue with chatGPT that is not specific to programming but still worth mentioning here. The responses that you get seem to always have a confidence level of 100%. Unfortunately chatGPT does not currently seem capable of communicating the level of confidence that it has in it's own answers. Ideally the responses would include some output that did indicate this. 
@@ -1557,7 +1557,7 @@ I don't think that this goes to show that chatGPT does not or can not understand
 
 To me, it seems like most of these issues will be solved in the near future. The big one that I anticipate might not be solved any time soon is the inability to output results that are exactly what the user expected. Essentially the ability to remove the human from the drivers seat. I think that if we could start seeing tools like this output their degree of confidence in the solution, that could go a long way to further automating the process of software development. It seems like the main limitation of these tools at this point is that they will occasionally output results that could seem correct to someone without the proper domain knowledge but are in fact *very incorrect*.
 
-## So Can chatGPT Write Software?
+### So Can chatGPT Write Software?
 
 If you ask me, the honest answer to this question is still "yes and no". The answer depends a lot on what exactly you mean by "write software" and what kind of software it is that you want it to write. 
 

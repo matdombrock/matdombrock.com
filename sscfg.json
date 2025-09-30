@@ -1,6 +1,6 @@
 {
   "sourcePath": "./source",
   "layoutPath": "./layout",
-  "highlightStyle": "tomorrow-night-bright",
+  "highlightStyle": "obsidian",
   "outPath": "./build/"
 }
