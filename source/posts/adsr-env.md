@@ -22,11 +22,11 @@ This post discusses my thoughts on implementing an ADSR envelope for real-time D
 
     <br/>
     <label for="attack">A:</label>
-    <input type="range" id="attack" name="attack" min="0" max="5" value="5" step="0.1" oninput="state.updateADSR(this)">
+    <input type="range" id="attack" name="attack" min="0.1" max="5" value="5" step="0.1" oninput="state.updateADSR(this)">
 
     <br/>
     <label for="decay">D:</label>
-    <input type="range" id="decay" name="decay" min="0" max="5" value="1" step="0.1" oninput="state.updateADSR(this)">
+    <input type="range" id="decay" name="decay" min="0.1" max="5" value="1" step="0.1" oninput="state.updateADSR(this)">
 
     <br/>
     <label for="sustain">S:</label>
@@ -34,7 +34,7 @@ This post discusses my thoughts on implementing an ADSR envelope for real-time D
 
     <br/>
     <label for="release">R:</label>
-    <input type="range" id="release" name="release" min="0" max="5" value="1" step="0.1" oninput="state.updateADSR(this)">
+    <input type="range" id="release" name="release" min="0.1" max="5" value="1" step="0.1" oninput="state.updateADSR(this)">
   </div>
 
   <br/>
