@@ -12,12 +12,12 @@ Hello and welcome to my website! My name is Mathieu Dombrock, and I've been deve
 ## Top Posts
 
 ### [ADSR Envelopes](/posts/adsr-env.html)
-### [Can chatGPT Write Software?](/posts/can-chatgpt-write-software.html)
 ### [Exploring Neural Nets In The Browser](/posts/neural-web.html)
 ### [Frequency & Wavelength](/posts/frequency-and-wavelength.html)
 ### [Ultrasonic Distance](/posts/arduino-ultrasonic-distance.html)
 ### [Moving Within a Matrix](/posts/moving-within-a-matrix.html)
 ### [Diagrams as Code](/posts/mermaid.html)
+### [Can chatGPT Write Software?](/posts/can-chatgpt-write-software.html)
 ### [Hacking an RG351 into a Synth](/posts/rg351-synth.html)
 ### [Emoji Math 👽](/posts/emoji-math.html)
 ### [Popular SDRs](/posts/popular-sdrs.html)
