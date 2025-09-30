@@ -9,7 +9,7 @@
 </steelsky>
 
 # ADSR Envelope
-This post discusses my thoughts on implementing an ADSR envelope for real-time DSP applications.
+This post discusses my thoughts on implementing an ADSR envelope for real-time DSP applications. There are many, many ways to go about this. I'm not claiming this is the best or perfect soution but after careful consideration, I belive this approach is the best I have found so far. 
 
 ## Interactive Demo
 
@@ -634,10 +634,11 @@ function getADSRValueAt(wavetables, position) {
 
 - **Memory Usage:** For embedded or real-time systems, consider the memory footprint of your wavetable(s).
 
-- **Envelope Re-triggering:** Decide how to handle rapid note retriggers (e.g., should the envelope restart, or continue from its current value?).
-- **Release from Non-Sustain:** If note-off occurs before reaching sustain, ensure the release phase starts from the current value, not always from the sustain level.
+- **Envelope Re-triggering:** Decide how to handle rapid note retriggers (e.g., should the envelope restart, or continue from its current value?). *The demo/example code restarts when a new note is triggered*.
 
-- **Anti-Aliasing:** For very fast envelopes, consider anti-aliasing if the output is used for audio-rate modulation.
+- **Release from Non-Sustain:** If note-off occurs before reaching sustain, ensure the release phase starts from the current value, not always from the sustain level. *This is not implemented in the demo/example code*.
+
+- **Anti-Aliasing:** For very fast envelopes, consider anti-aliasing if the output is used for audio-rate modulation. *This is not implemented in the example code*.
 
 ## Implementation Examples
 
