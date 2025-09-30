@@ -1,6 +1,6 @@
 {
   "sourcePath": "./source",
   "layoutPath": "./layout",
-  "highlightStyle": "monokai-sublime",
+  "highlightStyle": "tomorrow-night-bright",
   "outPath": "./build/"
 }

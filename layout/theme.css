@@ -74,6 +74,13 @@ h1,h2,h3,h4{
 .nav a{
   text-decoration: none;
 }
+.hljs {
+  border-radius: 0.5rem;
+  /* Inset shadow */
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 1);
+  border: 1px solid var(--text);
+  padding: 1rem;
+}
 .ss-content{
   max-width:1000px;
   margin-left:10vw;
