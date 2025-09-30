@@ -14,7 +14,7 @@ This post discusses my thoughts on implementing an ADSR envelope for real-time D
 ## Interactive Demo
 
 <center>
-  <canvas id="mainCanvas" style="background-color: #000000;"></canvas>
+  <canvas id="mainCanvas" style="background-color: rgb(27,27,27)"></canvas>
   <br/>
   <div id="controls">
     <button onClick="state.noteOn()">Note ON</button>
@@ -284,7 +284,7 @@ view.updateReadOut = function(section) {
 
 // Clear the canvas
 view.clearCanvas = function() {
-  view.ctx.fillStyle = "#000";
+  view.ctx.fillStyle = "rgb(27,27,27)";
   view.ctx.fillRect(0, 0, view.width, view.height);
 }
 
@@ -353,9 +353,6 @@ setInterval(mainLoop, 1000 / state.sampleRate);
   margin-top: 50px;
 }
 body {
-  background-color: #000;
-  color: #fff;
-  font-family: monospace;
   max-width: 100vw;
   margin: 0;
   padding: 0;
