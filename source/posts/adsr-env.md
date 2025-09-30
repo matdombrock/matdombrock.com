@@ -636,7 +636,7 @@ function getADSRValueAt(wavetables, position) {
 
 - **Envelope Re-triggering:** Decide how to handle rapid note retriggers (e.g., should the envelope restart, or continue from its current value?). *The demo/example code restarts when a new note is triggered*.
 
-- **Release from Non-Sustain:** If note-off occurs before reaching sustain, ensure the release phase starts from the current value, not always from the sustain level. *This is not implemented in the demo/example code*.
+- **Release from Non-Sustain:** If note-off occurs before reaching sustain, ensure the release phase starts from the current value, not always from the sustain level. The only thing that needs to change to make the new table is the sustain level. Calculating a new table where `sustain = envVal` will give the correct release values. *This is not implemented in the demo/example code*.
 
 - **Anti-Aliasing:** For very fast envelopes, consider anti-aliasing if the output is used for audio-rate modulation. *This is not implemented in the example code*.
 
