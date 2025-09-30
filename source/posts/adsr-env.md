@@ -54,6 +54,7 @@ const state = {
     sustain: 0.5, // 0 to 1
     release: 3, // Seconds
   },
+  sustainCache: 0.5,
   position: 0, // 0 to 1
   speed: 0, // Increment per frame
   isNoteOn: true,
@@ -130,14 +131,34 @@ state.checkSection = function() {
   return ["attack", "decay", "sustain", "release"][Math.floor(state.position * 4)];
 }
 
+// Cache the sustain value
+state.cacheSustain = function() {
+  state.sustainCache = state.adsr.sustain;
+}
+
+// Get the cached sustain value
+state.getCachedSustain = function() {
+  state.adsr.sustain = state.sustainCache;
+  state.generateADSRWavetables();
+}
+
+// Recalculate the sustain value
+state.recalcSustain = function() {
+  state.cacheSustain();
+  state.adsr.sustain = state.getADSRValueAt();
+  state.generateADSRWavetables();
+}
+
 // Trigger note on
 state.noteOn = function() {
+  state.getCachedSustain();
   state.position = 0;
   state.isNoteOn = true;
 }
 
 // Trigger note off
-state.noteOff = function() {
+state.noteOff = function() { 
+  state.recalcSustain();
   state.position = 0.75; // Jump to release
   state.isNoteOn = false;
 }
@@ -149,6 +170,7 @@ state.updateADSR = function(slider) {
   state.adsr[name] = value;
   if (name === "sustain") {
     state.generateADSRWavetables();
+    state.cacheSustain();
   }
   state.noteOn();
 }
@@ -277,7 +299,7 @@ view.draw = function(section) {
 
 // Main loop
 const mainLoop = function() {
-  if (state.position >= 1) return;
+  // if (state.position >= 1) return;
   const section = state.checkSection();
   view.draw(section);
   const isPreSustain = state.isNoteOn && state.position < 0.5;
@@ -290,6 +312,9 @@ const mainLoop = function() {
   }
   state.position += state.speed;
   state.position = state.position > 1 ? 1 : state.position;
+  if (state.position === 1) {
+    state.getCachedSustain();
+  }
 }
 
 // Set the canvas size
@@ -630,7 +655,7 @@ function getADSRValueAt(wavetables, position) {
 
 ## Final Thoughts
 
-- **Release from Non-Sustain:** If note-off occurs before reaching sustain, ensure the release phase starts from the current value, not always from the sustain level. The only thing that needs to change to make the new table is the sustain level. Calculating a new table where `sustain = envVal` will give the correct release values. *This is not implemented in the demo/example code*.
+- **Release from Non-Sustain:** If note-off occurs before reaching sustain, ensure the release phase starts from the current value, not always from the sustain level. The only thing that needs to change to make the new table is the sustain level. Calculating a new table where `sustain = envVal` will give the correct release values. This can be done either be re-calculating the table or switching to the correct pre-calculated table. Be sure you cache your current sustain value / table so that it can be restored when the envelope resets. *This is implemented in the demo but not implemented in the example code for simplicity*.
 
 - **Envelope Re-triggering:** Decide how to handle rapid note retriggers (e.g., should the envelope restart, or continue from its current value?). *The demo/example code restarts when a new note is triggered*.
 
