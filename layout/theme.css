@@ -12,7 +12,7 @@ body{
   background:var(--bg);
   color:var(--text);
   margin:0 auto;
-  line-height: 150%;
+  line-height: 180%;
 }
 body::selection { color: var(--highlight) }
 a{
