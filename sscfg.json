@@ -2,5 +2,8 @@
   "sourcePath": "./source",
   "layoutPath": "./layout",
   "highlightStyle": "obsidian",
-  "outPath": "./build/"
+  "outPath": "./build/",
+  "rssTitle": "MatDombrock.com",
+  "rssURL": "https://matdombrock.com",
+  "rssDescription": "Mathieu Dombrocks website"
 }

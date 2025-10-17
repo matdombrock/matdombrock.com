@@ -7,18 +7,21 @@
 
 # POSTS
 
-<div id="post-area">,,,</div>
+<div id="ss-listing-area">,,,</div>
 
-<script src="/postListing.js"></script>
+<script src="/ssAPI.js"></script>
+<script>
+new SSAPI().postsRender();
+</script>
 <style>
-.post-item h2 {
+.ss-post-item h2 {
     margin:0.25;
     margin-top: 2rem;
 }
-.post-item p {
+.ss-post-item p {
     margin: 0.25rem;
 }
-.post-date {
+.ss-post-date {
     font-size:0.75rem;
     opacity: 0.5;
 }

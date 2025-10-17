@@ -6,7 +6,7 @@
 </steelsky>
 # Site Search
 
-<select id="filter" onchange="ssList.updateFilter()">
+<select id="ss-filter" onchange="ssapi.listingUpdate()">
   <option value=".html">HTML</option> 
   <option value="all">All</option>
   <option value=".gif">GIF</option>
@@ -14,9 +14,15 @@
   <option value=".jpg">JPG</option>
   <option value=".txt">TXT</option>
 </select>
-<input type="text" id="search" onchange="ssList.updateFilter()" placeholder="search term">
+<input type="text" id="ss-search" onchange="ssapi.listingUpdate()" placeholder="search term">
 
-<div id="listing-area"></div>
+<div id="ss-listing-area"></div>
+
+<script src="/ssAPI.js"></script>
+<script>
+const ssapi = new SSAPI;
+ssapi.listingUpdate();
+</script>
 
 <style>
 .ss-listing-item-wrap{
@@ -31,4 +37,3 @@
 }
 </style>
 
-<script src="/ssList2.js"></script>
