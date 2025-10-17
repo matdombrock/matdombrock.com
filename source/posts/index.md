@@ -7,6 +7,8 @@
 
 # POSTS
 
+<a href="/rss.xml"><img src="/img/rss.ico"> RSS Feed</a>
+
 <div id="ss-listing-area">,,,</div>
 
 <script src="/ssAPI.js"></script>
@@ -14,6 +16,9 @@
 new SSAPI().postsRender();
 </script>
 <style>
+img {
+    width:1rem;
+}
 .ss-post-item h2 {
     margin:0.25;
     margin-top: 2rem;

@@ -1,7 +1,7 @@
 <steelsky>
 {
     "title":"Diagrams as Code",
-    "description":"Eploring Mermaid.js.",
+    "description":"Exploring Mermaid.js.",
     "tags":"#programming #thoughts",
     "type":"post",
     "date":"2023-04-01"

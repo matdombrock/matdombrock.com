@@ -7,7 +7,7 @@
 
 ## Hello!
 
-Hello! My name is [Mathieu Dombrock](/about). I really love Linux, audio, graphics and web programming.                                                                  
+Hello! My name is [Mathieu Dombrock](/about). I like building things, breaking things and reinventing wheels.                                                                   
 
 This site is built with my static site generator called [SteelSky](https://github.com/matdombrock/steelsky). 
 
@@ -38,6 +38,10 @@ If that wasn't enough, you can find all of my open source projects at [github.co
 <!--https://anmolgautam.com/repo-card/-->
 <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
 
+<div class="repo-card" data-repo="matdombrock/SteelSky" data-theme="dark-theme"></div>
+
+<div class="repo-card" data-repo="matdombrock/minimalrss" data-theme="dark-theme"></div>
+
 <div class="repo-card" data-repo="matdombrock/lifelab" data-theme="dark-theme"></div>
 
 <div class="repo-card" data-repo="ReplicatAudio/DSPGraph" data-theme="dark-theme"></div>
@@ -47,8 +51,6 @@ If that wasn't enough, you can find all of my open source projects at [github.co
 <div class="repo-card" data-repo="matdombrock/MatrixGL" data-theme="dark-theme"></div>
 
 <div class="repo-card" data-repo="matdombrock/WiFi-Clock2" data-theme="dark-theme"></div>
-
-<div class="repo-card" data-repo="matdombrock/SteelSky" data-theme="dark-theme"></div>
 
 <div class="repo-card" data-repo="ReplicatAudio/generative1" data-theme="dark-theme"></div>
 
