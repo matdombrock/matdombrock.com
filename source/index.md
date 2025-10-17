@@ -24,7 +24,7 @@ If that wasn't enough, you can find all of my open source projects at [github.co
 ### [Frequency & Wavelength](/posts/frequency-and-wavelength.html)
 ### [Ultrasonic Distance](/posts/arduino-ultrasonic-distance.html)
 ### [Moving Within a Matrix](/posts/moving-within-a-matrix.html)
-### [Diagrams as Code](/posts/mermaid.html)
+### [Diagrams as Code](/posts/diagrams-as-code.html)
 ### [Can chatGPT Write Software?](/posts/can-chatgpt-write-software.html)
 ### [Hacking an RG351 into a Synth](/posts/rg351-synth.html)
 ### [Emoji Math 👽](/posts/emoji-math.html)
