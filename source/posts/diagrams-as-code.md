@@ -1,7 +1,7 @@
 <steelsky>
 {
-    "title":"Mermaids?",
-    "description":"My thoughts on spellcheck in your IDE.",
+    "title":"Diagrams as Code",
+    "description":"Eploring Mermaid.js.",
     "tags":"#programming #thoughts",
     "type":"post",
     "date":"2023-04-01"

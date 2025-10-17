@@ -7,9 +7,17 @@
 
 ## Hello!
 
-Hello and welcome to my website! My name is Mathieu Dombrock, and I've been developing software professionally for over 10 years. I have a particular interest in web technologies, electronics hacking and audio software, and I enjoy sharing my knowledge and experiences with others through this site. Thank you for stopping by, and I hope you enjoy reading about my adventures in computing.
+Hello! My name is [Mathieu Dombrock](/about). I really love Linux, audio, graphics and web programming.                                                                  
 
-## Top Posts
+This site is built with my static site generator called [SteelSky](https://github.com/matdombrock/steelsky). 
+
+You can check out my commerical audio software at [ReplicatAudio.com](https://replicataudio.com).
+
+I also have some other software available at [replicat.itch.io](https://replicat.itch.io).
+
+If that wasn't enough, you can find all of my open source projects at [github.com/matdombrock](https://github.com/matdombrock).
+
+## Coolest Posts
 
 ### [ADSR Envelopes](/posts/adsr-env.html)
 ### [Exploring Neural Nets In The Browser](/posts/neural-web.html)
@@ -22,9 +30,11 @@ Hello and welcome to my website! My name is Mathieu Dombrock, and I've been deve
 ### [Emoji Math 👽](/posts/emoji-math.html)
 ### [Popular SDRs](/posts/popular-sdrs.html)
 
+[More Posts](/posts)
+
 <hr>
 
-## Top Open Source Projects
+## Coolest Open Source Projects
 <!--https://anmolgautam.com/repo-card/-->
 <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
 

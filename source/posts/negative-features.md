@@ -1,7 +1,7 @@
 <steelsky>
 {
   "title":"Negative Features",
-  "description":"Thoughts.",
+  "description":"Features have a specification cost, a design cost, and a development cost.",
   "tags":"#programming #thoughts",
   "type":"post",
   "date":"2023-1-01"

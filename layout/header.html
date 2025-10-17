@@ -11,8 +11,8 @@
 <hr>
 <div class="nav">
   <a href="/">home</a> |
-  <a href="/about.html">about</a> |
-  <a href="/search.html">search</a> |
+  <a href="/about">about</a> |
+  <a href="/posts">posts</a> |
   <a href="https://github.com/matdombrock" target="_blank">github</a> |
   <a href="https://replicataudio.com" target="_blank">replicataudio</a> |
   <input type="text" placeholder="local search" id="nav-search" style="float:right;">
@@ -27,7 +27,8 @@
   });
 
   function search(){
-    window.location.href = "/search.html?s="+encodeURIComponent(document.getElementById('nav-search').value);
+    const searchVal = encodeURIComponent(document.getElementById('nav-search').value || 'unknown');
+    window.location.href = "/search?s="+searchVal;
   }
   const quotes = [
     "Baseless claims & crimes against computing.",

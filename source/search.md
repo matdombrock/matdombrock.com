@@ -31,4 +31,4 @@
 }
 </style>
 
-<script src="/ssList.js"></script>
+<script src="/ssList2.js"></script>

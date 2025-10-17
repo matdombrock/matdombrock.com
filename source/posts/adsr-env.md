@@ -1,7 +1,7 @@
 <steelsky>
 {
     "title":"ADSR Envelopes",
-    "description":"",
+    "description":"An exploration of ADSR envelopes for DSP.",
     "tags":"#programming #thoughts",
     "type":"post",
     "date":"2025-09-01"

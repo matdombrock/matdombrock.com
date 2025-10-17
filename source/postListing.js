@@ -13,6 +13,7 @@ async function fetchListing() {
 }
 
 async function run() {
+  const postElement = document.getElementById('post-area');
   const listing = await fetchListing();
   if (!listing) {
     alert('Failed to load listing data.');
@@ -35,6 +36,29 @@ async function run() {
     return dateB - dateA; // Sort descending
   });
   console.log('Sorted posts:', posts);
+  let htmlContent = '';
+  for (const post of posts) {
+    if (post.meta.title === 'Posts') {
+      continue; // Skip the index post
+    }
+    const postDate = post.meta.date ? new Date(post.meta.date) : null;
+    const formattedDate = postDate
+      ? postDate.toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'long',
+      })
+      : 'Unknown date';
+    const postHTML = `
+      <div class="post-item">
+        <h2><a href="${post.location}">${post.meta.title || 'Untitled Post'}</a></h2>
+        <p class="post-date">${formattedDate}</p>
+        <p class="post-description">${post.meta.description || ''}</p>
+        <hr/>
+      </div>
+    `;
+    htmlContent += postHTML;
+  }
+  postElement.innerHTML = htmlContent;
 }
 
 run()

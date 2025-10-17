@@ -1,7 +1,7 @@
 <steelsky>
 {
     "title":"Gnome + Wayland Touchpad Scroll Fix",
-    "description":"",
+    "description":"Fix the touchpad scrolling speed on Gnome + Wayland",
     "tags":"#linux",
     "type":"post",
     "date":"2025-10-01"
