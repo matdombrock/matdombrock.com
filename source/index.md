@@ -36,7 +36,8 @@ If that wasn't enough, you can find all of my open source projects at [github.co
 
 ## Coolest Open Source Projects
 <!--https://anmolgautam.com/repo-card/-->
-<script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
+<!-- <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script> -->
+<script src="repo-card.js"></script>
 
 <div class="repo-card" data-repo="matdombrock/SteelSky" data-theme="dark-theme"></div>
 
