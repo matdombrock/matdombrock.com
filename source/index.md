@@ -7,7 +7,7 @@
 
 ## Hello!
 
-Hello! My name is [Mathieu Dombrock](/about). I like building things, breaking things and reinventing wheels.                                                                   
+Hello! My name is [Mathieu Dombrock](/about.html). I like building things, breaking things and reinventing wheels.                                                                   
 
 This site is built with my static site generator called [SteelSky](https://github.com/matdombrock/steelsky). 
 
