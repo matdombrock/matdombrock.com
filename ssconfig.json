@@ -1,0 +1,8 @@
+{
+  "baseURL": "https://matdombrock.com",
+  "siteTitle": "Mat Dombrock",
+  "siteDescription": "MatDombrock.com",
+  "siteImage": "/img/icon.png",
+  "highlightStyle": "a11y-dark",
+  "compileTs": true
+}
