@@ -77,3 +77,5 @@ An account-less, vault-less, cloud-less password manager for humans.
 "
 footer="Typescript"
 ```
+
+[More Projects](/projects)
