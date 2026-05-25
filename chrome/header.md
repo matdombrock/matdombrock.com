@@ -3,7 +3,7 @@
   <nav>
     <a href="/about.html">About</a>
     <a href="/projects.html">Projects</a>
-    <a href="/posts.html">Posts</a>
+    <a href="/posts/">Posts</a>
   </nav>
 </header>
 <div id="base-layer"></div>
