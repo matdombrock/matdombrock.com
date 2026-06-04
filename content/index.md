@@ -28,7 +28,7 @@ If you're interested, you can read more [about me](/about.html).
 
 ```/posts max="3"```
 
-[More Posts](/posts) | [RSS](/rss.xml)
+[More Posts](/posts.html) | [RSS](/rss.xml)
 
 ## Top Projects
 
