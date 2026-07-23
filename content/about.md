@@ -23,14 +23,18 @@ Hi there! My name is Mathieu Dombrock and I am a software engineer. I have been 
 
 > (Cards generated with: [github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards))
 
-I'm proficient in a number of programming languages, but my primary expertise is in JavaScript and C++. I have a strong foundation in computer science principles and I am always seeking to learn and expand my skills. In my free time, you can find me hiking, playing music, tinkering with new technologies or working on personal projects.
+I'm proficient in a number of programming languages, but my primary expertise is in TypeScript and C++. I have a strong foundation in computer science principles and I am always seeking to learn and expand my skills. In my free time, you can find me hiking, playing music, tinkering with new technologies or working on personal projects.
 
 Thank you for visiting my website. I hope you enjoy reading about my journey as a software engineer and my thoughts on various topics related to technology.
 
 This site is built using my own custom static site generator called [SteelSky](https://github.com/matdombrock/SteelSky)
+
+If you want to lean more about the tools I use to build stuff checkout my [tools page](/tools.html)!
 
 If anything I'm working on or writing about here interests you feel free to contact me. 
 
 [dombrock.mathieu@gmail.com](mailto:dombrock.mathieu@gmail.com)
 
 ## [Now for a little about you...](/about-you.html)
+
+
