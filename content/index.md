@@ -15,7 +15,7 @@ I'm a software engineer with 10+ years of experience. I specialize in audio, web
 
 ## Across the web
 
-You can check out my commerical audio software at [replicataudio.com](https://replicataudio.com).
+You can check out my commercial audio software at [replicataudio.com](https://replicataudio.com).
 
 I also have some other software available at [replicat.itch.io](https://replicat.itch.io).
 
