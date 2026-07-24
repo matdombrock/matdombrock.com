@@ -32,7 +32,7 @@ I also have a deep love for music, math and computing. It *stresses me out great
 *This being said so bluntly, I do believe its possible to responsibly (if not ethically) use LLMs to aid in a certain class of programming tasks.*
 
 NO:
-- Module ideas
+- "Ideas"
 - Creative decisions
 - Architectural/engineering decisions
 - UI/UX decisions
