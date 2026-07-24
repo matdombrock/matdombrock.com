@@ -27,9 +27,9 @@ I have a deep love for programming and have been doing it professionally for ove
 
 I understand (almost) ALL of the code I publish. My goal when utilizing an LLM is to generate code is which virtually indistinguishable from code I would have written myself. 
 
-As said, I have a deep love for music, math and computing. It *stresses me out greatly* to see how generative AI has led to such an alarming and overwhelming amount of slop. Software stores and music streaming platforms are now full of low effort, low creativity shovelware and soulless drivel. This is not that.  
+I also have a deep love for music, math and computing. It *stresses me out greatly* to see how generative AI tools have led to such an alarming and overwhelming amount of slop. Software stores and music streaming platforms are now full of low effort, low creativity shovelware and soulless drivel. 
 
-This being said so bluntly, I do believe its possible to responsibly (if not ethically) use LLMs to aid in a certain class of programming tasks.
+*This being said so bluntly, I do believe its possible to responsibly (if not ethically) use LLMs to aid in a certain class of programming tasks.*
 
 NO:
 - Module ideas
@@ -46,7 +46,7 @@ SOMETIMES:
 - Rapid prototyping
 - Bulk changes
 
-Diffs are always audited and verified. I do not "vibe code"  
+Diffs are always audited and verified. I do not "vibe code". 
 
 LLMs are never the last tool to touch the code and they never make any commits to this repo themselves. 
 
