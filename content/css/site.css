@@ -119,7 +119,25 @@ pre {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-
+/* Basic table borders */
+#page-content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+#page-content th,
+#page-content td {
+  border: 1px solid var(--text, #ccc);
+  padding: 0.5rem;
+  text-align: left;
+}
+#page-content th {
+  background-color: var(--bg2, #f4f4f4);
+  font-weight: bold;
+}
+/* Alternating row colors (optional) */
+#page-content tbody tr:nth-child(even) {
+  background-color: var(--bg2, #f9f9f9);
+} 
 @media (max-width: 1000px) {
   #page-content {
     padding: 1rem;

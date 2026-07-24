@@ -13,7 +13,10 @@ description=About my tools
 | IDE | Neovim |
 | Terminal | Ghostty |
 | Agent Harness | Pi |
-
+| 3D  | Blender & FreeCAD |
+| 2D | Inkscape & Kritta |
+| Video | Kdenlive |
+| Music | Bitwig, Reaper, Bespke, VCV |
 
 
 When I'm working on cross-platform software, I use other tools, but this is my main stack. 
@@ -43,7 +46,7 @@ SOMETIMES:
 - Rapid prototyping
 - Bulk changes
 
-Diffs are always audited and verified. I do not "vibe code".  
+Diffs are always audited and verified. I do not "vibe code"  
 
 LLMs are never the last tool to touch the code and they never make any commits to this repo themselves. 
 
